@@ -30,12 +30,43 @@
     color: inherit;
 }
 
+.info{
+    background-color: #000000 !important;
+    padding-left: 20px;
+   height: 150px;
+}
+
+
+
+.contactnum{
+    align-items:end !important;
+}
+
+
+
 .aboutsection{
     background-image: url(/images/bg_4.jpg);
     background-repeat: no-repeat;
     position: fix;
 }
 
+
+.text h5{
+    color: #ffffff;
+    margin-top: 30px;
+}
+
+.text p{
+    color: #808080;
+}
+
+.aboutsocial ul li{
+    list-style: none;
+}
+
+.aboutsocial{
+    justify-content: space-between !important;
+}
 
 
 .welcome-img{
@@ -62,6 +93,7 @@ justify-content: space-between !important;
   margin-left: 2%;
   margin-right: 2%;
  
+ 
   
  
 
@@ -75,8 +107,15 @@ justify-content: space-between !important;
     width: 100px;
     border-radius: 50%;
     margin-top: 10px !important;
+    margin-bottom: 20px !important;
     
 
+}
+
+.position{
+    color: #FAC564;
+    font-size: 20px;
+    margin-bottom: 30px !important;
 }
 
 .chefttext{
