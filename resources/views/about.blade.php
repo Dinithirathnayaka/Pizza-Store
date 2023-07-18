@@ -19,64 +19,76 @@
         </div>
       </section>
 
-       <section class="ftco-section">
-      <div class="container">
-      	<div class="row justify-content-center mb-5 pb-3">
-          <div class="col-md-7 heading-section ftco-animate text-center">
-            <h2 class="mb-4">Our Chef</h2>
-            <p class="flip"><span class="deg1"></span><span class="deg2"></span><span class="deg3"></span></p>
-            <p class="mt-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+      <section class="aboutsection">
+        <div class="row">
+          <div class="col-md-6 col-xs-12">	<img src="images/about.jpg" class="welcome-img" alt=""></div>
+          <div class="col-md-6 col-xs-12 welcomeright">
+            <div class="welcome-text " style="color: #ffffff">
+              <h2 class="mb-4 mt-4">Welcome to <span class="fa fa-pizza">Pizza</span> A Restaurant</h2>
+            </div>
+            <span class="fa fa-envelope"></span>
+            <span class="fas fa-pizza"></span>
+            <div> 
+              <p style="color: #808080">On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their.</p>
+            </div>
           </div>
         </div>
-        <div class="row">
-        	<div class="col-lg-3 d-flex mb-sm-4 ftco-animate">
-        		<div class="staff">
-      				<div class="img mb-4" ><img src="images/person_1.jpg" class="img-fluid" alt=""></div>
-      				<div class="info text-center">
-      					<h3><a href="teacher-single.html">Tom Smith</a></h3>
-      					<span class="position">Hair Specialist</span>
-      					<div class="text">
-	        				<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-	        			</div>
-      				</div>
-        		</div>
-        	</div>
-        	<div class="col-lg-3 d-flex mb-sm-4 ftco-animate">
-      				<div class="img mb-4" ><img src="images/person_2.jpg" class="img-fluid" alt=""></div>
-      				<div class="info text-center">
-      					<h3><a href="teacher-single.html">Mark Wilson</a></h3>
-      					<span class="position">Beard Specialist</span>
-      					<div class="text">
-	        				<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-	        			</div>
-      				</div>
-        		</div>
-        	</div>
-        	<div class="col-lg-3 d-flex mb-sm-4 ftco-animate">
-        		<div class="staff">
-      				<div class="img mb-4" ><img src="images/person_3.jpg" class="img-fluid" alt=""></div>
-      				<div class="info text-center">
-      					<h3><a href="teacher-single.html">Patrick Jacobson</a></h3>
-      					<span class="position">Hair Stylist</span>
-      					<div class="text">
-	        				<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-	        			</div>
-      				</div>
-        		</div>
-        	</div>
-        	<div class="col-lg-3 d-flex mb-sm-4 ftco-animate">
-        		<div class="staff">
-      				<div class="img mb-4" ><img src="images/person_4.jpg" class="img-fluid" alt=""></div>
-      				<div class="info text-center">
-      					<h3><a href="teacher-single.html">Ivan Dorchsner</a></h3>
-      					<span class="position">Beard Specialist</span>
-      					<div class="text">
-	        				<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-	        			</div>
-      				</div>
-        		</div>
-        	</div>
+   
+
+      
+      <div class="container pb-5">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section ftco-animate text-center">
+            <h2 class="mb-4 mt-4">Our Chef</h2>
+            <p class="flip"><span class="deg1"></span><span class="deg2"></span><span class="deg3"></span></p>
+            
+          </div>
         </div>
+        <div class="row " style="display: flex">
+        	<div class="cheft col-lg-3 col-md-6 col-xs-12  justify-content-center text-center">
+        		<img src="images/person_2.jpg" class="img-fluid" alt="">
+            <div class="info text-center">
+              <h6>Tom Smith</h6>
+              <span class="position">Hair Specialist</span>
+              <div class="text">
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              </div>
+            </div>
+            
+            
+        	</div>
+        	<div class="cheft col-lg-3 col-md-6 col-xs-12  justify-content-center text-center">
+            <img src="images/person_3.jpg" class="img-fluid" alt="">
+            <div class="info text-center">
+              <h6>Tom Smith</h6>
+              <span class="position">Hair Specialist</span>
+              <div class="text">
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              </div>
+            </div>
+        		</div>
+            <div class="cheft col-lg-3 col-md-6 col-xs-12  justify-content-center text-center">
+              <img src="images/person_4.jpg" class="img-fluid" alt="">
+              <div class="info text-center">
+                <h6>Tom Smith</h6>
+                <span class="position">Hair Specialist</span>
+                <div class="text">
+                  <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="cheft col-lg-3 col-md-6 col-xs-12  justify-content-center text-center">
+              <img src="images/person_1.jpg" class="img-fluid" alt="">
+              <div class="info text-center">
+                <h6>Tom Smith</h6>
+                <span class="position">Hair Specialist</span>
+                <div class="text">
+                  <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                </div>
+              </div>
+            </div>
+        	</div>
       </div>
     </section>
 
