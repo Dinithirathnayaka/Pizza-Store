@@ -1,4 +1,18 @@
 /* -----------------
+------CONTACT PAGE----
+--------------------*/
+
+#ftco-navbar{
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    background-color: #212529;
+    z-index: 100;
+}
+
+
+/* -----------------
 ------ABOUT PAGE----
 --------------------*/
 
@@ -88,13 +102,11 @@ border: 1px solid #FAC564;
 justify-content: space-between !important;
   padding-top:50px;
   justify-content: center !important;
-  background-color: #000000;
+  background:transparent !important;
   width: 21% !important;
   margin-left: 2%;
   margin-right: 2%;
  
- 
-  
  
 
 }
@@ -186,9 +198,64 @@ input:focus, textarea:focus, select:focus{
 .contactinfo{
     background-image: url(/images/bg_4.jpg);
     background-repeat: no-repeat;
-    position: fix;
+    position: relative;
+    height:100vh ;
+    
 
 }
+
+.newcontainer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+p a{
+    text-decoration: none !important;
+    color:#FAC564 !important;
+}
+
+.form-controlnew{
+    width: 100%;
+    border: none !important;
+    border-bottom: 0.1px solid #ffffff !important;
+    background:transparent !important;
+    color: #ffffff !important;
+    margin-bottom: 20px;
+    font-size: 15px;
+    padding: 10px;
+}
+
+.form-controlnew:focus{
+    border-color: #000000;
+ }
+ 
+ input:focus, textarea:focus, select:focus{
+     outline: none !important;
+ }
+ 
+ ::placeholder {
+     color: #ffffff !important;
+     opacity: 0.6; /* Firefox */
+   }
+   
+   :-ms-input-placeholder { /* Internet Explorer 10-11 */
+     color: #ffffff !important;
+     opacity: 0.6;
+   }
+   
+   ::-ms-input-placeholder { /* Microsoft Edge */
+    color: #ffffff !important;
+    opacity: 0.6;
+   }
+
+   .btncontact{
+    border:1px solid #FAC564;
+   }
+
+
+ 
 
 /* -----------------
 ------Footer----

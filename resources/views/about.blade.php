@@ -81,19 +81,18 @@
         	<div class="cheft col-lg-3 col-md-6 col-xs-12  justify-content-center text-center">
         		<img src="images/person_2.jpg" class="img-fluid" alt="">
             <div class=" text-center">
-              <h6>Tom Smith</h6>
+              <h6 style="color: #ffffff">Tom Smith</h6>
               <span class="position">Hair Specialist</span>
               <div class="text">
                 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
               </div>
             </div>
-            
-            
         	</div>
+
         	<div class="cheft col-lg-3 col-md-6 col-xs-12  justify-content-center text-center">
             <img src="images/person_3.jpg" class="img-fluid" alt="">
-            <div class="info text-center">
-              <h6>Tom Smith</h6>
+            <div class="text-center">
+              <h6 style="color: #ffffff">Tom Smith</h6>
               <span class="position">Hair Specialist</span>
               <div class="text">
                 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
@@ -102,8 +101,8 @@
         		</div>
             <div class="cheft col-lg-3 col-md-6 col-xs-12  justify-content-center text-center">
               <img src="images/person_4.jpg" class="img-fluid" alt="">
-              <div class="info text-center">
-                <h6>Tom Smith</h6>
+              <div class="text-center">
+                <h6 style="color: #ffffff">Tom Smith</h6>
                 <span class="position">Hair Specialist</span>
                 <div class="text">
                   <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
@@ -113,8 +112,8 @@
 
             <div class="cheft col-lg-3 col-md-6 col-xs-12  justify-content-center text-center">
               <img src="images/person_1.jpg" class="img-fluid" alt="">
-              <div class="info text-center">
-                <h6>Tom Smith</h6>
+              <div class="text-center">
+                <h6 style="color: #ffffff">Tom Smith</h6>
                 <span class="position">Hair Specialist</span>
                 <div class="text">
                   <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
