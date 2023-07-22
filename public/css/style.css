@@ -21,7 +21,6 @@
 
 .slider-item {
     height: calc(100vh - 60px);
-
     opacity: 0.5;
 }
 
@@ -323,4 +322,16 @@ p a{
    position: absolute;
    margin-left: auto;
    margin-right: auto;
+}
+
+/* -----------------
+------Services----
+--------------------*/
+
+.ftco-services{
+    background-image: url(/images/food.png);
+    height:89vh ;
+    width: 100vw;
+    margin-top: 11vh;
+  
 }
