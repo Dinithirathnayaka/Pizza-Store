@@ -4,42 +4,45 @@
 
     <section class="ftco-services pt-5 pb-5">
     	
-    	<div class="container">
+    	<div class="container pt-5 pb-5" >
     		<div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section ftco-animate text-center">
             <h2 class="mb-4">Our Services</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+            <p style="color: #5C3D03">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
           </div>
         </div>
     		<div class="row">
-          <div class="col-md-4 col-xs-12">
+          <div class="col-md-4 col-xs-12 servicediv">
             <div class="media d-block text-center block-6 services">
-              <div class="icon d-flex justify-content-center align-items-center mb-5">
-              	<span class="fas fa-hamburger" ></span>
+              <div class="serviceIcon  mx-auto d-block justify-content-center align-items-center mb-5 mt-5">
+				<img src="images/diet.png" class="fas" /> 
               </div>
               <div class="media-body">
-                <h3 class="heading">Healthy Foods</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                <h3 class="heading" >Healthy Foods</h3>
+                <p style="color: #5C3D03">Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
               </div>
             </div>      
           </div>
-          <div class="col-md-4 col-xs-12">
+          <div class="col-md-4 col-xs-12 servicediv">
             <div class="media d-block text-center block-6 services">
-              <div class="icon d-flex justify-content-center align-items-center mb-5">
-              	<span class="fas fa-truck"></span>
+              <div class="serviceIcon  mx-auto d-block justify-content-center align-items-center mb-5 mt-5">
+				  <img src="images/food-delivery.png" class="fas" /> 
+
               </div>
               <div class="media-body">
                 <h3 class="heading">Fastest Delivery</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                <p style="color: #5C3D03">Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
               </div>
             </div>      
           </div>
-          <div class="col-md-4 ">
+          <div class="col-md-4 col-xs-12 servicediv">
             <div class="media d-block text-center block-6 services">
-              <div class="icon d-flex justify-content-center align-items-center mb-5"><span class="fas fa-pizza-slice" style="width: 100px"></span></div>
+              <div class="serviceIcon  mx-auto d-block justify-content-center align-items-center mb-5 mt-5"> 
+				<img src="images/pizza.png" class="fas" /> 
+            </div>
               <div class="media-body">
                 <h3 class="heading">Original Recipes</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                <p style="color: #5C3D03">Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
               </div>
             </div>    
           </div>
