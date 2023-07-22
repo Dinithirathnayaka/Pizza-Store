@@ -350,7 +350,31 @@ text-transform: capitalize;
     color: #5C3D03;
 }
 
+.section-service{
+    background-image: url(/images/bg_4.jpg);
+   
+    width: 100vw;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    height: auto;
+  
+}
+
+
+.menu-img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
  
+
+.btn-service{
+    background: transparent;
+    color:#ffffff !important; 
+    border: 1px solid #ffffff;
+    padding: 5px;
+}
 
 /* -----------------
 ------Footer----
