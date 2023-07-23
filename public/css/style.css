@@ -352,7 +352,6 @@ text-transform: capitalize;
 
 .section-service{
     background-image: url(/images/bg_4.jpg);
-   
     width: 100vw;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -375,6 +374,31 @@ text-transform: capitalize;
     border: 1px solid #ffffff;
     padding: 5px;
 }
+
+/* -----------------
+------Menu----
+--------------------*/
+
+.menupizzaimg{
+margin-top: 200px !important;
+background-image: url(/images/bg_4.jpg);
+width: 100vw;
+}
+
+
+
+.menupizza{
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+
+.text-div{
+    background-color: #000000;
+    
+}
+
 
 /* -----------------
 ------Footer----
