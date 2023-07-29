@@ -132,6 +132,29 @@
 
         <script src="js/bootstrap.js"></script>
         <script src="https://kit.fontawesome.com/eb896d6758.js" crossorigin="anonymous"></script>
+        <script>
+        
+          function showDiv(divId) {
+              var divs = document.querySelectorAll('div[id^="div"]');
+              for (var i = 0; i < divs.length; i++) {
+                  if (divs[i].id === divId) {
+                      divs[i].style.display = 'block';
+                  } else {
+                      divs[i].style.display = 'none';
+                  }
+              }
+          }
+
+          document.addEventListener('DOMContentLoaded', function() {
+            var activeDivId = localStorage.getItem('activeDiv');
+            if (activeDivId) {
+                showDiv(activeDivId);
+            } else {
+                
+                showDiv('div1');
+            }
+        });
+      </script>
        
     </body>
 </html>

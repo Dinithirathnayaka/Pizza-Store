@@ -380,7 +380,7 @@ text-transform: capitalize;
 --------------------*/
 
 .menupizzaimg{
-margin-top: 200px !important;
+
 background-image: url(/images/bg_4.jpg);
 width: 100vw;
 }
@@ -390,14 +390,158 @@ width: 100vw;
 .menupizza{
     width: 200px;
     height: 200px;
-    margin-bottom: 20px;
+   
+
 }
 
 
 .text-div{
-    background-color: #000000;
-    
+    background-color: #0000001c;
+    padding: 20px;
+       
 }
+
+.text-div .price{
+    color: #ffc107;
+    margin-right: 20px !important;
+}
+
+
+.text-div a{
+    color:#ffffff
+}
+.main{
+    display: flex;
+   
+}
+
+.left{
+    display: flex;
+    flex: 4;
+}
+
+.middle{
+    display: flex;
+    flex: 4;
+}
+
+.right{
+    display: flex;
+    flex: 4;
+}
+
+.leftdown{
+    display: flex;
+    flex: 4;
+}
+
+.middledown{
+    display: flex;
+    flex: 4;
+}
+
+.rightdown{
+    display: flex;
+    flex: 4;
+}
+
+.btn-order{
+    color: #ffffff !important;
+    border: 1px solid #ffffff;
+    padding: 5px;
+}
+
+.menurow{
+    display: flex !important;
+    padding: 15px;
+}
+
+.leftmenu{
+    flex:5;
+}
+
+.rightmenu{
+    flex:5;
+}
+
+.menudiv{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.imgdiv{
+flex:0.5;
+}
+
+.menuimg{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.menucontent{
+    flex:4;
+}
+
+.toprule{
+    display: flex;
+}
+
+.namepizza{
+    color: #ffffff;
+}
+
+.pizzaprice{
+    color: #ffc107;
+}
+
+.bottomrule p{
+    color: #808080
+
+}
+
+.menus{
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+
+}
+
+
+.menusleftimg{
+    width: 100%;
+    height: 80vh;
+}
+
+.btnlist button{
+    width: 100px;
+    height: 40px;
+    border: 1px solid #ffc107;
+    color: #ffc107;
+    background: none;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
+.btnlist button.active{
+    background-color: #ffc107 !important;
+    color: #000000 !important;
+}
+
+.btnlist button:checked{
+    background-color: #ffc107 !important;
+    color: #000000 !important;
+}
+
+.btnlist button:hover{
+    background-color: #ffc107;
+    color: #000000;
+}
+  
+
+
+
 
 
 /* -----------------
@@ -411,6 +555,7 @@ width: 100vw;
     padding-left: 100px;
     padding-right: 100px;
     text-decoration: none;
+    width: 100vw !important;
 }
 
 .ftco-heading-2 {
@@ -468,3 +613,46 @@ width: 100vw;
    margin-right: auto;
 }
 
+@media screen and (max-width: 1200px) {
+    .main {
+     display:flex;
+    }
+  }
+
+
+  @media screen and (max-width: 991px) {
+    .main {
+     display:block;
+    
+    }
+
+    .leftdown{
+        flex-direction: row-reverse !important;
+    }
+
+    .middledown{
+        flex-direction: row-reverse !important;
+    }
+
+    .rightdown{
+        flex-direction: row-reverse !important;
+    }
+  }
+
+
+
+  @media screen and (max-width: 768px) {
+    .menurow {
+     display:block !important;
+    
+    }
+
+    .leftmenu{
+        flex: 12;
+    }
+
+    .rightmenu{
+        flex: 12;
+    }
+
+  }
