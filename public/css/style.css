@@ -502,7 +502,7 @@ flex:0.5;
 
 .menus{
     width: 100vw;
-    height: 80vh;
+    height: auto;
     display: flex;
 
 }
@@ -524,7 +524,7 @@ flex:0.5;
 
 }
 
-.btnlist button.active{
+.btnlist button:focus{
     background-color: #ffc107 !important;
     color: #000000 !important;
 }
@@ -653,6 +653,16 @@ flex:0.5;
 
     .rightmenu{
         flex: 12;
+    }
+
+    .btnlist{
+        margin-left: 30px;
+    }
+
+    .btnlist button{
+        width: 75px;
+        margin-left: 3px;
+        margin-right: 3px;
     }
 
   }

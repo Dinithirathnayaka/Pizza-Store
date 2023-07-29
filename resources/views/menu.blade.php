@@ -222,10 +222,9 @@
         </div>
 
 
-        <div class="menus">
-            
-            <div class="col-5"><img src="images/about.jpg" class="menusleftimg"/></div>
-            <div class="col-7 "><div class="btnlist mb-3 mt-3">
+        <div class="menus pt-3 ">
+            <div class="row">  <div class="col-lg-4 col-sm-12"><img src="images/about.jpg" class="menusleftimg"/></div>
+            <div class="col-lg-8 col-sm-12 "><div class="btnlist mb-3 mt-3">
                 <button onclick="showDiv('div1')">Pizza</button>
                 
                 <button onclick="showDiv('div2')">Drinks</button>
@@ -404,7 +403,8 @@
                
                     </div>
                 </div>
-            </div>
+            </div></div>
+          
         </div>
 
 
