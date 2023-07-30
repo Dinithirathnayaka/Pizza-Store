@@ -69,7 +69,7 @@
    
 
       
-      <div class="container pb-5">
+      
       	<div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section text-center">
             <h2 class="mb-3 mt-4" style="color: #ffffff">Our Chef</h2>
@@ -77,9 +77,11 @@
             
           </div>
         </div>
-        <div class="row " style="display: flex">
-        	<div class="cheft col-lg-3 col-md-6 col-xs-12  justify-content-center text-center">
-        		<img src="images/person_2.jpg" class="img-fluid" alt="">
+
+        <div class="container"> 
+          <div class="row cheftlist" >
+        	<div class="col-md-6 col-xs-12 cheft ">
+        		<img src="images/person_2.jpg" class="cheftimg mx-auto d-block" alt="">
             <div class=" text-center">
               <h6 style="color: #ffffff">Tom Smith</h6>
               <span class="position">Hair Specialist</span>
@@ -89,8 +91,8 @@
             </div>
         	</div>
 
-        	<div class="cheft col-lg-3 col-md-6 col-xs-12  justify-content-center text-center">
-            <img src="images/person_3.jpg" class="img-fluid" alt="">
+        	<div class="col-md-6 col-xs-12 cheft">
+            <img src="images/person_3.jpg" class="cheftimg mx-auto d-block" alt="">
             <div class="text-center">
               <h6 style="color: #ffffff">Tom Smith</h6>
               <span class="position">Hair Specialist</span>
@@ -99,8 +101,8 @@
               </div>
             </div>
         		</div>
-            <div class="cheft col-lg-3 col-md-6 col-xs-12  justify-content-center text-center">
-              <img src="images/person_4.jpg" class="img-fluid" alt="">
+            <div class="col-md-6 col-xs-12 cheft">
+              <img src="images/person_4.jpg" class="cheftimg mx-auto d-block" alt="">
               <div class="text-center">
                 <h6 style="color: #ffffff">Tom Smith</h6>
                 <span class="position">Hair Specialist</span>
@@ -110,8 +112,8 @@
               </div>
             </div>
 
-            <div class="cheft col-lg-3 col-md-6 col-xs-12  justify-content-center text-center">
-              <img src="images/person_1.jpg" class="img-fluid" alt="">
+            <div class="col-md-6 col-xs-12 cheft">
+              <img src="images/person_1.jpg" class="cheftimg mx-auto d-block" alt="">
               <div class="text-center">
                 <h6 style="color: #ffffff">Tom Smith</h6>
                 <span class="position">Hair Specialist</span>
@@ -120,8 +122,9 @@
                 </div>
               </div>
             </div>
-        	</div>
-      </div>
+        	</div></div>
+     
+      
     </section>
 
 
