@@ -1,3 +1,42 @@
+
+
+/* -----------------
+------NAVBAR----
+--------------------*/
+
+.navbar-nav {
+    margin-left: auto; 
+    
+  }
+
+  .navbar-nav .nav-item {
+    margin-left: 15px; 
+  }
+
+  
+  .navbar-nav .nav-link {
+    text-decoration: none;
+  }
+
+  .toplogo{
+    display: flex;
+  }
+
+  .toplogocontent{
+    color: #FFFFFF;
+    margin-left: 10px;
+    font-size: 20px;
+  }
+
+  .downlogocontent{
+    color: #FAC564 !important;
+    text-align: left !important;
+    margin-left: 0;
+  }
+
+  
+
+
 /* -----------------
 ------CONTACT PAGE----
 --------------------*/
@@ -198,17 +237,20 @@ input:focus, textarea:focus, select:focus{
     background-image: url(/images/bg_4.jpg);
     background-repeat: no-repeat;
     position: relative;
-    height:100vh ;
+    height:auto;
+    padding-top: 8%;
+    padding-bottom: 8%;
+      padding-left: 20px;
+    padding-right: 20px;
     
 
 }
 
-.newcontainer{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-  transform: translate(-50%, -50%);
+.contact-info{
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
+
 
 p a{
     text-decoration: none !important;
