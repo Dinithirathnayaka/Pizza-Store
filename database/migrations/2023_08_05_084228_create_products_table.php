@@ -12,6 +12,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('description');
+            $table->string('imgurl');
             $table->double('discount')->default(0.0);
             $table->double('price');
             $table->unsignedBigInteger('category_id'); // Add the foreign key column
