@@ -54,6 +54,12 @@
             @endif
 
          @endforeach
+
+
+    </div>
+    <div class="container">
+        {!!$products->withQueryString()->links('pagination::bootstrap-5')!!}
+
     </div>
 
         <div class="container">
@@ -153,6 +159,11 @@
             @foreach($categories as $category)
             <button onclick="showDiv('div1')">{{$category->name}}</button>
         @endforeach
+{{--
+        <div class="container">
+            {!!$products->withQueryString()->links('pagination::bootstrap-5')!!}
+
+        </div> --}}
 
             </div>
 

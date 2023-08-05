@@ -28,6 +28,13 @@
 
         <!-- Styles -->
         <style>
+      .page-item.active .page-link  {
+        background-color: #ffc107 !important;
+        color: white; /* Optionally change the text color for better visibility */
+    }
+    .page-link{
+        color: black;
+    }
 
         </style>
     </head>
