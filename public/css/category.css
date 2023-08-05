@@ -1,0 +1,32 @@
+.table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+h3 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.addbtn {
+    margin-left: 90%;
+    background-color: blue;
+    color: #ffffff;
+    border: none;
+    padding: 5px;
+    width: 100px;
+    margin-bottom: 30px;
+}
+
+.deletebtn {
+    background-color: red;
+    color: #ffffff;
+    border: none;
+    padding: 5px;
+}
