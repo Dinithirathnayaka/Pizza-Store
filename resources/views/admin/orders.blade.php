@@ -1,7 +1,6 @@
-@extends('admin.dashboard')
-
+@extends('layouts.adminfrontend')
 @section('content')
-<div class="container" style="margin-top: 100px">
+<div>
     <h3>Order List</h3>
 
     

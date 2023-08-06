@@ -1,7 +1,7 @@
-@extends('admin.dashboard')
+@extends('layouts.adminfrontend')
 
 @section('content')
-<div class="container" style="margin-top: 100px">
+<div class="">
 
     <h3>Category</h3>
     <button class="addbtn">Add</button>

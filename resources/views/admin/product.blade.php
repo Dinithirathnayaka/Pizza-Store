@@ -1,27 +1,70 @@
-@extends('admin.dashboard')
+@extends('layouts.adminfrontend')
 
 @section('content')
-<div class="container" style="margin-top: 100px">
+<div class="product">
+<h5 style="color: #fff">Products Details</h5>
+   
 
-    <h3>Product Details</h3>
+    <table class="table  text-center" border="2" style="width: 100%">
+    
 
-    <table class="table  text-center" border="2" style="width: 80%">
-        <tr>
-            <th>Product_ID</th>
-            <th>Product Image</th>
-            <th>Date</th>
-            <th>Name</th>
-            <th>Discount</th>
-            <th>Price</th>
-        </tr>
-        <tr>
-            <td>01</td>
-            <td><img src="{{ asset('images/pizza-7.jpg') }}" alt="Product Image"  class="productimg"></td>
-            <td>05/08/2023</td>
-            <td>Pizza</td>
-            <td>5%</td>
-            <td>Rs1000.00</td>
-        </tr>
+        <thead>
+            <tr>
+              <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Product_ID</th>
+              <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Image</th>
+              <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Name</th>
+              <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Discount</th>
+              <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Price</th>
+              <th class="text-secondary opacity-7"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td>
+                 001
+                </td>
+                <td>
+                    <img src="{{ asset('images/pizza-7.jpg') }}" alt="Product Image"  class="productimg">
+                </td>
+                <td >
+                  Cheese Pizza
+                </td>
+                <td >
+                  5%
+                </td>
+                <td >
+                  Rs1000.00
+                </td>
+                <td >
+                 
+                   <button class="edit">Edit</button>
+                   <button class="delete">Delete</button>
+                  </td>
+              </tr>
+          </tbody>
+          <tbody>
+            <tr>
+                <td>
+                 001
+                </td>
+                <td>
+                    <img src="{{ asset('images/pizza-7.jpg') }}" alt="Product Image"  class="productimg">
+                </td>
+                <td >
+                  Cheese Pizza
+                </td>
+                <td >
+                  5%
+                </td>
+                <td >
+                  Rs1000.00
+                </td>
+                <td >
+                   <button class="edit">Edit</button>
+                   <button class="delete">Delete</button>
+                  </td>
+              </tr>
+          </tbody>
      
     </table>
 
