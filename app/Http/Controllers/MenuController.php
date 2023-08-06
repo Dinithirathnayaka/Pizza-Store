@@ -10,8 +10,11 @@ class MenuController extends Controller
 {
     public function index()
     {
-        $products = Product::all();
+
+        $products=Product::paginate(6);
+        $no_pgproducts=Product::all();
         $categories = Category::all();
-        return view('menu', compact('products', 'categories'));
+
+        return view('menu', compact('products', 'categories','no_pgproducts'));
     }
 }
