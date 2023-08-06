@@ -35,7 +35,6 @@ Route::get('/menu', [App\Http\Controllers\MenuController::class, 'index'])->name
 Route::group(['prefix' => 'admin'], function () {
     Route::get('/dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'dashboard'])->name('admin.dashboard');
     Route::get('/product', [App\Http\Controllers\Admin\ProductController::class, 'product'])->name('admin.product');
-
     Route::get('/category', [App\Http\Controllers\Admin\CategoryController::class, 'category'])->name('admin.category');
     Route::get('/users', [App\Http\Controllers\Admin\UsersController::class, 'users'])->name('admin.users');
     Route::get('/orders', [App\Http\Controllers\Admin\OrdersController::class, 'orders'])->name('admin.orders');

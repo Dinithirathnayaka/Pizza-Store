@@ -1,31 +1,45 @@
 @extends('layouts.adminfrontend')
 
 @section('content')
-<div class="">
 
-    <h3>Category</h3>
+
+
+<div class="category">
+    <h5 style="color: #fff">Category Details</h5>
+       
     <button class="addbtn">Add</button>
-
-    <table class="table  text-center" border="2" style="width: 80%">
-        <tr>
-            <th>Category_ID</th>
-            <th>Category Name</th>
-            <th>Category Description</th>
-            <th></th>
-           
-        </tr>
-        <tr>
-            <td>01</td>
+        <table class="table  text-center" border="2" style="width: 100%">
+        
+    
+            <thead>
+                <tr>
+                  <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Category_ID</th>
+                  <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Category Name</th>
+                  <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Category Description</th>
+                  <th class="text-secondary opacity-7"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                    <td>01</td>
+                    <td>Pizza</td>
+                    <td>Pizza fdssssssssssss fggggggggggggggggggggg</td>
+                    <td><button class="deletebtn">Delete</button></td>
+                  </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                    <td>01</td>
             <td>Pizza</td>
             <td>Pizza fdssssssssssss fggggggggggggggggggggg</td>
             <td><button class="deletebtn">Delete</button></td>
-            
-        </tr>
-     
-    </table>
-
-</div>
-
+                  </tr>
+              </tbody>
+         
+        </table>
+    
+    </div>
+    
 @endsection
 
 {{-- @include('modals.popup') --}}

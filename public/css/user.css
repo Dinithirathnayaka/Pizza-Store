@@ -1,21 +1,31 @@
+.user {
+    border-radius: 10px;
+}
+
 .table {
+    border-collapse: collapse;
     margin-left: auto;
     margin-right: auto;
+    border: none;
+    padding: 20px;
+    border-radius: 10px !important;
+}
+
+th {
+    font-size: small;
 }
 
 th,
 td {
-    border: 1px solid black;
     padding: 8px;
 }
 
-h3 {
-    margin-top: 30px;
-    margin-bottom: 30px;
+h5 {
+    padding: 10px 0px 10px 30px;
 }
 
 .profileimg {
     width: 70px;
     height: 70px;
-    border-radius: 50%;
+    border-radius: 10%;
 }
