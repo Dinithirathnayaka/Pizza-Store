@@ -47,3 +47,13 @@ h5 {
     border: none;
     width: 60px;
 }
+
+.signinicon {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.rightnav-header {
+    display: flex;
+    color: #ffffff;
+}

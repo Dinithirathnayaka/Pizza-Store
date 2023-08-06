@@ -29,3 +29,13 @@ h5 {
     height: 70px;
     border-radius: 10%;
 }
+
+.signinicon {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.rightnav-header {
+    display: flex;
+    color: #ffffff;
+}

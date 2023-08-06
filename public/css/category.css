@@ -41,3 +41,13 @@ h5 {
     border: none;
     padding: 5px;
 }
+
+.signinicon {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.rightnav-header {
+    display: flex;
+    color: #ffffff;
+}

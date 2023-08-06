@@ -1,10 +1,16 @@
 @extends('layouts.adminfrontend')
 
 @section('content')
+<div class="rightnav-header">
+    <span class="ms-1 font-weight-bold light">User Details</span>
+  <div style="margin-left: 80%"> <img src="{{ asset('images/adminuser.png') }}"   class="signinicon" alt="main_logo"> <span>Sign In</span></div>
+  
+  </div>
+  <hr style="color: #fff"/>
 
 
 <div class="user">
-    <h5 style="color: #fff">Products Details</h5>
+   
        
     
         <table class="table  text-center" border="2" style="width: 100%">
