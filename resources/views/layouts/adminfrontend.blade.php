@@ -38,19 +38,19 @@
   <div class="leftbar">
     <div class="sidenav-header">
    
-      <img src="{{ asset('images/admin-panel.png') }}"   class="logoicon" alt="main_logo">
-      <span class="ms-1 font-weight-bold">Admin panel</span>
+      <img src="{{ asset('images/control-panel.png') }}"   class="logoicon" alt="main_logo">
+      <span class="ms-1 font-weight-bold light">Admin panel</span>
       </a>
     </div>
-    <hr/>
+    <hr style="color: #fff"/>
 
     <div class="sidenav_bottom">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item active"><a href="{{ route('admin.dashboard') }}" class="nav-link"><span><img src="{{ asset('images/house.png') }}" alt=""  class="navicon"></span>Dashboard</a></li>
-        <li class="nav-item"><a href="{{ route('admin.users') }}" class="nav-link"><span><img src="{{ asset('images/user.png') }}" alt=""  class="navicon"></span>Users</a></li>
-        <li class="nav-item"><a href="{{ route('admin.product') }}" class="nav-link"><span><img src="{{ asset('images/order.png') }}" alt=""  class="navicon"></span>Products</a></li>
-        <li class="nav-item"><a href="{{ route('admin.orders') }}" class="nav-link"><span><img src="{{ asset('images/checkout.png') }}" alt=""  class="navicon"></span>Orders</a></li>
-        <li class="nav-item"><a href="{{ route('admin.category') }}" class="nav-link"><span><img src="{{ asset('images/category.png') }}" alt=""  class="navicon"></span>Category</a></li>
+        <li class="nav-item {{ request()->is('admin/dashboard') ? 'active' : '' }}"><a href="{{ route('admin.dashboard') }}" class="nav-link"><span><img src="{{ asset('images/house.png') }}" alt=""  class="navicon"></span>Dashboard</a></li>
+        <li class="nav-item {{ request()->is('admin/users') ? 'active' : '' }}" ><a href="{{ route('admin.users') }}" class="nav-link"><span><img src="{{ asset('images/user.png') }}" alt=""  class="navicon"></span>Users</a></li>
+        <li class="nav-item {{ request()->is('admin/product') ? 'active' : '' }}"><a href="{{ route('admin.product') }}" class="nav-link"><span><img src="{{ asset('images/order.png') }}" alt=""  class="navicon"></span>Products</a></li>
+        <li class="nav-item {{ request()->is('admin/orders') ? 'active' : '' }}"><a href="{{ route('admin.orders') }}" class="nav-link"><span><img src="{{ asset('images/checkout.png') }}" alt=""  class="navicon"></span>Orders</a></li>
+        <li class="nav-item {{ request()->is('admin/category') ? 'active' : '' }}"><a href="{{ route('admin.category') }}" class="nav-link"><span><img src="{{ asset('images/category.png') }}" alt=""  class="navicon"></span>Category</a></li>
     </ul>
     </div>
  </div>
@@ -68,10 +68,10 @@
 
        
 
-        <footer >
-     
+        {{-- <footer class="admin_footer mx-auto b-block">
+     <p>Copyright © 2023 All rights reserved</p>
         </footer>
-
+ --}}
 
 
       @yield('scripts')

@@ -16,7 +16,12 @@
     margin-right: 30px;
 }
 
+.light {
+    color: #fff;
+}
+
 .leftbar {
+    background-color: #212529;
     border: 1px solid #808080 !important;
     padding: 20px;
 }
@@ -25,11 +30,17 @@
     margin-top: 10px;
     margin-bottom: 10px;
     font-size: 18px;
-    width: 80%;
+    width: 90%;
+    color: #fff;
 }
 
 .nav-item.active .nav-link {
-    background-color: #007bff;
+    background-color: #fac5641c;
+    color: #fff;
+}
+
+.nav-item:hover .nav-link {
+    background-color: #fac5641c;
     color: #fff;
 }
 
@@ -39,12 +50,21 @@
     color: #333;
 }
 .navicon {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     margin-left: 15px;
     margin-right: 15px;
+    background-color: #fff;
+    color: #fac564;
+    padding: 6px;
+}
+
+.nav-item.active .navicon {
     background-color: #fac564;
-    padding: 3px;
+}
+
+.nav-item:hover .navicon {
+    background-color: #fac564;
 }
 
 .rightbar {
