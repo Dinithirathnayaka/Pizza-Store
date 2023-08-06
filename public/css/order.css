@@ -49,3 +49,11 @@ h5 {
     display: flex;
     color: #ffffff;
 }
+
+.completebtn {
+    background-color: green;
+    padding: 5px;
+    color: #ffffff;
+    border: none;
+    width: 150px;
+}

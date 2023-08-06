@@ -38,4 +38,5 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/category', [App\Http\Controllers\Admin\CategoryController::class, 'category'])->name('admin.category');
     Route::get('/users', [App\Http\Controllers\Admin\UsersController::class, 'users'])->name('admin.users');
     Route::get('/orders', [App\Http\Controllers\Admin\OrdersController::class, 'orders'])->name('admin.orders');
+    Route::get('/login', [App\Http\Controllers\Admin\AdminLoginController::class, 'login'])->name('admin.login');
 });

@@ -34,7 +34,7 @@
                     <td>5%</td>
                     <td>Rs1000.00</td>
                     <th><button class="offline">Offline</button></th>
-                    <th><button>Complete Button</button></th>
+                    <th><button class="completebtn">Complete Button</button></th>
                 </tr>
               </tbody>
               <tbody>
@@ -45,7 +45,7 @@
                     <td>5%</td>
                     <td>Rs1000.00</td>
                     <th><button class="offline">Offline</button></th>
-                    <th><button>Complete Button</button></th>
+                    <th><button class="completebtn">Complete Button</button></th>
                 </tr>
               </tbody>
          
