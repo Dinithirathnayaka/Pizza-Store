@@ -501,8 +501,12 @@ width: 100vw;
 }
 
 .menurow{
-    display: flex !important;
-    padding: 15px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates 2 columns of equal width */
+    grid-gap: 5px; /* Add a gap between grid items */
+    max-width: 100vw; /* Set a maximum width for the grid container */
+    margin: 20px auto;
 }
 
 .leftmenu{

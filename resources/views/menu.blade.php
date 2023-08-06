@@ -71,82 +71,24 @@
         </div>
 
         <div class="menurow">
-        <div class="leftmenu">
-            <div class="menudiv">
-                <div class="imgdiv"><img src="images/pizza-1.jpg" class="menuimg"/></div>
-                <div class="menucontent">
-                    <div class="toprule"><div class="namepizza">Italian Pizza</div><div class="pizzaprice"><span>-------------------</span>$20.00</div></div>
-                    <div class="bottomrule"><p>A small river named Duden flows by their place and supplies</p></div>
+            @php $counter = 0 @endphp
+            @foreach($no_pgproducts as $product)
+               @if ($counter < 8)
+
+                <div class="menudiv">
+                    <div class="imgdiv"><img src={{$product->imgurl}} class="menuimg"/></div>
+                    <div class="menucontent">
+                        <div class="toprule"><div class="namepizza">{{ $product->name }}</div><div class="pizzaprice"><span>------------------------</span>${{$product->price}}</div></div>
+                        <div class="bottomrule"><p>{{ $product->description }}</p></div>
+                    </div>
                 </div>
-        </div>
-        <div class="menudiv">
-            <div class="imgdiv"><img src="images/pizza-2.jpg" class="menuimg"/></div>
-            <div class="menucontent">
-                <div class="toprule"><div class="namepizza">Italian Pizza</div><div class="pizzaprice"><span>-------------------</span>$20.00</div></div>
-                <div class="bottomrule"><p>A small river named Duden flows by their place and supplies</p></div>
-            </div>
-    </div>
-    <div class="menudiv">
-        <div class="imgdiv"><img src="images/pizza-3.jpg" class="menuimg"/></div>
-        <div class="menucontent">
-            <div class="toprule"><div class="namepizza">Italian Pizza</div><div class="pizzaprice"><span>-------------------</span>$20.00</div></div>
-            <div class="bottomrule"><p>A small river named Duden flows by their place and supplies</p></div>
-        </div>
+            @php $counter++ @endphp <!-- Increment the counter variable -->
+            @endif
+
+            @endforeach
+
+
 </div>
-<div class="menudiv">
-    <div class="imgdiv"><img src="images/pizza-4.jpg" class="menuimg"/></div>
-    <div class="menucontent">
-        <div class="toprule"><div class="namepizza">Italian Pizza</div><div class="pizzaprice"><span>-------------------</span>$20.00</div></div>
-        <div class="bottomrule"><p>A small river named Duden flows by their place and supplies</p></div>
-    </div>
-</div>
-<div class="menudiv">
-    <div class="imgdiv"><img src="images/pizza-5.jpg" class="menuimg"/></div>
-    <div class="menucontent">
-        <div class="toprule"><div class="namepizza">Italian Pizza</div><div class="pizzaprice"><span>-------------------</span>$20.00</div></div>
-        <div class="bottomrule"><p>A small river named Duden flows by their place and supplies</p></div>
-    </div>
-</div>
-        </div>
-        <div class="rightmenu">
-            <div class="menudiv">
-                <div class="imgdiv"><img src="images/pizza-6.jpg" class="menuimg"/></div>
-                <div class="menucontent">
-                    <div class="toprule"><div class="namepizza">Italian Pizza</div><div class="pizzaprice"><span>-------------------</span>$20.00</div></div>
-                    <div class="bottomrule"><p>A small river named Duden flows by their place and supplies</p></div>
-                </div>
-        </div>
-        <div class="menudiv">
-            <div class="imgdiv"><img src="images/pizza-7.jpg" class="menuimg"/></div>
-            <div class="menucontent">
-                <div class="toprule"><div class="namepizza">Italian Pizza</div><div class="pizzaprice"><span>-------------------</span>$20.00</div></div>
-                <div class="bottomrule"><p>A small river named Duden flows by their place and supplies</p></div>
-            </div>
-    </div>
-    <div class="menudiv">
-        <div class="imgdiv"><img src="images/pizza-8.jpg" class="menuimg"/></div>
-        <div class="menucontent">
-            <div class="toprule"><div class="namepizza">Italian Pizza</div><div class="pizzaprice"><span>-------------------</span>$20.00</div></div>
-            <div class="bottomrule"><p>A small river named Duden flows by their place and supplies</p></div>
-        </div>
-</div>
-<div class="menudiv">
-    <div class="imgdiv"><img src="images/pizza-1.jpg" class="menuimg"/></div>
-    <div class="menucontent">
-        <div class="toprule"><div class="namepizza">Italian Pizza</div><div class="pizzaprice"><span>-------------------</span>$20.00</div></div>
-        <div class="bottomrule"><p>A small river named Duden flows by their place and supplies</p></div>
-    </div>
-</div>
-<div class="menudiv">
-    <div class="imgdiv"><img src="images/pizza-7.jpg" class="menuimg"/></div>
-    <div class="menucontent">
-        <div class="toprule"><div class="namepizza">Italian Pizza</div><div class="pizzaprice"><span>-------------------</span>$20.00</div></div>
-        <div class="bottomrule"><p>A small river named Duden flows by their place and supplies</p></div>
-    </div>
-</div>
->
-        </div>
-        </div>
 
 
         </div>
