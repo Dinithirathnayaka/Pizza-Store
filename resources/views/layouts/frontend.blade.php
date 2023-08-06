@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-    
+
 
         <title>Pizza Store</title>
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        
+
         <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet">
@@ -15,28 +15,28 @@
         <link rel="stylesheet" href="{{URL::asset('css/bootstrap.css')}}">
 
         <link rel="stylesheet" href="{{URL::asset('css/style.css')}}">
-        
-       
+
+
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-    
-  
+
+
 
         <!-- Fonts -->
-       
+
 
         <!-- Styles -->
         <style>
-           
+
         </style>
     </head>
     <body class="">
         <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
             <div class="container">
               <div class="toplogo"><img src="images/pizza-slicelogo.png" alt=""  class="logoimg"><div class="toplogocontent" >Pizza</div></div>
-          
-                 
+
+
                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="oi oi-menu"></span> Menu
                   </button>
@@ -57,7 +57,7 @@
         @yield('content')
 
         <footer class="ftco-footer ftco-section img ">
-           
+
           <div class="container">
             <div class="row mb-5">
               <div class="col-lg-3 col-md-6 mb-5 mb-md-5" style="text-align: left">
@@ -69,7 +69,7 @@
                     <div class="fa fa-facebook"></div>
                     <div class="fa fa-instagram"></div>
                   </div>
-                
+
                 </div>
               </div>
               <div class="col-lg-4 col-md-6 mb-5 mb-md-5" style="text-align: left">
@@ -77,7 +77,7 @@
                   <h2 class="ftco-heading-2">Recent Blog</h2>
                   <div class="block-21 mb-4 d-flex">
                     <img src="images/image_1.jpg" alt="" class="footerimg">
-                   
+
                     <div class="text" style="text-align: left">
                       <h3 class="heading" style="color: #FFFFFFE3; font-size:16px"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
                       <div class="meta" style="text-align: left">
@@ -100,7 +100,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-2 col-md-6 mb-5 mb-md-5" style="text-align: left"> 
+              <div class="col-lg-2 col-md-6 mb-5 mb-md-5" style="text-align: left">
                  <div class="ftco-footer-widget mb-4 ml-md-4" style="text-align: left">
                   <h2 class="ftco-heading-2">Services</h2>
                   <ul class="list-unstyled">
@@ -129,9 +129,9 @@
             </div>
             <div class="row">
               <div class="col-md-12 text-center">
-    
+
                 <p class="footerpara" style="color:#FFFFFFE3"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-      Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved 
+      Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
       <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
               </div>
             </div>
@@ -141,7 +141,7 @@
         <script src="js/bootstrap.js"></script>
         <script src="https://kit.fontawesome.com/eb896d6758.js" crossorigin="anonymous"></script>
         <script>
-        
+
           function showDiv(divId) {
               var divs = document.querySelectorAll('div[id^="div"]');
               for (var i = 0; i < divs.length; i++) {
@@ -158,7 +158,7 @@
             if (activeDivId) {
                 showDiv(activeDivId);
             } else {
-                
+
                 showDiv('div1');
             }
         });
@@ -166,7 +166,7 @@
 
 
 
-      
-       
+
+
     </body>
 </html>

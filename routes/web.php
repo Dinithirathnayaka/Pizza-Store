@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 
@@ -26,7 +27,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/about', [App\Http\Controllers\AboutController::class, 'about'])->name('about');
 Route::get('/contact', [App\Http\Controllers\ContactController::class, 'contact'])->name('contact');
 Route::get('/services', [App\Http\Controllers\ServicesController::class, 'services'])->name('services');
-Route::get('/menu', [App\Http\Controllers\MenuController::class, 'menu'])->name('menu');
+Route::get('/menu', [App\Http\Controllers\MenuController::class, 'index'])->name('menu');
 
 
 // ----------------ADMIN PANEL---------

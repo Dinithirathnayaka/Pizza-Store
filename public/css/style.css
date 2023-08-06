@@ -5,15 +5,15 @@
 --------------------*/
 
 .navbar-nav {
-    margin-left: auto; 
-    
+    margin-left: auto;
+
   }
 
   .navbar-nav .nav-item {
-    margin-left: 15px; 
+    margin-left: 15px;
   }
 
-  
+
   .navbar-nav .nav-link {
     text-decoration: none;
   }
@@ -38,8 +38,8 @@
   .navbar-nav .nav-item:focus{
      color: #FAC564 !important;
   }
-   
-  
+
+
 
 
 /* -----------------
@@ -133,7 +133,7 @@
 
 .welcomeright{
     padding: 60px !important;
-    
+
 }
 
 .welcome-text{
@@ -151,7 +151,7 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
- 
+
 
 }
 
@@ -215,12 +215,12 @@ input:focus, textarea:focus, select:focus{
     color: #ffffff !important;
     opacity: 0.6; /* Firefox */
   }
-  
+
   :-ms-input-placeholder { /* Internet Explorer 10-11 */
     color: #ffffff !important;
     opacity: 0.6;
   }
-  
+
   ::-ms-input-placeholder { /* Microsoft Edge */
    color: #ffffff !important;
    opacity: 0.6;
@@ -230,7 +230,7 @@ input:focus, textarea:focus, select:focus{
     background-color: #FAC564 !important;
     color:#000000;
     border-radius: none !important;
-    
+
 }
 
 /* -----------------
@@ -246,7 +246,7 @@ input:focus, textarea:focus, select:focus{
     padding-bottom: 8%;
       padding-left: 20px;
     padding-right: 20px;
-    
+
 
 }
 
@@ -275,21 +275,21 @@ p a{
 .form-controlnew:focus{
     border-color: #000000;
  }
- 
+
  input:focus, textarea:focus, select:focus{
      outline: none !important;
  }
- 
+
  ::placeholder {
      color: #ffffff !important;
      opacity: 0.6; /* Firefox */
    }
-   
+
    :-ms-input-placeholder { /* Internet Explorer 10-11 */
      color: #ffffff !important;
      opacity: 0.6;
    }
-   
+
    ::-ms-input-placeholder { /* Microsoft Edge */
     color: #ffffff !important;
     opacity: 0.6;
@@ -311,7 +311,7 @@ p a{
     margin-top: 11vh;
     padding-top: 200px;
     padding-bottom: 100px;
-  
+
 }
 
 .fas{
@@ -346,13 +346,13 @@ p a{
     transform: rotate(67.5deg);
     background-color:#ffc107 !important;
     border: 0.1px solid #ffc107;
-  
-  } 
+
+  }
 
   .serviceIcon:hover .fas{
     color: #ffffff;
-    
-    
+
+
   }
 
   .servicediv:hover .serviceIcon{
@@ -402,7 +402,7 @@ text-transform: capitalize;
     padding-top: 50px;
     padding-bottom: 50px;
     height: auto;
-  
+
 }
 
 
@@ -412,11 +412,11 @@ text-transform: capitalize;
     border-radius: 50%;
     margin-bottom: 20px;
 }
- 
+
 
 .btn-service{
     background: transparent;
-    color:#ffffff !important; 
+    color:#ffffff !important;
     border: 1px solid #ffffff;
     padding: 5px;
 }
@@ -436,7 +436,7 @@ width: 100vw;
 .menupizza{
     width: 200px;
     height: 200px;
-   
+
 
 }
 
@@ -444,7 +444,7 @@ width: 100vw;
 .text-div{
     background-color: #0000001c;
     padding: 20px;
-       
+
 }
 
 .text-div .price{
@@ -457,8 +457,11 @@ width: 100vw;
     color:#ffffff
 }
 .main{
-    display: flex;
-   
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Display three items per row */
+    grid-gap: 20px;
+    padding: 20px;
+
 }
 
 .left{
@@ -584,7 +587,7 @@ flex:0.5;
     background-color: #ffc107;
     color: #000000;
 }
-  
+
 
 
 
@@ -639,7 +642,7 @@ flex:0.5;
 
 .ftco-footer-social{
     display: flex;
-   
+
 }
 
 .ftco-animate{
@@ -649,7 +652,7 @@ flex:0.5;
     border-radius: 50%;
     position: relative;
     margin: 10px;
- 
+
 }
 
 .social{
@@ -701,7 +704,7 @@ flex:0.5;
   @media screen and (max-width: 991px) {
     .main {
      display:block;
-    
+
     }
 
     .leftdown{
@@ -722,7 +725,7 @@ flex:0.5;
   @media screen and (max-width: 768px) {
     .menurow {
      display:block !important;
-    
+
     }
 
     .leftmenu{

@@ -28,109 +28,33 @@
       </div>
     </div>
     </div>
-    
-        <div class="main">
-            <div class="left"> <div class=" text-center p-3">
-                <div class="services-wrap ">
-                    <img src="images/pizza-1.jpg" class="menupizza"/>
-                </div>
-            </div>
-            <div class=" text-div ">
-                <div class="services-wrap ">
-                    <div class="text">
-                        <h3>Greek Pizza</h3>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-                        <p ><span class="price" >$2.90 </span> <a href="#" class="ml-2 btn-order btn-white btn-outline-white ">Order</a></p>
-                    </div>
-                </div>
-            </div></div>
-            <div class="middle">     <div class=" text-center p-3  ">
-                <div class="services-wrap ">
-                    <img src="images/pizza-3.jpg" class="menupizza"/>
-                </div>
-            </div>
 
-            <div class=" text-div">
-                <div class="services-wrap ">
-                    <div class="text">
-                        <h3>American Pizza</h3>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia </p>
-                        <p ><span class="price">$2.90</span> <a href="#" class="ml-2 btn-order btn-white btn-outline-white">Order</a></p>
+    <div class="main">
+        @php $counter = 0 @endphp
+         @foreach($products as $product)
+            @if ($counter < 6)
+                <div class="left">
+                    <div class=" text-center p-3">
+                        <div class="services-wrap ">
+                            <img src={{$product->imgurl}} class="menupizza"/>
+                        </div>
                     </div>
-                </div>
-            </div></div>
-            <div class="right">  <div class=" text-center p-3">
-                <div class="services-wrap ">
-                    <img src="images/pizza-5.jpg" class="menupizza" />
-                </div>
-            </div>
-            <div class=" text-div">
-                <div class="services-wrap ">
-                    <div class="text">
-                        <h3>Margherita</h3>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-                        <p ><span class="price">$2.90</span> <a href="#" class="ml-2 btn-order btn-white btn-outline-white">Order</a></p>
-                    </div>
-                </div>
-            </div></div>
-           
-       
-          
-        </div>
-
-        <div class="main">
-            <div class="leftdown"> 
-            <div class=" text-div ">
-                <div class="services-wrap ">
-                    <div class="text">
-                        <h3>Greek Pizza</h3>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-                        <p ><span class="price">$2.90</span> <a href="#" class="ml-2 btn-order btn-white btn-outline-white">Order</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class=" text-center p-3">
-                <div class="services-wrap ">
-                    <img src="images/pizza-1.jpg" class="menupizza"/>
-                </div>
-            </div>
-        </div>
-            <div class="middledown">   
-                
-    
-                <div class=" text-div">
-                    <div class="services-wrap ">
-                        <div class="text">
-                            <h3>American Pizza</h3>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia </p>
-                            <p ><span class="price">$2.90</span> <a href="#" class="ml-2 btn-order btn-white btn-outline-white">Order</a></p>
+                    <div class=" text-div ">
+                        <div class="services-wrap ">
+                            <div class="text">
+                                <h3>{{ $product->name }}</h3>
+                                <p>{{ $product->description }}</p>
+                                <p ><span class="price" >${{ $product->price }} </span> <a href="#" class="ml-2 btn-order btn-white btn-outline-white ">Order</a></p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class=" text-center p-3  ">
-                    <div class="services-wrap ">
-                        <img src="images/pizza-3.jpg" class="menupizza"/>
-                    </div>
-                </div>
-            </div>
-            <div class="rightdown">    <div class=" text-div ">
-                <div class="services-wrap ">
-                    <div class="text">
-                        <h3>Greek Pizza</h3>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-                        <p ><span class="price">$2.90</span> <a href="#" class="ml-2 btn-order btn-white btn-outline-white">Order</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class=" text-center p-3">
-                <div class="services-wrap ">
-                    <img src="images/pizza-1.jpg" class="menupizza"/>
-                </div>
-            </div>\
-        </div>
 
-          
-        </div>
+            @php $counter++ @endphp <!-- Increment the counter variable -->
+            @endif
+
+         @endforeach
+    </div>
 
         <div class="container">
             <div class="row justify-content-center mb-5 pb-3">
@@ -218,29 +142,27 @@
         </div>
         </div>
 
-        
+
         </div>
 
 
         <div class="menus pt-3 ">
             <div class="row">  <div class="col-lg-4 col-sm-12"><img src="images/about.jpg" class="menusleftimg"/></div>
             <div class="col-lg-8 col-sm-12 "><div class="btnlist mb-3 mt-3">
-                <button onclick="showDiv('div1')">Pizza</button>
-                
-                <button onclick="showDiv('div2')">Drinks</button>
-            
-               
-                <button onclick="showDiv('div3')">Burgers</button>
-            
-                <button onclick="showDiv('div4')">Pasta</button></div>
-                
-            
+
+            @foreach($categories as $category)
+            <button onclick="showDiv('div1')">{{$category->name}}</button>
+        @endforeach
+
+            </div>
+
+
                 <div id="div1" style="display: none;">
                     <div class="row">
                         <div class="col-md-4 text-center ">
                           <div class="menu-wrap">
                             <img src="images/pizza-1.jpg" class="menu-img"  />
-                              
+
                               <div class="text">
                                   <h5>Itallian Pizza</h5>
                                   <p style="color: #808080">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
@@ -252,7 +174,7 @@
                       <div class="col-md-4 text-center ">
                           <div class="menu-wrap">
                             <img src="images/pizza-2.jpg" class="menu-img" />
-                              
+
                               <div class="text">
                                 <h5>Itallian Pizza</h5>
                                   <p style="color: #808080">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
@@ -264,7 +186,7 @@
                       <div class="col-md-4 text-center ">
                           <div class="menu-wrap">
                             <img src="images/pizza-7.jpg" class="menu-img" />
-                              
+
                               <div class="text">
                                 <h5>Itallian Pizza</h5>
                                   <p style="color: #808080">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
@@ -273,17 +195,17 @@
                               </div>
                           </div>
                       </div>
-               
+
                     </div>
                 </div>
-            
-                
+
+
                 <div id="div2" style="display: none;">
                     <div class="row">
                         <div class="col-md-4 text-center ">
                           <div class="menu-wrap">
                             <img src="images/drink-1.jpg" class="menu-img"  />
-                              
+
                               <div class="text">
                                   <h5>Lime Juice</h5>
                                   <p style="color: #808080">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
@@ -295,7 +217,7 @@
                       <div class="col-md-4 text-center ">
                           <div class="menu-wrap">
                             <img src="images/drink-2.jpg" class="menu-img" />
-                              
+
                               <div class="text">
                                 <h5>Soda Drink</h5>
                                   <p style="color: #808080">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
@@ -307,7 +229,7 @@
                       <div class="col-md-4 text-center ">
                           <div class="menu-wrap">
                             <img src="images/drink-7.jpg" class="menu-img" />
-                              
+
                               <div class="text">
                                 <h5>Apple Juice</h5>
                                   <p style="color: #808080">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
@@ -316,16 +238,16 @@
                               </div>
                           </div>
                       </div>
-               
+
                     </div>
                 </div>
-            
+
                 <div id="div3" style="display: none;">
                     <div class="row">
                         <div class="col-md-4 text-center ">
                           <div class="menu-wrap">
                             <img src="images/burger-1.jpg" class="menu-img"  />
-                              
+
                               <div class="text">
                                   <h5>Itallian burger</h5>
                                   <p style="color: #808080">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
@@ -337,7 +259,7 @@
                       <div class="col-md-4 text-center ">
                           <div class="menu-wrap">
                             <img src="images/burger-2.jpg" class="menu-img" />
-                              
+
                               <div class="text">
                                 <h5>Itallian burger</h5>
                                   <p style="color: #808080">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
@@ -349,7 +271,7 @@
                       <div class="col-md-4 text-center ">
                           <div class="menu-wrap">
                             <img src="images/burger-3.jpg" class="menu-img" />
-                              
+
                               <div class="text">
                                 <h5>Itallian burger</h5>
                                   <p style="color: #808080">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
@@ -358,16 +280,16 @@
                               </div>
                           </div>
                       </div>
-               
+
                     </div>
                 </div>
-            
+
                 <div id="div4" style="display: none;">
                     <div class="row">
                         <div class="col-md-4 text-center ">
                           <div class="menu-wrap">
                             <img src="images/pasta-1.jpg" class="menu-img"  />
-                              
+
                               <div class="text">
                                   <h5>Itallian Pasta</h5>
                                   <p style="color: #808080">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
@@ -379,7 +301,7 @@
                       <div class="col-md-4 text-center ">
                           <div class="menu-wrap">
                             <img src="images/pasta-2.jpg" class="menu-img" />
-                              
+
                               <div class="text">
                                 <h5>Itallian Pasta</h5>
                                   <p style="color: #808080">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
@@ -391,7 +313,7 @@
                       <div class="col-md-4 text-center ">
                           <div class="menu-wrap">
                             <img src="images/pasta-3.jpg" class="menu-img" />
-                              
+
                               <div class="text">
                                 <h5>Itallian Pasta</h5>
                                   <p style="color: #808080">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
@@ -400,16 +322,31 @@
                               </div>
                           </div>
                       </div>
-               
+
                     </div>
                 </div>
             </div></div>
-          
+
         </div>
 
 
     </div>
     </div>
+
+
 </section>
-  
+
 @endsection
+
+<script>
+    // jQuery function to handle category button click
+    $(document).ready(function() {
+        $('.category-btn').on('click', function() {
+            const categoryId = $(this).data('category');
+
+            // Hide all product cards and show only the cards with the selected category
+            $('.card').hide();
+            $(`.category-${categoryId}`).show();
+        });
+    });
+</script>
