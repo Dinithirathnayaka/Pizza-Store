@@ -1,0 +1,49 @@
+.leftbar {
+    display: none !important;
+}
+.rightbar {
+    width: 100vw;
+    padding-top: 10%;
+    background-color: #808080;
+    /* background-image: url("{{ asset('images/bg_1.jpg') }}") !important; */
+}
+
+.adminlogin {
+    background-color: #808080;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card {
+    width: 500px;
+    padding: 20px;
+    background-color: #212529;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logintext {
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.loginbtn {
+    background-color: #fac564;
+    width: 100px;
+    border: none;
+    outline: none;
+    padding: 5px;
+    color: #212529;
+    font-weight: 500;
+}
+
+.forgotlink {
+    text-decoration: none;
+    font-size: small;
+}
+
+.adminlogin label {
+    color: #fff;
+}

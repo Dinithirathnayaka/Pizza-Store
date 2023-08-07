@@ -3,7 +3,7 @@
 @section('content')
 <div class="rightnav-header">
     <span class="ms-1 font-weight-bold light">Category Details</span>
-  <div style="margin-left: 80%"> <img src="{{ asset('images/adminuser.png') }}"   class="signinicon" alt="main_logo"> <span>Sign In</span></div>
+  <div style="margin-left: 80%"> <a href="{{ route('admin.login') }}"><img src="{{ asset('images/adminuser.png') }}"   class="signinicon" alt="main_logo"> <span>Sign In</a></span></div>
   
   </div>
   <hr style="color: #fff"/>
