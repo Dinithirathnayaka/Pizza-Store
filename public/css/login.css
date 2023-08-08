@@ -31,17 +31,20 @@
 
 .loginbtn {
     background-color: #fac564;
-    width: 100px;
+    width: 150px;
     border: none;
     outline: none;
     padding: 5px;
     color: #212529;
     font-weight: 500;
+    font-size: 18px;
+    border-radius: 10px;
 }
 
 .forgotlink {
     text-decoration: none;
     font-size: small;
+    color: red;
 }
 
 .adminlogin label {

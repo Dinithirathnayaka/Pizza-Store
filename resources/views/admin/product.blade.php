@@ -11,7 +11,7 @@
 <div class="product">
 
    
-
+  <a href="{{ route('admin.products.create') }}" class="addbtn">Add</a>
     <table class="table  text-center" border="2" style="width: 100%">
     
 
