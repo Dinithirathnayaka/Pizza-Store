@@ -25,6 +25,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/about', [App\Http\Controllers\AboutController::class, 'about'])->name('about');
+Route::get('/fetch-products',[App\Http\Controllers\MenuController::class, 'fetchProductsByCategory']);
 Route::get('/contact', [App\Http\Controllers\ContactController::class, 'contact'])->name('contact');
 Route::get('/services', [App\Http\Controllers\ServicesController::class, 'services'])->name('services');
 Route::get('/menu', [App\Http\Controllers\MenuController::class, 'index'])->name('menu');
