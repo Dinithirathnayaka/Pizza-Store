@@ -12,8 +12,7 @@
 
     <div class="category">
 
-
-        <button class="addbtn">Create new </button>
+        <a href="{{route('admin.category.create')}}">Create Category</a>
         <table class="table  text-center" border="2" style="width: 100%">
 
 
