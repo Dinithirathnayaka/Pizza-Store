@@ -141,10 +141,12 @@
                 <div class="col-lg-8 col-sm-12">
 
                     <div class="slider" id="slider-id">
+
                         <input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav" />
                         <input type="radio" name="slider" title="slide2" class="slider__nav" />
                         <input type="radio" name="slider" title="slide3" class="slider__nav" />
                         <input type="radio" name="slider" title="slide4" class="slider__nav" />
+
                         <div class="slider__inner">
                             <div class="slider__contents">
                                 <div class="row">
@@ -293,7 +295,7 @@
                     }
 
                 }
-                let inndiv = ` <div class="slider__inner"> `;
+                let inndiv = '<div class="slider__inner">';
                 carouselContainer.append(inndiv);
                 // Group products into sets of 3
 
