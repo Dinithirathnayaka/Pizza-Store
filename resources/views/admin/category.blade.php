@@ -33,14 +33,15 @@
                         <td>{{ $category->name }}</td>
                         <td>{{ $category->description }}</td>
                         <td>
-                            <form action="{{ route('admin.category.delete', $category->id) }}"
-                                method="POST",style="display: none;",id="deleteForm">
+                            <form action="{{ route('admin.category.delete', $category->id) }}" style="display: none;"
+                                method="POST" id="deleteForm">
                                 @csrf
                                 @method('DELETE')
 
-                                <button type="submit",class="deletebtn",
-                                    style="display: inline-block;",id="deleteButton">Delete</button>
                             </form>
+
+                            <button class="deletebtn" style="display: inline-block;" onclick="deletecat();"
+                                id="deleteButton">Delete</button>
 
                         </td>
                     </tr>
@@ -61,17 +62,17 @@
 
 @section('scripts')
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var deleteButton = document.getElementById('deleteButton');
+        function deletecat() {
+            console.log("pressed");
+            var shouldDelete = confirm('Are you sure you want to delete?');
 
-            deleteButton.addEventListener('click', function(event) {
-                var shouldDelete = confirm('Are you sure you want to delete this category?');
+            if (!shouldDelete) {
+                event.preventDefault(); // Prevent the form submission
+            } else {
+                $("#deleteForm").submit();
+            }
 
-                if (!shouldDelete) {
-                    event.preventDefault(); // Prevent the form submission
-                }
-            });
-        });
+        }
     </script>
 
     <script>

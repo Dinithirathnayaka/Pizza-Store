@@ -153,7 +153,7 @@
 
                 // Select the carousel container
                 var carouselContainer = $('#carousel-container');
-
+                console.log(carouselContainer);
                 // Clear existing content
                 carouselContainer.empty();
 
@@ -183,8 +183,10 @@
                             </div>
                         </div>
                     `;
-
+                    // console.log(slideHtml);
                     carouselContainer.append(slideHtml);
+                    carouselContainer.show();
+
                 }
 
                 // Show the carousel container

@@ -14,11 +14,11 @@ class DatabaseSeeder extends Seeder
     {
 
 
-        DB::table('categories')->insert([
-            ['name' => 'Pizza', 'description' => 'Description for Category 1'],
-            ['name' => 'Burger', 'description' => 'Description for Category 2'],
+        // DB::table('categories')->insert([
+        //     ['name' => 'Pizza', 'description' => 'Description for Category 1'],
+        //     ['name' => 'Burger', 'description' => 'Description for Category 2'],
 
-        ]);
+        // ]);
 
 
 
