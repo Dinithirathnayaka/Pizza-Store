@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
-
+use App\Models\Product;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -16,8 +16,8 @@ class ProductController extends Controller
     {
         // Your code to display a list of products
 
-
-        return view('admin.product');
+        $products=Product::paginate(5);
+        return view('admin.product', compact('products'));
     }
 
     public function create()
