@@ -14,7 +14,7 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id'); // Add the foreign key column
             $table->double('discount')->default(0.0);
             $table->integer('orderstatus')->default(0);
-            $table->timestamps();
+            $table->timestamps('');
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });

@@ -4,11 +4,16 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Category;
 
 class CategoryController extends Controller
 {
-    public function category()
+    public function index()
     {
-        return view('admin.category');
+        $categories = Category::all();
+        return view('admin.category',compact('categories'));
     }
+
+
+
 }
