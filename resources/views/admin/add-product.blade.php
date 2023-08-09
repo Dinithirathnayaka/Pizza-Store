@@ -16,8 +16,8 @@
         <label for="name">Product Name:</label>
         <input type="text" id="name" name="name" required>
 
-        <label for="image">Product Image URL:</label>
-        <input type="text" id="image" name="imgurl" required>
+        <label for="image">Product Image:</label>
+        <input type="file" id="image" name="imgurl" accept="image/*" required>
 
         <label for="discount">Discount (%):</label>
         <input type="number" id="discount" name="discount" min="0" max="100" step="1" required>
