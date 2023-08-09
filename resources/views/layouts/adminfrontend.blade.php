@@ -14,7 +14,6 @@
     <link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet">
 
     <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.css') }}">
-
     <link rel="stylesheet" href="{{ URL::asset('css/style.css') }}">
 
 

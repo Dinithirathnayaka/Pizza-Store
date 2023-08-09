@@ -99,11 +99,19 @@
 
         </div>
 
+        <div class=" d-flex justify-content-center">
+            <div class="btnlist mb-1 mt-3">
 
-        <div class="menus pt-3">
-            <div class="row">
-                <div class="col-lg-4 col-sm-12"><img src="images/about.jpg" class="menusleftimg" /></div>
-                <div class="col-lg-8 col-sm-12">
+                @foreach ($categories as $category)
+                    <button onclick="fetchProductsByCategory({{ $category->id }})">{{ $category->name }}</button>
+                @endforeach
+
+            </div>
+        </div>
+        <div class="menus pt-3 ">
+            <div class="row vw-100">
+                <div class="col-lg-4 col-sm-12"><img src="images/about.jpg" class="menusleftimg ps-3" /></div>
+                {{-- <div class="col-lg-8 col-sm-12">
                     <div class="btnlist mb-3 mt-3">
 
                         @foreach ($categories as $category)
@@ -128,7 +136,109 @@
                         </div>
                     </div>
 
+                </div> --}}
+
+                <div class="col-lg-8 col-sm-12">
+
+                    <div class="slider" id="slider-id">
+                        <input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav" />
+                        <input type="radio" name="slider" title="slide2" class="slider__nav" />
+                        <input type="radio" name="slider" title="slide3" class="slider__nav" />
+                        <input type="radio" name="slider" title="slide4" class="slider__nav" />
+                        <div class="slider__inner">
+                            <div class="slider__contents">
+                                <div class="row">
+                                    <div class="col-md-4 text-center">
+
+                                        <div class="menu-wrap">
+                                            <img src="${product.imgurl}" class="menu-img" />
+                                            <div class="text">
+                                                <h5>"dfdf"</h5>
+                                                <p style="color: #808080">sddsd</p>
+                                                <p class="price"><span style="color: #ffc107">rsdsd</span></p>
+                                                <p><a href="#" class="btn-service mb-3">Add to cart</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <div class="menu-wrap">
+                                            <img src="${product.imgurl}" class="menu-img" />
+                                            <div class="text">
+                                                <h5>"dfdf"</h5>
+                                                <p style="color: #808080">sddsd</p>
+                                                <p class="price"><span style="color: #ffc107">rsdsd</span></p>
+                                                <p><a href="#" class="btn-service mb-3">Add to cart</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <div class="menu-wrap">
+                                            <img src="${product.imgurl}" class="menu-img" />
+                                            <div class="text">
+                                                <h5>"dfdf"</h5>
+                                                <p style="color: #808080">sddsd</p>
+                                                <p class="price"><span style="color: #ffc107">rsdsd</span></p>
+                                                <p><a href="#" class="btn-service mb-3">Add to cart</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="slider__contents">
+                                <div class="row">
+                                    <div class="col-md-4 text-center">
+
+                                        <div class="menu-wrap">
+                                            <img src="${product.imgurl}" class="menu-img" />
+                                            <div class="text">
+                                                <h5>"dfdf"</h5>
+                                                <p style="color: #808080">sddsd</p>
+                                                <p class="price"><span style="color: #ffc107">rsdsd</span></p>
+                                                <p><a href="#" class="btn-service mb-3">Add to cart</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <div class="menu-wrap">
+                                            <img src="${product.imgurl}" class="menu-img" />
+                                            <div class="text">
+                                                <h5>"dfdf"</h5>
+                                                <p style="color: #808080">sddsd</p>
+                                                <p class="price"><span style="color: #ffc107">rsdsd</span></p>
+                                                <p><a href="#" class="btn-service mb-3">Add to cart</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <div class="menu-wrap">
+                                            <img src="${product.imgurl}" class="menu-img" />
+                                            <div class="text">
+                                                <h5>"dfdf"</h5>
+                                                <p style="color: #808080">sddsd</p>
+                                                <p class="price"><span style="color: #ffc107">rsdsd</span></p>
+                                                <p><a href="#" class="btn-service mb-3">Add to cart</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="slider__contents"><i class="slider__image fa fa-television"></i>
+                                <h2 class="slider__caption">television</h2>
+                                <p class="slider__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At
+                                    cupiditate omnis possimus illo quos, corporis minima!</p>
+                            </div>
+                            <div class="slider__contents"><i class="slider__image fa fa-diamond"></i>
+                                <h2 class="slider__caption">diamond</h2>
+                                <p class="slider__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At
+                                    cupiditate omnis possimus illo quos, corporis minima!</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
+
             </div>
         </div>
 
@@ -139,6 +249,21 @@
     </section>
 @endsection
 
+{{-- @section('styles')
+    <link href="{{ asset('css/menucarosul.css') }}" rel="stylesheet">
+@endsection --}}
+
+{{-- <div class="col-md-4 text-center">
+    <div class="menu-wrap">
+        <img src="${product.imgurl}" class="menu-img" />
+        <div class="text">
+            <h5>${product.name}</h5>
+            <p style="color: #808080">${product.description}</p>
+            <p class="price"><span style="color: #ffc107">$${product.price}</span></p>
+            <p><a href="#" class="btn-service mb-3">Add to cart</a></p>
+        </div>
+    </div>
+</div> --}}
 <script>
     function fetchProductsByCategory(categoryId) {
         console.log("IN-----------IN");
@@ -150,45 +275,60 @@
             },
             success: function(data) {
                 console.log(data);
-
-                // Select the carousel container
-                var carouselContainer = $('#carousel-container');
+                var carouselContainer = $('#slider-id');
                 console.log(carouselContainer);
                 // Clear existing content
                 carouselContainer.empty();
 
-                // Group products into sets of 3
+                let catcount = Math.floor(data.length / 3);
                 for (var i = 0; i < data.length; i += 3) {
-                    var productsSet = data.slice(i, i + 3);
-
-                    // Generate carousel slide HTML
-                    var slideHtml = `
-                        <div class="carousel-item">
-                            <div class="row">
-                                ${productsSet.map(function(product) {
-                                    return `
-                                        <div class="col-md-4 text-center">
-                                            <div class="menu-wrap">
-                                                <img src="${product.imgurl}" class="menu-img" />
-                                                <div class="text">
-                                                    <h5>${product.name}</h5>
-                                                    <p style="color: #808080">${product.description}</p>
-                                                    <p class="price"><span style="color: #ffc107">$${product.price}</span></p>
-                                                    <p><a href="#" class="btn-service mb-3">Add to cart</a></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    `;
-                                }).join('')}
-                            </div>
-                        </div>
-                    `;
-                    // console.log(slideHtml);
-                    carouselContainer.append(slideHtml);
-                    carouselContainer.show();
+                    if (i == 0) {
+                        let radiohtml =
+                            `<input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav" /> `;
+                        carouselContainer.append(radiohtml);
+                    } else {
+                        let radiohtml =
+                            `  <input type="radio" name="slider" title="slide4" class="slider__nav" /> `;
+                        carouselContainer.append(radiohtml);
+                    }
 
                 }
+                let inndiv = ` <div class="slider__inner"> `;
+                carouselContainer.append(inndiv);
+                // Group products into sets of 3
 
+                for (var i = 0; i < data.length; i += 3) {
+                    var productsSet = data.slice(i, i + 3);
+                    // Generate carousel slide HTML
+                    var slideHtml = `
+                    <div class="slider__contents">
+                          <div class="row">
+                                ${productsSet.map(function(product) {
+                                    return `
+                                    <div class="col-md-4 text-center">
+                                        <div class="menu-wrap">
+                                            <img src="${product.imgurl}" class="menu-img" />
+                                            <div class="text">
+                                                <h5>${product.name}</h5>
+                                                <p style="color: #808080">${product.description}</p>
+                                                <p class="price"><span style="color: #ffc107">$${product.price}</span></p>
+                                                <p><a href="#" class="btn-service mb-3">Add to cart</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    `;
+                                }).join('')}
+
+                         </div>
+                    </div>
+                    `;
+                    console.log(slideHtml);
+                    carouselContainer.append(slideHtml);
+                    // carouselContainer.show();
+
+                }
+                let enddiv = `</div>`
+                carouselContainer.append(enddiv);
                 // Show the carousel container
                 carouselContainer.show();
             },
@@ -198,4 +338,62 @@
             }
         });
     }
+    // function fetchProductsByCategory(categoryId) {
+    //     console.log("IN-----------IN");
+    //     $.ajax({
+    //         url: '/fetch-products',
+    //         type: 'GET',
+    //         data: {
+    //             id: categoryId
+    //         },
+    //         success: function(data) {
+    //             console.log(data);
+
+    //             // Select the carousel container
+    //             var carouselContainer = $('#carousel-container');
+    //             console.log(carouselContainer);
+    //             // Clear existing content
+    //             carouselContainer.empty();
+
+    //             // Group products into sets of 3
+    //             for (var i = 0; i < data.length; i += 3) {
+    //                 var productsSet = data.slice(i, i + 3);
+
+    //                 // Generate carousel slide HTML
+    //                 var slideHtml = `
+    //                     <div class="carousel-item">
+    //                         <div class="row">
+    //                             ${productsSet.map(function(product) {
+    //                                 return `
+    //                                     <div class="col-md-4 text-center">
+    //                                         <div class="menu-wrap">
+    //                                             <img src="${product.imgurl}" class="menu-img" />
+    //                                             <div class="text">
+    //                                                 <h5>${product.name}</h5>
+    //                                                 <p style="color: #808080">${product.description}</p>
+    //                                                 <p class="price"><span style="color: #ffc107">$${product.price}</span></p>
+    //                                                 <p><a href="#" class="btn-service mb-3">Add to cart</a></p>
+    //                                             </div>
+    //                                         </div>
+    //                                     </div>
+    //                                 `;
+    //                             }).join('')}
+    //                         </div>
+    //                     </div>
+    //                 `;
+    //                 // console.log(slideHtml);
+    //                 carouselContainer.append(slideHtml);
+    //                 carouselContainer.show();
+
+    //             }
+
+    //             // Show the carousel container
+    //             carouselContainer.show();
+    //         },
+    //         error: function(error) {
+    //             console.log("ERROR  ");
+    //             console.log(error);
+    //         }
+    //     });
+    // }
 </script>

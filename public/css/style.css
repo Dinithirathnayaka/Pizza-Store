@@ -566,6 +566,10 @@ flex:0.5;
     height: 80vh;
 }
 
+.btnlist{
+    width: auto;
+}
+
 .btnlist button{
     width: 100px;
     height: 40px;
