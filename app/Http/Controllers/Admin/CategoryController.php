@@ -21,7 +21,22 @@ class CategoryController extends Controller
 
     public function store(Request $request)
     {
-        // Your code to store a new product
+        $validatedData = $request->validate([
+            'name' => 'required|unique:categories|max:255',
+            'description' => 'required',
+        ]);
+
+        try {
+            $category = Category::create($validatedData);
+
+            return redirect()->route('admin.category')
+                ->with('success', 'Category created successfully.');
+        } catch (\Throwable $th) {
+            return redirect()->route('admin.category.create')
+                ->with('fail', 'Category created failed.');
+        }
+
+
     }
 
     public function show($id)
@@ -41,6 +56,14 @@ class CategoryController extends Controller
 
     public function destroy($id)
     {
-        // Your code to delete a product
+       try {
+        $category = Category::findOrFail($id);
+        $category->delete();
+            return redirect()->route('admin.category')
+                ->with('success', 'Category deleted successfully.');
+       } catch (\Throwable $th) {
+            return redirect()->route('admin.category')
+            ->with('success', 'Category deleted failed.');
+       }
     }
 }

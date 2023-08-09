@@ -12,7 +12,7 @@
 
     <div class="category">
 
-        <a href="{{route('admin.category.create')}}">Create Category</a>
+        <a href="{{ route('admin.category.create') }}">Create Category</a>
         <table class="table  text-center" border="2" style="width: 100%">
 
 
@@ -32,7 +32,17 @@
                         <td>{{ $category->id }}</td>
                         <td>{{ $category->name }}</td>
                         <td>{{ $category->description }}</td>
-                        <td><button class="deletebtn">Delete</button></td>
+                        <td>
+                            <form action="{{ route('admin.category.delete', $category->id) }}"
+                                method="POST",style="display: none;",id="deleteForm">
+                                @csrf
+                                @method('DELETE')
+
+                                <button type="submit",class="deletebtn",
+                                    style="display: inline-block;",id="deleteButton">Delete</button>
+                            </form>
+
+                        </td>
                     </tr>
                 </tbody>
             @endforeach
@@ -50,6 +60,20 @@
 @endsection
 
 @section('scripts')
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var deleteButton = document.getElementById('deleteButton');
+
+            deleteButton.addEventListener('click', function(event) {
+                var shouldDelete = confirm('Are you sure you want to delete this category?');
+
+                if (!shouldDelete) {
+                    event.preventDefault(); // Prevent the form submission
+                }
+            });
+        });
+    </script>
+
     <script>
         function openPopup() {
             var popup = document.getElementById('addCategoryPopup');

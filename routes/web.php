@@ -40,6 +40,8 @@ Route::group(['prefix' => 'admin'], function () {
     Route::post('/products', [App\Http\Controllers\Admin\ProductController::class, 'store'])->name('admin.products.store');
     Route::get('/category', [App\Http\Controllers\Admin\CategoryController::class, 'index'])->name('admin.category');
     Route::get('/category/create', [App\Http\Controllers\Admin\CategoryController::class, 'create'])->name('admin.category.create');
+    Route::delete('/category/delete/{id}', [App\Http\Controllers\Admin\CategoryController::class, 'destroy'])->name('admin.category.delete');
+    Route::post('/category/store', [App\Http\Controllers\Admin\CategoryController::class, 'store'])->name('admin.category.store');
     Route::get('/users', [App\Http\Controllers\Admin\UsersController::class, 'users'])->name('admin.users');
     Route::get('/orders', [App\Http\Controllers\Admin\OrdersController::class, 'orders'])->name('admin.orders');
     Route::get('/login', [App\Http\Controllers\Admin\AdminLoginController::class, 'login'])->name('admin.login');
