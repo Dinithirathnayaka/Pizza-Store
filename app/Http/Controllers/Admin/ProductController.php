@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 use App\Models\Product;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Category;
 
 class ProductController extends Controller
 {
@@ -22,12 +23,45 @@ class ProductController extends Controller
 
     public function create()
     {
-        return view('admin.add-product');
+        $categories = Category::all();
+
+        return view('admin.add-product',compact('categories'));
     }
 
     public function store(Request $request)
     {
-        // Your code to store a new product
+
+        try {
+            $validatedData = $request->validate([
+                'category_id' => 'required|exists:categories,id',
+                'name' => 'required|string|max:255',
+                'imgurl' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+                'discount' => 'required|numeric|min:0|max:100',
+                'price' => 'required|numeric|min:0',
+            ]);
+
+            // Upload and store the image
+            if ($request->hasFile('imgurl')) {
+                $imagePath = $request->file('imgurl')->store('product_images', 'public');
+            }
+
+            // Create a new product
+            $product = new Product();
+            $product->category_id = $validatedData['category_id'];
+            $product->name = $validatedData['name'];
+            $product->imgurl = $imagePath; // Store the image path
+            $product->discount = $validatedData['discount'];
+            $product->price = $validatedData['price'];
+            $product->save();
+
+            return redirect()->route('admin.products.index')
+                ->with('success', 'Product added successfully.');
+        } catch (\Throwable $th) {
+
+
+        }
+
+
     }
 
     public function show($id)

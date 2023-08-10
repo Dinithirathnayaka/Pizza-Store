@@ -278,31 +278,30 @@
             success: function(data) {
                 console.log(data);
                 var carouselContainer = $('#slider-id');
-                console.log(carouselContainer);
+
                 // Clear existing content
                 carouselContainer.empty();
 
                 let catcount = Math.floor(data.length / 3);
+                var slideHtml = '';
                 for (var i = 0; i < data.length; i += 3) {
                     if (i == 0) {
-                        let radiohtml =
-                            `<input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav" /> `;
-                        carouselContainer.append(radiohtml);
+                        slideHtml +=
+                            '<input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav" /> ';
                     } else {
-                        let radiohtml =
-                            `  <input type="radio" name="slider" title="slide4" class="slider__nav" /> `;
-                        carouselContainer.append(radiohtml);
+                        slideHtml +=
+                            '<input type="radio" name="slider" title="slide4" class="slider__nav" /> ';
                     }
-
                 }
-                let inndiv = '<div class="slider__inner">';
-                carouselContainer.append(inndiv);
+                slideHtml += '<div class="slider__inner">';
+
                 // Group products into sets of 3
+                console.log(carouselContainer);
 
                 for (var i = 0; i < data.length; i += 3) {
                     var productsSet = data.slice(i, i + 3);
                     // Generate carousel slide HTML
-                    var slideHtml = `
+                    slideHtml += `
                     <div class="slider__contents">
                           <div class="row">
                                 ${productsSet.map(function(product) {
@@ -324,22 +323,24 @@
                          </div>
                     </div>
                     `;
-                    console.log(slideHtml);
-                    carouselContainer.append(slideHtml);
-                    // carouselContainer.show();
 
+                    // carouselContainer.show();
                 }
-                let enddiv = `</div>`
-                carouselContainer.append(enddiv);
+                slideHtml += '</div>';
+                console.log(slideHtml);
+                carouselContainer.append(slideHtml);
+
                 // Show the carousel container
                 carouselContainer.show();
             },
             error: function(error) {
-                console.log("ERROR  ");
+                console.log("ERROR");
                 console.log(error);
             }
         });
     }
+
+
     // function fetchProductsByCategory(categoryId) {
     //     console.log("IN-----------IN");
     //     $.ajax({
