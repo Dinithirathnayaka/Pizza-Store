@@ -5,7 +5,7 @@ use App\Models\Product;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Category;
-
+use Illuminate\Validation\ValidationException;
 class ProductController extends Controller
 {
     // public function product()
@@ -28,9 +28,9 @@ class ProductController extends Controller
         return view('admin.add-product',compact('categories'));
     }
 
+
     public function store(Request $request)
     {
-
         try {
             $validatedData = $request->validate([
                 'category_id' => 'required|exists:categories,id',
@@ -56,13 +56,14 @@ class ProductController extends Controller
 
             return redirect()->route('admin.products.index')
                 ->with('success', 'Product added successfully.');
+        } catch (ValidationException $e) {
+            return redirect()->back()->withErrors($e->errors())->withInput();
         } catch (\Throwable $th) {
-
-
+            // Handle other exceptions or errors
         }
-
-
     }
+
+
 
     public function show($id)
     {
