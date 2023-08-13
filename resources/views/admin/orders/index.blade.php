@@ -30,27 +30,20 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>02</td>
-                    <td>05/08/2023</td>
-                    <td>Supus</td>
-                    <td>5%</td>
-                    <td>Rs1000.00</td>
-                    <th><button class="offline">Offline</button></th>
-                    <th><button class="completebtn">Complete Button</button></th>
-                </tr>
+                @foreach ($orders as $order)
+                    <tr>
+                        <td>{{ $order->id }}</td>
+                        <td>{{ \Carbon\Carbon::parse($order->total)->format('Y-m-d H:i') }}</td>
+                        <td>{{ $order->cusname }}</td>
+                        <td>{{ $order->discount }}</td>
+                        <td>{{ $order->total }}</td>
+                        <th><button class="offline">Offline</button></th>
+                        <th><button class="completebtn">Complete Button</button></th>
+                    </tr>
+                @endforeach
+
             </tbody>
-            <tbody>
-                <tr>
-                    <td>02</td>
-                    <td>05/08/2023</td>
-                    <td>Supus</td>
-                    <td>5%</td>
-                    <td>Rs1000.00</td>
-                    <th><button class="offline">Offline</button></th>
-                    <th><button class="completebtn">Complete Button</button></th>
-                </tr>
-            </tbody>
+
 
         </table>
 
