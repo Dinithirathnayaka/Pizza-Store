@@ -31,29 +31,26 @@
         </div>
 
         <div class="main">
-            @php $counter = 0 @endphp
+
             @foreach ($products as $product)
-                @if ($counter < 6)
-                    <div class="left">
-                        <div class=" text-center p-3">
-                            <div class="services-wrap ">
-                                <img src={{ $product->imgurl }} class="menupizza" />
-                            </div>
+                <div class="left">
+                    <div class=" text-center p-3">
+                        <div class="services-wrap ">
+                            <img src={{ $product->imgurl }} class="menupizza" />
                         </div>
-                        <div class=" text-div ">
-                            <div class="services-wrap ">
-                                <div class="text">
-                                    <h3>{{ $product->name }}</h3>
-                                    <p>{{ $product->description }}</p>
-                                    <p><span class="price">${{ $product->price }} </span> <a href="#"
-                                            class="ml-2 btn-order btn-white btn-outline-white ">Order</a></p>
-                                </div>
+                    </div>
+                    <div class=" text-div ">
+                        <div class="services-wrap ">
+                            <div class="text">
+                                <h3>{{ $product->name }}</h3>
+                                <p>{{ $product->description }}</p>
+                                <p><span class="price">${{ $product->price }} </span> <a
+                                        href="{{ route('cart.add', ['product' => $product]) }}"
+                                        class="ml-2 btn-order btn-white btn-outline-white ">Add to cart</a></p>
                             </div>
                         </div>
                     </div>
-
-                    @php $counter++ @endphp <!-- Increment the counter variable -->
-                @endif
+                </div>
             @endforeach
 
 

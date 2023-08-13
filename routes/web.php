@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\CartController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -30,6 +31,17 @@ Route::get('/fetch-products',[App\Http\Controllers\MenuController::class, 'fetch
 Route::get('/contact', [App\Http\Controllers\ContactController::class, 'contact'])->name('contact');
 Route::get('/services', [App\Http\Controllers\ServicesController::class, 'services'])->name('services');
 Route::get('/menu', [App\Http\Controllers\MenuController::class, 'index'])->name('menu');
+
+
+Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
+Route::get('/cart/add/{product}', [CartController::class, 'add'])->name('cart.add');
+Route::patch('/cart/update/{product}', [CartController::class, 'update'])->name('cart.update');
+Route::delete('/cart/remove/{product}', [CartController::class, 'remove'])->name('cart.remove');
+Route::delete('/cart/clear', [CartController::class, 'clear'])->name('cart.clear');
+
+
+
+
 
 
 // ----------------ADMIN PANEL---------
