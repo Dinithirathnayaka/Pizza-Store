@@ -20,4 +20,10 @@ class Order extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+
+    public function rider()
+    {
+        return $this->belongsTo(Rider::class, 'rider_id');
+    }
 }

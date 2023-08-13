@@ -12,4 +12,9 @@ class Rider extends Model
     protected $fillable = [
         'emp_id', 'name', 'mobile', 'imgurl'
     ];
+
+    public function orders()
+    {
+        return $this->hasMany(Order::class, 'rider_id');
+    }
 }
