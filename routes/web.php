@@ -87,7 +87,7 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/users', [UsersController::class, 'users'])->name('admin.users');
 
     // orders
-    Route::get('/orders', [OrdersController::class, 'orders'])->name('admin.orders');
+    Route::get('/orders', [OrdersController::class, 'index'])->name('admin.orders');
 
 
 });

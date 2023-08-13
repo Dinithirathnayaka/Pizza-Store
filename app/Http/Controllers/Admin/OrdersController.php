@@ -18,9 +18,11 @@ class OrdersController extends Controller
     }
 
 
-    public function orders()
+    public function index()
     {
-        return view('admin.orders.index');
+
+        $orders = Order::paginate(15);
+        return view('admin.orders.index',compact('orders'));
     }
 
 

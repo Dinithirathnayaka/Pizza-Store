@@ -46,6 +46,9 @@
 
 
         </table>
+        <div>
+            {{ $orders->links('pagination::bootstrap-5') }}
+        </div>
 
     </div>
 @endsection
