@@ -81,6 +81,10 @@
                             href="{{ route('admin.category') }}" class="nav-link"><span><img
                                     src="{{ asset('images/category.png') }}" alt=""
                                     class="navicon"></span>Category</a></li>
+                    <li class="nav-item {{ request()->is('admin/category') ? 'active' : '' }}"><a
+                            href="{{ route('admin.riders') }}" class="nav-link"><span><img
+                                    src="{{ asset('images/category.png') }}" alt=""
+                                    class="navicon"></span>Riders</a></li>
                 </ul>
             </div>
         </div>
