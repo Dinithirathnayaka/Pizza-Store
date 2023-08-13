@@ -35,6 +35,7 @@ class ProductController extends Controller
             $validatedData = $request->validate([
                 'category_id' => 'required|exists:categories,id',
                 'name' => 'required|string|max:255',
+                'description'=> 'required|string|max:255',
                 'imgurl' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
                 'discount' => 'required|numeric|min:0|max:100',
                 'price' => 'required|numeric|min:0',
@@ -42,24 +43,32 @@ class ProductController extends Controller
 
             // Upload and store the image
             if ($request->hasFile('imgurl')) {
-                $imagePath = $request->file('imgurl')->store('product_images', 'public');
+
+                $image=$request->imgurl;
+                $imagename=time().'.'.$image->getClientOriginalExtension();
+                // return ($imagename);
+                $request->imgurl->move('products',$imagename);
+
             }
+
+
 
             // Create a new product
             $product = new Product();
             $product->category_id = $validatedData['category_id'];
             $product->name = $validatedData['name'];
-            $product->imgurl = $imagePath; // Store the image path
+            $product->imgurl = $imagename; // Store the image path
             $product->discount = $validatedData['discount'];
             $product->price = $validatedData['price'];
+            $product->description=$validatedData['description'];
             $product->save();
 
-            return redirect()->route('admin.products.index')
+            return redirect()->route('admin.product')
                 ->with('success', 'Product added successfully.');
         } catch (ValidationException $e) {
             return redirect()->back()->withErrors($e->errors())->withInput();
         } catch (\Throwable $th) {
-            // Handle other exceptions or errors
+            return redirect()->back()->withErrors(['error' => 'An error occurred while processing your request.'])->withInput();
         }
     }
 
@@ -72,16 +81,64 @@ class ProductController extends Controller
 
     public function edit($id)
     {
-        // Your code to show a form for editing a product
+
+        $categories = Category::all();
+
+        $product = Product::findOrFail($id);
+        return view('admin.edit-product', compact('product','categories'));
     }
+
 
     public function update(Request $request, $id)
     {
-        // Your code to update a product
+        try {
+            $product = Product::findOrFail($id);
+
+            $validatedData = $request->validate([
+               'category_id' => 'required|exists:categories,id',
+                'name' => 'required|string|max:255',
+                'description'=> 'required|string|max:255',
+                'imgurl' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+                'discount' => 'required|numeric|min:0|max:100',
+                'price' => 'required|numeric|min:0',
+            ]);
+
+
+            $product->category_id = $validatedData['category_id'];
+            $product->name = $validatedData['name'];
+            $product->discount = $validatedData['discount'];
+            $product->price = $validatedData['price'];
+            $product->description=$validatedData['description'];
+
+            if ($request->hasFile('imgurl')) {
+                $image = $request->imgurl;
+                $imagename = time().'.'.$image->getClientOriginalExtension();
+                $request->imgurl->move('products', $imagename);
+                $product->imgurl = $imagename;
+            }
+
+            // Save the changes
+            $product->save();
+            return redirect()->route('admin.product')
+                ->with('success', 'Product updated successfully.');
+        } catch (ValidationException $e) {
+            return redirect()->back()->withErrors($e->errors())->withInput();
+        } catch (\Throwable $th) {
+            return redirect()->back()->withErrors(['error' => 'An error occurred while processing your request.'])->withInput();
+        }
     }
 
     public function destroy($id)
     {
-        // Your code to delete a product
+        try {
+            $product = Product::findOrFail($id);
+            $product->delete();
+                return redirect()->route('admin.product')
+                    ->with('success', 'Category deleted successfully.');
+           } catch (\Throwable $th) {
+                return redirect()->route('admin.product')
+                ->with('success', 'Category deleted failed.');
+           }
+
     }
 }

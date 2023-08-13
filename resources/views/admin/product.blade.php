@@ -51,8 +51,21 @@
                         </td>
                         <td>
 
-                            <button class="edit">Edit</button>
-                            <button class="delete">Delete</button>
+                            <a href="{{ route('admin.products.edit', ['product' => $product->id]) }}"> <button
+                                    class="edit">Edit</button></a>
+
+                        <td>
+                            <form action="{{ route('admin.product.delete', $product->id) }}" style="display: none;"
+                                method="POST" id="deleteForm">
+                                @csrf
+                                @method('DELETE')
+
+                            </form>
+
+                            <button class="delete" style="display: inline-block;" onclick="deleteprod();"
+                                id="deleteButton">Delete</button>
+
+                        </td>
                         </td>
                     </tr>
                 @endforeach
@@ -68,4 +81,19 @@
 
 @section('styles')
     <link href="{{ asset('css/product.css') }}" rel="stylesheet">
+@endsection
+@section('scripts')
+    <script>
+        function deleteprod() {
+            console.log("pressed");
+            var shouldDelete = confirm('Are you sure you want to delete?');
+
+            if (!shouldDelete) {
+                event.preventDefault(); // Prevent the form submission
+            } else {
+                $("#deleteForm").submit();
+            }
+
+        }
+    </script>
 @endsection
