@@ -1,4 +1,4 @@
-@extends('layouts.frontend')
+@extends('layouts.user')
 
 @section('content')
     <section class=" home-slider owl-carousel img" style="background-color: black;">

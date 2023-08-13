@@ -1,6 +1,6 @@
 <!-- resources/views/cart/index.blade.php -->
 
-@extends('layouts.frontend')
+@extends('layouts.user')
 
 @section('content')
     <h2>Your Cart</h2>

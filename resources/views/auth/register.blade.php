@@ -1,4 +1,4 @@
-@extends('layouts.adminfrontend')
+@extends('layouts.admin')
 @section('content')
     <div class="adminlogin mx-auto d-block tect-center">
         <div class="row justify-content-center">

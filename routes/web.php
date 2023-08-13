@@ -1,8 +1,17 @@
 <?php
 
+use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\OrdersController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\RiderController;
-use App\Http\Controllers\CartController;
+use App\Http\Controllers\Admin\UsersController;
+
+use App\Http\Controllers\User\CartController;
+use App\Http\Controllers\User\HomeController;
+use App\Http\Controllers\User\MenuController;
+
+
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -19,19 +28,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/about', [App\Http\Controllers\AboutController::class, 'about'])->name('about');
-Route::get('/fetch-products',[App\Http\Controllers\MenuController::class, 'fetchProductsByCategory']);
-Route::get('/contact', [App\Http\Controllers\ContactController::class, 'contact'])->name('contact');
-Route::get('/services', [App\Http\Controllers\ServicesController::class, 'services'])->name('services');
-Route::get('/menu', [App\Http\Controllers\MenuController::class, 'index'])->name('menu');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/about', [HomeController::class, 'about'])->name('about');
+
+Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
+Route::get('/services', [HomeController::class, 'services'])->name('services');
+
+
+Route::get('/menu', [MenuController::class, 'index'])->name('menu');
+Route::get('/fetch-products',[MenuController::class, 'fetchProductsByCategory']);
 
 
 Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
@@ -45,23 +54,28 @@ Route::delete('/cart/clear', [CartController::class, 'clear'])->name('cart.clear
 
 
 
-// ----------------ADMIN PANEL---------
+
 
 Route::group(['prefix' => 'admin'], function () {
-    Route::get('/dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'dashboard'])->name('admin.dashboard');
 
-    Route::get('/product', [App\Http\Controllers\Admin\ProductController::class, 'index'])->name('admin.product');
-    Route::get('/products/create', [App\Http\Controllers\Admin\ProductController::class, 'create'])->name('admin.products.create');
+    // dashboard
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
+
+    // producrs
+    Route::get('/products', [ProductController::class, 'index'])->name('admin.product');
+    Route::get('/products/create', [ProductController::class, 'create'])->name('admin.products.create');
     Route::get('/products/{product}/edit', [ProductController::class, 'edit'])->name('admin.products.edit');
     Route::patch('/products/{product}', [ProductController::class, 'update'])->name('admin.products.update');
-    Route::post('/products', [App\Http\Controllers\Admin\ProductController::class, 'store'])->name('admin.products.store');
+    Route::post('/products', [ProductController::class, 'store'])->name('admin.products.store');
     Route::delete('/product/delete/{id}', [ProductController::class, 'destroy'])->name('admin.product.delete');
 
-    Route::get('/category', [App\Http\Controllers\Admin\CategoryController::class, 'index'])->name('admin.category');
-    Route::post('/category/store', [App\Http\Controllers\Admin\CategoryController::class, 'store'])->name('admin.category.store');
-    Route::get('/category/create', [App\Http\Controllers\Admin\CategoryController::class, 'create'])->name('admin.category.create');
-    Route::delete('/category/delete/{id}', [App\Http\Controllers\Admin\CategoryController::class, 'destroy'])->name('admin.category.delete');
+    // categories
+    Route::get('/categories', [CategoryController::class, 'index'])->name('admin.category');
+    Route::post('/categories/store', [CategoryController::class, 'store'])->name('admin.category.store');
+    Route::get('/categories/create', [CategoryController::class, 'create'])->name('admin.category.create');
+    Route::delete('/categories/delete/{id}', [CategoryController::class, 'destroy'])->name('admin.category.delete');
 
+    // riders
     Route::get('/riders', [RiderController::class, 'index'])->name('admin.riders');
     Route::get('/riders/create', [RiderController::class, 'create'])->name('admin.riders.create');
     Route::get('/riders/{rider}/edit', [RiderController::class, 'edit'])->name('admin.riders.edit');
@@ -69,7 +83,11 @@ Route::group(['prefix' => 'admin'], function () {
     Route::post('/riders', [RiderController::class, 'store'])->name('admin.riders.store');
     Route::delete('/rider/delete/{id}', [RiderController::class, 'destroy'])->name('admin.riders.delete');
 
-    Route::get('/users', [App\Http\Controllers\Admin\UsersController::class, 'users'])->name('admin.users');
-    Route::get('/orders', [App\Http\Controllers\Admin\OrdersController::class, 'orders'])->name('admin.orders');
-    Route::get('/login', [App\Http\Controllers\Admin\AdminLoginController::class, 'login'])->name('admin.login');
+    // users
+    Route::get('/users', [UsersController::class, 'users'])->name('admin.users');
+
+    // orders
+    Route::get('/orders', [OrdersController::class, 'orders'])->name('admin.orders');
+
+
 });

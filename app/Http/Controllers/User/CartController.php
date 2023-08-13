@@ -1,7 +1,7 @@
 <?php
 
-namespace App\Http\Controllers;
-
+namespace App\Http\Controllers\User;
+use App\Http\Controllers\Controller;
 use App\Models\Product;
 use App\Services\CartService;
 use Illuminate\Http\Request;
@@ -11,7 +11,7 @@ class CartController extends Controller
     public function index(CartService $cart)
     {
         $items = $cart->getItems();
-        return view('cart', compact('items'));
+        return view('user.cart', compact('items'));
     }
 
     public function add(Request $request, Product $product, CartService $cart)

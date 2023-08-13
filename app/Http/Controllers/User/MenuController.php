@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
-
+namespace App\Http\Controllers\User;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Category;
+
 
 class MenuController extends Controller
 {
@@ -15,7 +16,7 @@ class MenuController extends Controller
         $no_pgproducts=Product::all();
         $categories = Category::all();
 
-        return view('menu', compact('products', 'categories','no_pgproducts'));
+        return view('user.menu', compact('products', 'categories','no_pgproducts'));
     }
 
 

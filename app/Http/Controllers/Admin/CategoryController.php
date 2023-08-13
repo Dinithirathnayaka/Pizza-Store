@@ -11,9 +11,14 @@ class CategoryController extends Controller
     public function index()
     {
         $categories = Category::all();
-        return view('admin.category', compact('categories'));
+        return view('admin.categories.index', compact('categories'));
     }
 
+    public function create()
+    {
+
+        return view('admin.categories.create');
+    }
     public function store(Request $request)
     {
         $validatedData = $request->validate([
@@ -22,7 +27,7 @@ class CategoryController extends Controller
         ]);
 
         try {
-            $category = Category::create($validatedData);
+            Category::create($validatedData);
 
             return redirect()->route('admin.category')
                 ->with('success', 'Category created successfully.');
@@ -36,17 +41,17 @@ class CategoryController extends Controller
 
     public function show($id)
     {
-        // Your code to display details of a specific product
+
     }
 
     public function edit($id)
     {
-        // Your code to show a form for editing a product
+
     }
 
     public function update(Request $request, $id)
     {
-        // Your code to update a product
+
     }
 
     public function destroy($id)

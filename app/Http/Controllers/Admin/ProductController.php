@@ -18,14 +18,14 @@ class ProductController extends Controller
         // Your code to display a list of products
 
         $products=Product::paginate(5);
-        return view('admin.product', compact('products'));
+        return view('admin.products.index', compact('products'));
     }
 
     public function create()
     {
         $categories = Category::all();
 
-        return view('admin.add-product',compact('categories'));
+        return view('admin.products.create',compact('categories'));
     }
 
 
@@ -85,7 +85,7 @@ class ProductController extends Controller
         $categories = Category::all();
 
         $product = Product::findOrFail($id);
-        return view('admin.edit-product', compact('product','categories'));
+        return view('admin.products.edit', compact('product','categories'));
     }
 
 
