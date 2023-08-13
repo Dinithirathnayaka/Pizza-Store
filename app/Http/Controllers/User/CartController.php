@@ -32,6 +32,7 @@ class CartController extends Controller
     {
         $quantity = $request->input('quantity', 1);
         $cart->updateQuantity($product->id, $quantity);
+
         return redirect()->route('cart.index')->with('success', 'Cart updated.');
     }
 
@@ -46,4 +47,19 @@ class CartController extends Controller
         $cart->clear();
         return redirect()->route('cart.index')->with('success', 'Cart cleared.');
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

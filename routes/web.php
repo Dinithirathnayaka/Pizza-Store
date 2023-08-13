@@ -11,7 +11,6 @@ use App\Http\Controllers\User\CartController;
 use App\Http\Controllers\User\HomeController;
 use App\Http\Controllers\User\MenuController;
 
-
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -38,7 +37,8 @@ Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::get('/services', [HomeController::class, 'services'])->name('services');
 
-
+Route::get('/placeorder', [OrdersController::class, 'create'])->name('orders.create');
+Route::post('/placeorder', [OrdersController::class, 'store'])->name('orders.store');
 Route::get('/menu', [MenuController::class, 'index'])->name('menu');
 Route::get('/fetch-products',[MenuController::class, 'fetchProductsByCategory']);
 

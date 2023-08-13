@@ -40,4 +40,8 @@
         @method('DELETE')
         <button type="submit">Clear Cart</button>
     </form>
+    @if (!$items->isEmpty())
+        </br>
+        <a href="{{ route('orders.create') }}" class="addbtn">Complete Order</a>
+    @endif
 @endsection
