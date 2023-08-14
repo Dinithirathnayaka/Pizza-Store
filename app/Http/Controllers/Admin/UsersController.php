@@ -11,6 +11,6 @@ class UsersController extends Controller
     {
 
         $genusers = User::where('role', 0)->get();
-        return view('admin.users',compact('genusers'));
+        return view('admin.users.index',compact('genusers'));
     }
 }

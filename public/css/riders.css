@@ -1,0 +1,110 @@
+.rider {
+    border-radius: 10px;
+}
+
+.table {
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    padding: 20px;
+    border-radius: 10px !important;
+}
+
+th {
+    /* background-color: #fac5641c !important; */
+    font-size: small;
+}
+
+th,
+td {
+    padding: 8px;
+}
+
+h5 {
+    padding: 10px 0px 10px 30px;
+}
+
+.productimg {
+    width: 70px;
+    height: 70px;
+    border-radius: 10%;
+}
+
+.edit {
+    margin-right: 5px;
+    background-color: green;
+    padding: 5px;
+    color: #ffffff;
+    border: none;
+    width: 60px;
+}
+
+.delete {
+    background-color: red;
+    padding: 5px;
+    color: #ffffff;
+    border: none;
+    width: 60px;
+}
+
+.signinicon {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.rightnav-header {
+    display: flex;
+    color: #ffffff;
+}
+
+.addbtn {
+    margin-left: 90%;
+    background-color: blue;
+    color: #ffffff;
+    border: none;
+    padding: 5px;
+    width: 100px;
+    margin-bottom: 30px;
+}
+
+/*--- product form -------- */
+form {
+    width: 500px;
+    margin-top: 50px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button[type="submit"] {
+    background-color: #fac564;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #fac564;
+}

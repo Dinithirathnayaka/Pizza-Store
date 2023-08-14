@@ -9,6 +9,16 @@ class Order extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'user_id',
+        'total',
+        'discount',
+        'orderstatus',
+        'address',
+        'mobile_number',
+        'cusname',
+        'note'
+    ];
 
     public function orderItems()
     {
@@ -19,5 +29,11 @@ class Order extends Model
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+
+    public function rider()
+    {
+        return $this->belongsTo(Rider::class, 'rider_id');
     }
 }
