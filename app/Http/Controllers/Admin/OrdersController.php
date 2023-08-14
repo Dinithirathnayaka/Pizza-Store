@@ -22,7 +22,7 @@ class OrdersController extends Controller
     {
 
         $orders = Order::paginate(15);
-        return view('admin.orders.index',compact('orders'));
+        return view('admin.orders.index', compact('orders'));
     }
 
 
@@ -30,61 +30,66 @@ class OrdersController extends Controller
     public function create(CartService $cart)
     {
         $items = $cart->getItems();
-        return view('user.placeorder',compact('items'));
+        return view('user.placeorder', compact('items'));
     }
 
-    public function store(Request $request,CartService $cart)
-{
-    try {
-        $validatedData = $request->validate([
-            'address' => 'required|string|max:255',
-            'mobile_number' => 'required|string|max:255',
-            'cusname' => 'required|string|max:255',
-            'note' => 'nullable|string|max:255',
+    public function show()
+    {
 
-        ]);
-        $items = $cart->getItems();
+        return view('admin.orders.show');
+    }
 
-        $totalbill=0.0;
-        $totaldiscount=0.0;
+    public function store(Request $request, CartService $cart)
+    {
+        try {
+            $validatedData = $request->validate([
+                'address' => 'required|string|max:255',
+                'mobile_number' => 'required|string|max:255',
+                'cusname' => 'required|string|max:255',
+                'note' => 'nullable|string|max:255',
 
-        foreach ($items as $item) {
-          $prod= $item['product'];
-          $qty=$item['quantity'];
-          $tbill=$prod->price*$qty;
-          $tdis= ($prod->price*(($prod->discount )/100))*$qty;
-          $totalbill+=$tbill;
-          $totaldiscount+=$tdis;
-
-        }
-
-
-        $order = new Order();
-        $order->address = $validatedData['address'];
-        $order->mobile_number = $validatedData['mobile_number'];
-        $order->cusname = $validatedData['cusname'];
-        $order->note = $validatedData['note'];
-        $order->user_id = auth()->user()->id;
-        $order->total=$totalbill-$totaldiscount;
-        $order->discount=$totaldiscount;
-        $order->save();
-
-        foreach ($items as $item) {
-            Order_item::create([
-                'qty' => $item['quantity'],
-                'total' => $item['product']->price,
-                'discount' => $item['product']->discount,
-                'order_id' => $order->id,
-                'product_id' => $item['product']->id,
             ]);
+            $items = $cart->getItems();
+
+            $totalbill = 0.0;
+            $totaldiscount = 0.0;
+
+            foreach ($items as $item) {
+                $prod = $item['product'];
+                $qty = $item['quantity'];
+                $tbill = $prod->price * $qty;
+                $tdis = ($prod->price * (($prod->discount) / 100)) * $qty;
+                $totalbill += $tbill;
+                $totaldiscount += $tdis;
+            }
+
+
+            $order = new Order();
+            $order->address = $validatedData['address'];
+            $order->mobile_number = $validatedData['mobile_number'];
+            $order->cusname = $validatedData['cusname'];
+            $order->note = $validatedData['note'];
+            $order->user_id = auth()->user()->id;
+            $order->total = $totalbill - $totaldiscount;
+            $order->discount = $totaldiscount;
+            $order->save();
+
+            foreach ($items as $item) {
+                Order_item::create([
+                    'qty' => $item['quantity'],
+                    'total' => $item['product']->price,
+                    'discount' => $item['product']->discount,
+                    'order_id' => $order->id,
+                    'product_id' => $item['product']->id,
+                ]);
+            }
+            $cart->clear();
+            return redirect()->route('cart.index')->with('success', 'Order created successfully.');
+        } catch (ValidationException $e) {
+            return redirect()->back()->withErrors($e->errors())->withInput();
+        } catch (\Throwable $th) {
+            return $th;
+            return redirect()->back()->withErrors(['error' => 'An error occurred while processing your request.'])->withInput();
         }
-        $cart->clear();
-        return redirect()->route('cart.index')->with('success', 'Order created successfully.');
-    } catch (ValidationException $e) {
-        return redirect()->back()->withErrors($e->errors())->withInput();
-    } catch (\Throwable $th) {
-        return $th;
-        return redirect()->back()->withErrors(['error' => 'An error occurred while processing your request.'])->withInput();
     }
-}
 }

@@ -57,3 +57,36 @@ h5 {
     border: none;
     width: 150px;
 }
+
+.ordersummary {
+    display: flex;
+    color: #ffffff;
+    padding: 30px;
+    column-gap: 20px;
+}
+
+.leftsummary {
+    flex: 5;
+    border: 1px solid #808080;
+    padding: 20px;
+}
+
+.rightsummary {
+    flex: 5;
+    border: 1px solid #808080;
+    padding: 20px;
+}
+
+.orderItems {
+    border: 1px solid #808080;
+    padding: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+}
+
+.productimg {
+    width: 70px;
+    height: 70px;
+    border-radius: 10%;
+}

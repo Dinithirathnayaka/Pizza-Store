@@ -30,7 +30,16 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($orders as $order)
+                <tr>
+                    <td>1</td>
+                    <td>2023/08/24</td>
+                    <td>dinithi</td>
+                    <td>3%</td>
+                    <td>30.00</td>
+                    <th><button class="offline">Offline</button></th>
+                    <th><a href="{{ route('admin.orders.show') }}" class="completebtn">Complete Button</a></th>
+                </tr>
+                {{-- @foreach ($orders as $order)
                     <tr>
                         <td>{{ $order->id }}</td>
                         <td>{{ \Carbon\Carbon::parse($order->total)->format('Y-m-d H:i') }}</td>
@@ -40,7 +49,7 @@
                         <th><button class="offline">Offline</button></th>
                         <th><button class="completebtn">Complete Button</button></th>
                     </tr>
-                @endforeach
+                @endforeach --}}
 
             </tbody>
 

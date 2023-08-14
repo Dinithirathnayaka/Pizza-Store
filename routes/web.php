@@ -40,7 +40,7 @@ Route::get('/services', [HomeController::class, 'services'])->name('services');
 Route::get('/placeorder', [OrdersController::class, 'create'])->name('orders.create');
 Route::post('/placeorder', [OrdersController::class, 'store'])->name('orders.store');
 Route::get('/menu', [MenuController::class, 'index'])->name('menu');
-Route::get('/fetch-products',[MenuController::class, 'fetchProductsByCategory']);
+Route::get('/fetch-products', [MenuController::class, 'fetchProductsByCategory']);
 
 
 Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
@@ -88,6 +88,5 @@ Route::group(['prefix' => 'admin'], function () {
 
     // orders
     Route::get('/orders', [OrdersController::class, 'index'])->name('admin.orders');
-
-
+    Route::get('/orders/show', [OrdersController::class, 'show'])->name('admin.orders.show');
 });
