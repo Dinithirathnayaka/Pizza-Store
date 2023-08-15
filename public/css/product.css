@@ -63,9 +63,10 @@ h5 {
     background-color: blue;
     color: #ffffff;
     border: none;
-    padding: 5px;
-    width: 100px;
+    padding: 5px !important;
+    width: 150px !important;
     margin-bottom: 30px;
+    text-decoration: none;
 }
 
 /*--- product form -------- */

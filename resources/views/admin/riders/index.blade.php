@@ -9,7 +9,7 @@
 
 
         <a href="{{ route('admin.riders.create') }}" class="addbtn">Add</a>
-        <table class="table  text-center" border="2" style="width: 100%">
+        <table class="table  text-center mt-5" border="2" style="width: 100%">
 
 
             <thead>
@@ -20,9 +20,6 @@
                     <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Name</th>
                     <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Mobile</th>
                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Image</th>
-
-
-                    </th>
                     <th class="text-secondary opacity-7"></th>
                 </tr>
             </thead>
@@ -51,7 +48,7 @@
                             <a href="{{ route('admin.riders.edit', ['rider' => $rider]) }}"> <button
                                     class="edit">Edit</button></a>
 
-                        <td>
+
                             <form action="{{ route('admin.riders.delete', $rider) }}" style="display: none;" method="POST"
                                 id="deleteForm">
                                 @csrf
@@ -62,7 +59,7 @@
                             <button class="delete" style="display: inline-block;" onclick="deleteprod();"
                                 id="deleteButton">Delete</button>
 
-                        </td>
+
                         </td>
                     </tr>
                 @endforeach

@@ -11,8 +11,8 @@
 
     <div class="category">
 
-        <a href="{{ route('admin.category.create') }}">Create Category</a>
-        <table class="table  text-center" border="2" style="width: 100%">
+        <a href="{{ route('admin.category.create') }}" class="categorybtn">Create Category</a>
+        <table class="table text-center mt-5" border="2" style="width: 100%">
 
 
             <thead>

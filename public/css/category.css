@@ -69,6 +69,18 @@ label {
     margin-bottom: 5px;
 }
 
+.categorybtn {
+    background-color: blue;
+    color: #ffffff;
+    border: none;
+    padding: 5px !important;
+    width: 150px !important;
+    margin-bottom: 30px !important;
+    text-decoration: none;
+    margin-left: 85%;
+    margin-top: 50px;
+}
+
 input[type="text"],
 textarea {
     width: 100%;

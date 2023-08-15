@@ -10,8 +10,8 @@
     <div class="product">
 
 
-        <a href="{{ route('admin.products.create') }}" class="addbtn">Add</a>
-        <table class="table  text-center" border="2" style="width: 100%">
+        <a href="{{ route('admin.products.create') }}" class="addbtn mb-3" style="width: 100px">Add</a>
+        <table class="table text-center mt-5" border="2" style="width: 100%">
 
 
             <thead>
@@ -22,8 +22,7 @@
                     <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Discount
                     </th>
                     <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Price</th>
-                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Bill Price
-                    </th>
+                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Bill Price </th>
                     <th class="text-secondary opacity-7"></th>
                 </tr>
             </thead>
@@ -53,7 +52,7 @@
                             <a href="{{ route('admin.products.edit', ['product' => $product->id]) }}"> <button
                                     class="edit">Edit</button></a>
 
-                        <td>
+
                             <form action="{{ route('admin.product.delete', $product->id) }}" style="display: none;"
                                 method="POST" id="deleteForm">
                                 @csrf
@@ -64,7 +63,7 @@
                             <button class="delete" style="display: inline-block;" onclick="deleteprod();"
                                 id="deleteButton">Delete</button>
 
-                        </td>
+
                         </td>
                     </tr>
                 @endforeach
