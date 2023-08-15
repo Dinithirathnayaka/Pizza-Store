@@ -23,19 +23,19 @@
             <hr/>
              <div class="cart">
             <div class="cartLeft"><img src="{{ asset('images/pasta-1.jpg') }}" class="cartimg" alt="cartimg"></div>
-            <div class="cartMiddle"><p>loremmmmmmmmmmmmmmmmmmmmmmmmmmm fhfdhgefghgfhf hgjdgg</p>Rs.2000.00<br><br><span class="price">Rs.2800.00</span><span class="discount">3%</span></div>
+            <div class="cartMiddle"><p>loremmmmmmmmmmmmmmmmmmmmmmmmmmm fhfdhgefghgfhf hgjdgg</p>Rs.2000.00<br><br><span class="cartpreprice">Rs.2800.00</span><span class="discount">3%</span></div>
             <div class="cartRight p-3"> <img src="{{ asset('images/bin.png') }}" class="bin" alt=""><br/><button class="minmax">-</button> 1 <button  class="minmax">+</button></div>
         </div>
         <hr/>
         <div class="cart">
             <div class="cartLeft"><img src="{{ asset('images/pasta-2.jpg') }}" class="cartimg" alt="cartimg"></div>
-            <div class="cartMiddle"><p>loremmmmmmmmmmmmmmmmmmmmmmmmmmm fhfdhgefghgfhf hgjdgg</p>Rs.2000.00<br><br><span class="price">Rs.2800.00</span> <span class="discount">3%</span></div>
+            <div class="cartMiddle"><p>loremmmmmmmmmmmmmmmmmmmmmmmmmmm fhfdhgefghgfhf hgjdgg</p>Rs.2000.00<br><br><span class="cartpreprice">Rs.2800.00</span> <span class="discount">3%</span></div>
             <div class="cartRight p-3"> <img src="{{ asset('images/bin.png') }}" class="bin" alt=""><br/><button class="minmax">-</button> 1 <button  class="minmax">+</button></div>
         </div>
         <hr/>
         <div class="cart">
             <div class="cartLeft"><img src="{{ asset('images/pasta-2.jpg') }}" class="cartimg" alt="cartimg"></div>
-            <div class="cartMiddle"><p>loremmmmmmmmmmmmmmmmmmmmmmmmmmm fhfdhgefghgfhf hgjdgg</p>Rs.2000.00<br><br><span class="price">Rs.2800.00</span> <span class="discount">3%</span></div>
+            <div class="cartMiddle"><p>loremmmmmmmmmmmmmmmmmmmmmmmmmmm fhfdhgefghgfhf hgjdgg</p>Rs.2000.00<br><br><span class="cartpreprice">Rs.2800.00</span> <span class="discount">3%</span></div>
             <div class="cartRight p-3"> <img src="{{ asset('images/bin.png') }}" class="bin" alt=""><br/><button class="minmax">-</button> 1 <button  class="minmax">+</button></div>
         </div>
         <hr/>
