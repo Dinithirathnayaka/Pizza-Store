@@ -767,7 +767,7 @@ flex:0.5;
   }
 
   .cart_container{
-
+border: 1px solid #808080;
     display: flex;
   }
 
