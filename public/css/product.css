@@ -109,3 +109,11 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #fac564;
 }
+
+.table-row-even {
+    background-color: red; /* Light gray color for even rows */
+}
+
+.table-row-odd {
+    background-color: #ffffff; /* White color for odd rows */
+}
