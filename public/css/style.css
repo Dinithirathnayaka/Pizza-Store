@@ -1,5 +1,5 @@
 
-/* 1 */
+
 *{
 	margin: 0;
 	padding: 0;
@@ -8,15 +8,9 @@
 }
 
 
-
-/* /1 */
-
-/* 2 */
 .slider{
 	position: relative;
 	width: 100%;
-
-
 }
 
 
@@ -66,15 +60,12 @@ margin-left: -97%;
 	margin: 0 10px;
 	cursor: pointer;
 }
-/* /2 */
 
-/* javascript */
+
 .active, .dot:hover{
 	border-color: #ffc107; /* blue */
 }
-/* /javascript */
 
-/* muslide add fade */
 .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1s;
@@ -144,10 +135,6 @@ margin-left: -97%;
 	font-weight: bold;
 	font-size: 20px;
 }
-/* /3 */
-
-/* 4 */
-
 
 
 @-webkit-keyframes zoomin {
@@ -267,7 +254,6 @@ margin-left: -97%;
 
 
 
-
 /* -----------------
 ------CONTACT PAGE----
 --------------------*/
@@ -285,8 +271,6 @@ margin-left: -97%;
 /* -----------------
 ------ABOUT PAGE----
 --------------------*/
-
-
 
 
 .slider-item {
@@ -534,7 +518,7 @@ p a{
     background-image: url(/images/food.png);
     height:auto ;
     width: 100vw;
-    margin-top: 11vh;
+
     padding-top: 200px;
     padding-bottom: 100px;
 
