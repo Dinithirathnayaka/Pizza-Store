@@ -65,22 +65,28 @@
                     <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Product Name
                     </th>
                     <th class="text-secondary opacity-7">Discount</th>
-                    <th class="text-secondary opacity-7">Total</th>
+                    <th class="text-secondary opacity-7">Price</th>
+                    <th class="text-secondary opacity-7">Bill price</th>
                     <th class="text-secondary opacity-7">Quantity</th>
                 </tr>
             </thead>
 
+
             <tbody>
-                <tr>
-                    <td>
-                        <img src="{{ asset('images/pasta-1.jpg') }}" class="productimg" alt="product">
-                    </td>
-                    <td>001</td>
-                    <td>Pasta</td>
-                    <td>10%</td>
-                    <td>1000.00</td>
-                    <td>10</td>
-                </tr>
+                @foreach ($orderitems as $item)
+                    <tr>
+                        <td>
+                            <img src="{{ asset('products/.$item->product->imgurl') }}" class="productimg" alt="product">
+                        </td>
+                        <td>{{ $item->product->id }}</td>
+                        <td>{{ $item->product->name }}</td>
+                        <td>{{ $item->product->discount }}%</td>
+                        <td>{{ $item->product->price }}</td>
+                        <td>{{ round($item->product->price - $item->product->price * ($item->product->discount / 100), 2) }}
+                        </td>
+                        <td>10</td>
+                    </tr>
+                @endforeach
             </tbody>
         </table>
     </div>

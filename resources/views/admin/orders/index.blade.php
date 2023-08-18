@@ -15,7 +15,21 @@
         }
     }
 @endphp
-
+@php
+    function getStatusColor($value)
+    {
+        switch ($value) {
+            case 0:
+                return 'red';
+            case 1:
+                return 'green';
+            case 2:
+                return 'yellow';
+            default:
+                return 'orange';
+        }
+    }
+@endphp
 
 
 @section('content')
@@ -55,8 +69,20 @@
                         <td>{{ $order->cusname }}</td>
                         <td>{{ $order->discount }}</td>
                         <td>{{ $order->total }}</td>
-                        <th><button class="offline">{{ getStatus($order->status) }}</button></th>
-                        <th><a href="{{ route('admin.orders.show', $order->id) }}" class="completebtn">Complete Button</a>
+
+                        <th><button class="offline">{{ getStatus($order->orderstatus) }}</button></th>
+
+                        <th>
+                            <form action="{{ route('orders.update', $order->id) }}" method="POST">
+                                @csrf
+                                @method('PATCH')
+                                <input type="hidden" name="status" value="{{ 1 }}">
+                                <input type="hidden" name="rider_id" value="{{ null }}">
+                                <button class="completebtn " type="submit"
+                                    style="background-color: {{ getStatusColor($order->orderstatus) }}">Complete
+                                    Button</button>
+                            </form>
+                            {{-- <a href="{{ route('admin.orders.show', $order->id) }}" class="completebtn">Complete Button</a> --}}
                         </th>
                     </tr>
                 @endforeach

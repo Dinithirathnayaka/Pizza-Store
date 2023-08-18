@@ -38,8 +38,14 @@ class OrdersController extends Controller
     {
         $riders = Rider::all();
         $order = Order::find($id);
-        return view('admin.orders.show', compact('riders'));
+        $orderitems=$order->orderItems;
+
+
+       return view('admin.orders.show', compact('riders','order','orderitems'));
     }
+
+
+
 
     public function store(Request $request, CartService $cart)
     {
@@ -95,6 +101,26 @@ class OrdersController extends Controller
         }
     }
 
+
+
+    public function update(Request $request, $id)
+{
+    try {
+        $validatedData = $request->validate([
+            'status' => 'required|integer',
+            'rider_id' => 'nullable|integer',
+        ]);
+        $order = Order::findOrFail($id);
+        $order->orderstatus = $validatedData['status'];
+         $order->rider_id = $validatedData['rider_id'];
+        $order->save();
+        return redirect()->route('order.index')->with('success', 'Order updated successfully.');
+    } catch (ValidationException $e) {
+        return redirect()->back()->withErrors($e->errors())->withInput();
+    } catch (\Throwable $th) {
+        return redirect()->back()->withErrors(['error' => 'An error occurred while processing your request.'])->withInput();
+    }
+}
     public function pendingorder()
     {
         return view('admin.orders.pendingorder');

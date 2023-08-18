@@ -80,6 +80,7 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/riders/create', [RiderController::class, 'create'])->name('admin.riders.create');
     Route::get('/riders/{rider}/edit', [RiderController::class, 'edit'])->name('admin.riders.edit');
     Route::patch('/riders/{rider}', [RiderController::class, 'update'])->name('admin.riders.update');
+
     Route::post('/riders', [RiderController::class, 'store'])->name('admin.riders.store');
     Route::delete('/rider/delete/{id}', [RiderController::class, 'destroy'])->name('admin.riders.delete');
 
@@ -89,6 +90,6 @@ Route::group(['prefix' => 'admin'], function () {
     // orders
     Route::get('/orders', [OrdersController::class, 'index'])->name('admin.orders');
     Route::get('/orders/{id}/show', [OrdersController::class, 'show'])->name('admin.orders.show');
+    Route::patch('/orders/{id}/update', [OrdersController::class, 'update'])->name('orders.update');
     Route::get('/orders/orderhistory', [OrdersController::class, 'orderhistory'])->name('admin.orders.orderhistory');
-    Route::get('/orders/pendingorder', [OrdersController::class, 'index'])->name('admin.orders.pendingorder');
 });

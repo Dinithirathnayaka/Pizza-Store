@@ -78,13 +78,15 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="{{ route('admin.orders') }}" class="nav-link nav-link-toggle" onclick="toggleSubMenu('sub-menu-1')">
+                        <a class="nav-link nav-link-toggle" onclick="toggleSubMenu('sub-menu-1')">
                             <span><img src="{{ asset('images/checkout.png') }}" alt="" class="navicon"></span>
                             Orders
                         </a>
                         <ul class="sub-menu" id="sub-menu-1">
-                            <li class="nav-item mb-2"><a href="{{ route('admin.orders.orderhistory') }}" >Order History</a></li><br>
-                            <li class="nav-item"><a href="{{ route('admin.orders.pendingorder') }}">Pending Orders</a></li>
+                            <li class="nav-item mb-2"><a href="{{ route('admin.orders.orderhistory') }}">Order
+                                    History</a></li><br>
+                            <li class="nav-item"><a href="{{ route('admin.orders') }}">Pending Orders</a>
+                            </li>
                         </ul>
                     </li>
 
@@ -139,15 +141,15 @@
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
     </script>
 
-<script>
-        $(document).ready(function () {
-            $(".nav-link-toggle").click(function (e) {
+    <script>
+        $(document).ready(function() {
+            $(".nav-link-toggle").click(function(e) {
                 e.preventDefault(); // Prevent default link behavior
                 const subMenu = $(this).siblings(".sub-menu");
                 subMenu.toggle(); // Toggle the sub-menu
             });
         });
-</script>
+    </script>
 </body>
 
 </html>
