@@ -217,6 +217,12 @@ margin-left: -97%;
 ------NAVBAR----
 --------------------*/
 
+.navbar{
+    padding-left: 100px !important;
+padding-right: 50px !important;
+    display: flex;
+    position: relative;
+}
 .navbar-nav {
     margin-left: auto;
 
@@ -268,10 +274,18 @@ margin-left: -97%;
   }
 
   .topbtn{
-    background-color: #808080;
-    width: 50px !important;
+    background-color: #FAC564;
+    position: absolute;
     border-radius: 50%;
-color: #fff !important;
+    color: #212529!important;
+    margin-top: -10px;
+    margin-bottom: -5px;
+    height: 18px;
+    width: 18px;
+    align-items: center;
+    padding-bottom: 3px;
+
+
 
   }
 

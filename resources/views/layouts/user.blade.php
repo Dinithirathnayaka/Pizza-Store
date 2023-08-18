@@ -49,7 +49,7 @@
 
 <body class="">
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-        <div class="container">
+
             <div class="toplogo"><img src="images/pizza-slicelogo.png" alt="" class="logoimg">
                 <div class="toplogocontent">Pizza</div>
             </div>
@@ -71,7 +71,7 @@
                     <li class="nav-item"><a href="{{ route('cart.index') }}" class="nav-link"> <img src="images/shopping-cart.png" alt="cart" class="cartimg"><span class="topbtn">1</span></a></li>
                 </ul>
             </div>
-        </div>
+
     </nav>
     <!-- END nav -->
 
