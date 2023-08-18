@@ -28,9 +28,30 @@ class CartService
     public function updateQuantity($productId, $quantity)
     {
         if ($this->has($productId)) {
-            $this->items->get($productId)['quantity'] = $quantity;
-            $this->save();
+            $prevQuantity = $this->items->get($productId)['quantity'];
+
+            if ($quantity + $prevQuantity >= 0) {
+                $newQuantity = $quantity + $prevQuantity;
+                $this->items = $this->items->map(function ($item, $key) use ($productId, $newQuantity) {
+                    if ($key === $productId) {
+                        $item['quantity'] = $newQuantity;
+                    }
+                    return $item;
+                });
+                $this->save();
+            } else {
+                $this->remove($productId);
+            }
         }
+    }
+
+    public function getProduct($productId)
+    {
+        if ($this->has($productId)) {
+            return $this->items->get($productId)['product'];
+        }
+
+        return null;
     }
 
     public function remove($productId)

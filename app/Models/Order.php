@@ -22,7 +22,7 @@ class Order extends Model
 
     public function orderItems()
     {
-        return $this->hasMany(OrderItem::class);
+        return $this->hasMany(Order_item::class);
     }
 
     // Define the relationship: One user has many orders

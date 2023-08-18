@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Order;
 use App\Models\Order_item;
+use App\Models\Rider;
 use App\Services\CartService;
 use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
@@ -33,10 +34,11 @@ class OrdersController extends Controller
         return view('user.placeorder', compact('items'));
     }
 
-    public function show()
+    public function show($id)
     {
-
-        return view('admin.orders.show');
+        $riders = Rider::all();
+        $order = Order::find($id);
+        return view('admin.orders.show',compact('riders'));
     }
 
     public function store(Request $request, CartService $cart)

@@ -3,75 +3,102 @@
 @extends('layouts.user')
 
 @section('content')
+    <section class="home-slider owl-carousel img" style="background-image: url(images/bg_1.jpg);">
 
-{{-- <div class="form-check">
-    <input class="form-check-input" type="checkbox" name="selectall"
-        {{ old('selectall') ? 'checked' : '' }}>
+        <div class="slider-item" style="background-image: url(images/bg_3.jpg);">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row slider-text justify-content-center align-items-center">
 
-    <label class="form-check-label" for="selectall">
-        {{ __('Select all') }}
-    </label>
-</div> --}}
+                    <div class="col-md-7 col-sm-12 text-center ftco-animate">
+                        <h1 class="mb-3 mt-5 bread">Cart</h1>
+                        <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Cart</span>
+                        </p>
+                    </div>
 
-<section class="home-slider owl-carousel img" style="background-image: url(images/bg_1.jpg);">
-
-    <div class="slider-item" style="background-image: url(images/bg_3.jpg);">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row slider-text justify-content-center align-items-center">
-
-                <div class="col-md-7 col-sm-12 text-center ftco-animate">
-                    <h1 class="mb-3 mt-5 bread">Cart</h1>
-                    <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Cart</span>
-                    </p>
                 </div>
-
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
 
-<div class="cartmain">
-    <h5  class="cart-title">Your Cart</h5>
+    <div class="cartmain">
+        <h5 class="cart-title">Your Cart</h5>
 
-    <div class="cart_container">
-
-
-        <div class="cartconLeft">
-            <hr/>
-             <div class="cart">
-            <div class="cartLeft"><img src="{{ asset('images/pasta-1.jpg') }}" class="cartimg" alt="cartimg"></div>
-            <div class="cartMiddle"><p>loremmmmmmmmmmmmmmmmmmmmmmmmmmm fhfdhgefghgfhf hgjdgg</p>Rs.2000.00<br><br><span class="cartpreprice">Rs.2800.00</span><span class="discount">3%</span></div>
-            <div class="cartRight p-3"> <img src="{{ asset('images/bin.png') }}" class="bin" alt=""><br/><button class="minmax">-</button> 1 <button  class="minmax">+</button></div>
-        </div>
-        <hr/>
-        <div class="cart">
-            <div class="cartLeft"><img src="{{ asset('images/pasta-2.jpg') }}" class="cartimg" alt="cartimg"></div>
-            <div class="cartMiddle"><p>loremmmmmmmmmmmmmmmmmmmmmmmmmmm fhfdhgefghgfhf hgjdgg</p>Rs.2000.00<br><br><span class="cartpreprice">Rs.2800.00</span> <span class="discount">3%</span></div>
-            <div class="cartRight p-3"> <img src="{{ asset('images/bin.png') }}" class="bin" alt=""><br/><button class="minmax">-</button> 1 <button  class="minmax">+</button></div>
-        </div>
-        <hr/>
-        <div class="cart">
-            <div class="cartLeft"><img src="{{ asset('images/pasta-2.jpg') }}" class="cartimg" alt="cartimg"></div>
-            <div class="cartMiddle"><p>loremmmmmmmmmmmmmmmmmmmmmmmmmmm fhfdhgefghgfhf hgjdgg</p>Rs.2000.00<br><br><span class="cartpreprice">Rs.2800.00</span> <span class="discount">3%</span></div>
-            <div class="cartRight p-3"> <img src="{{ asset('images/bin.png') }}" class="bin" alt=""><br/><button class="minmax">-</button> 1 <button  class="minmax">+</button></div>
-        </div>
-        <hr/>
-    </div>
-        <div class="cartconRight">
-            <h5>Order Summary</h5>
-            <p class="sub" style="margin-bottom: 20px">Sub Total<span class="ordersum">Rs.3000.00</span></p>
-            <hr/>
-            <p >Total<span class="ordersum">Rs.3000.00</span></p>
-            <button class="placeorderbtn">Place Order</button>
-
-        </div>
+        <div class="cart_container">
 
 
+            <div class="cartconLeft">
+                <hr />
 
-        {{-- <table class="table text-center" border="2" style="width: 100%">
+                @php
+                    $total = 0.0;
+                    $discount = 0.0;
+                @endphp
+                @foreach ($items as $productId => $item)
+                    <div class="cart">
+                        <div class="cartLeft"><img src="{{ asset('images/pasta-1.jpg') }}" class="cartimg" alt="cartimg">
+                        </div>
+                        <div class="cartMiddle">
+                            <p>{{ $item['product']->name }}</p>Rs.{{ $item['product']->price }}<br><br><span
+                                class="cartpreprice">Rs.{{ round($item['product']->price - ($item['product']->price * $item['product']->discount) / 100, 2) }}</span><span
+                                class="discount">{{ $item['product']->discount }}%</span>
+                        </div>
+
+                        <div class="cartRight p-3">
+                            <form action="{{ route('cart.remove', $item['product']) }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <input type="image" src="{{ asset('images/bin.png') }}" alt="Delete" class="bin">
+                            </form>
+
+                            <br />
+                            <div style="display: flex">
+                                <form action="{{ route('cart.update', $item['product']) }}" method="POST">
+                                    @csrf
+                                    @method('PATCH')
+                                    <input type="hidden" name="quantity" value="{{ -1 }}">
+                                    <button class="minmax" type="submit">-</button>
+                                </form>
+
+                                {{ $item['quantity'] }}
+
+
+                                <form action="{{ route('cart.update', $item['product']) }}" method="POST">
+                                    @csrf
+                                    @method('PATCH')
+                                    <input type="hidden" name="quantity" value="{{ 1 }}">
+                                    <button class="minmax" type="submit">+</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    @php
+                        $total += $item['product']->price;
+                        $discount += $item['product']->price * ($item['product']->discount / 100);
+                    @endphp
+                @endforeach
+            </div>
+            <div class="cartconRight">
+                <h5>Order Summary</h5>
+                <p class="sub" style="margin-bottom: 20px">Sub Total<span class="ordersum">Rs.
+                        {{ round($total, 2) }}</span></p>
+                <hr />
+                <p class="sub" style="margin-bottom: 20px">Discount<span class="ordersum">Rs.
+                        - {{ round($discount, 2) }}</span></p>
+                <hr />
+                <p>Total<span class="ordersum">Rs. {{ round($total - $discount, 2) }}</span></p>
+                <a href="{{ route('orders.create') }}"><button class="placeorderbtn ">Place
+                        Order</button></a>
+
+
+            </div>
+
+
+
+            {{-- <table class="table text-center" border="2" style="width: 100%">
              --}}
             {{-- <thead>
                 <tr>
@@ -102,10 +129,10 @@
                     </tr>
                 @endforeach
             </tbody> --}}
-        {{-- </table> --}}
+            {{-- </table> --}}
 
 
-        {{-- <form action="{{ route('cart.clear') }}" method="POST" class="text-end pb-5">
+            {{-- <form action="{{ route('cart.clear') }}" method="POST" class="text-end pb-5">
             @csrf
             @method('DELETE')
             <button type="submit" class="clear-btn">Clear Cart</button>
@@ -114,11 +141,7 @@
 
             <a href="{{ route('orders.create') }}" class="addbtn">Complete Order</a>
         @endif --}}
+        </div>
+
     </div>
-
-</div>
-
-
-
-
 @endsection

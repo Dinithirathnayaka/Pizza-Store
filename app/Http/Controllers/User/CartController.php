@@ -30,7 +30,7 @@ class CartController extends Controller
 
     public function update(Request $request, Product $product, CartService $cart)
     {
-        $quantity = $request->input('quantity', 1);
+        $quantity = $request->input('quantity',0);
         $cart->updateQuantity($product->id, $quantity);
 
         return redirect()->route('cart.index')->with('success', 'Cart updated.');

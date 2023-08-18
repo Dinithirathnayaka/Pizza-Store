@@ -1,5 +1,19 @@
 @extends('layouts.user')
 
+
+@php
+    $total = 0.0;
+    $discount = 0.0;
+    foreach ($items as $productId => $item) {
+        $total += $item['product']->price;
+        $discount += $item['product']->price * ($item['product']->discount / 100);
+    }
+    
+@endphp
+
+
+
+
 @section('content')
     <section class="contactinfo pt-5 pb-5">
         <div class="container newcontainer ">
@@ -8,6 +22,9 @@
                     <div class="row">
                         <div class="col-md-12 mb-4">
                             <h2 class="h4" style="color: #ffffff">Order Details</h2>
+                        </div>
+                        <div class="col-md-12 mb-4">
+                            <h2 class="h4" style="color: #ffffff">{{ round($total - $discount, 2) }}</h2>
                         </div>
                         <div class="col-md-12 mb-3">
                             <p style="color: #808080"><span style="color: #ffffff">Address:</span> 198 West 21th Street,
