@@ -1,6 +1,35 @@
 @extends('layouts.admin')
 
-
+@php
+    function getStatus($value)
+    {
+        switch ($value) {
+            case 0:
+                return 'Pending';
+            case 1:
+                return 'Accepted';
+            case 2:
+                return 'Completed';
+            default:
+                return 'Unknown';
+        }
+    }
+@endphp
+@php
+    function getStatusColor($value)
+    {
+        switch ($value) {
+            case 0:
+                return 'red';
+            case 1:
+                return 'green';
+            case 2:
+                return 'yellow';
+            default:
+                return 'orange';
+        }
+    }
+@endphp
 @section('content')
     <div class="rightnav-header">
         <span class="ms-1 font-weight-bold light">Order History</span>
@@ -26,11 +55,24 @@
                     </th>
                     <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Price</th>
                     <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Status</th>
-                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"></th>
+
                 </tr>
             </thead>
             <tbody>
-bbb
+                @foreach ($orders as $order)
+                    <tr>
+                        <td>{{ $order->id }}</td>
+                        <td>{{ \Carbon\Carbon::parse($order->updated_at)->format('Y-m-d H:i') }}</td>
+                        <td>{{ $order->cusname }}</td>
+                        <td>{{ $order->discount }}</td>
+                        <td>{{ $order->total }}</td>
+
+                        <th style="color: {{ getStatusColor($order->orderstatus) }}">{{ getStatus($order->orderstatus) }}
+                        </th>
+
+
+                    </tr>
+                @endforeach
 
 
             </tbody>

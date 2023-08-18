@@ -21,10 +21,13 @@ class OrdersController extends Controller
 
     public function index()
     {
+        $orders = Order::where('orderstatus', 0)
+                       ->orWhere('orderstatus', 1)
+                       ->paginate(15);
 
-        $orders = Order::paginate(15);
         return view('admin.orders.index', compact('orders'));
     }
+
 
 
 
@@ -121,13 +124,11 @@ class OrdersController extends Controller
         return redirect()->back()->withErrors(['error' => 'An error occurred while processing your request.'])->withInput();
     }
 }
-    public function pendingorder()
-    {
-        return view('admin.orders.pendingorder');
-    }
+
 
     public function orderhistory()
     {
-        return view('admin.orders.orderhistory');
+        $orders = Order::whereNotIn('orderstatus', [0, 1]) ->paginate(15);;
+        return view('admin.orders.orderhistory', compact('orders'));
     }
 }

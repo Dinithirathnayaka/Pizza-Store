@@ -70,19 +70,25 @@
                         <td>{{ $order->discount }}</td>
                         <td>{{ $order->total }}</td>
 
-                        <th><button class="offline">{{ getStatus($order->orderstatus) }}</button></th>
+                        <th style="color: {{ getStatusColor($order->orderstatus) }}">{{ getStatus($order->orderstatus) }}
+                        </th>
 
                         <th>
-                            <form action="{{ route('orders.update', $order->id) }}" method="POST">
-                                @csrf
-                                @method('PATCH')
-                                <input type="hidden" name="status" value="{{ 1 }}">
-                                <input type="hidden" name="rider_id" value="{{ null }}">
-                                <button class="completebtn " type="submit"
-                                    style="background-color: {{ getStatusColor($order->orderstatus) }}">Complete
-                                    Button</button>
-                            </form>
-                            {{-- <a href="{{ route('admin.orders.show', $order->id) }}" class="completebtn">Complete Button</a> --}}
+                            @if ($order->orderstatus == 0)
+                                <form action="{{ route('orders.update', $order->id) }}" method="POST">
+                                    @csrf
+                                    @method('PATCH')
+                                    <input type="hidden" name="status" value="{{ 1 }}">
+                                    <input type="hidden" name="rider_id" value="{{ null }}">
+                                    <button class="completebtn " type="submit" style="green">Accept
+                                        Order</button>
+                                </form>
+                            @else
+                                <a href="{{ route('admin.orders.show', $order->id) }}" class="completebtn">Complete
+                                    Order</a>
+                            @endif
+
+
                         </th>
                     </tr>
                 @endforeach
