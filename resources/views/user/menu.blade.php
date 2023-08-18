@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <section class=" home-slider owl-carousel img" style="background-color: black;">
+    <section class=" home-slider owl-carousel img">
 
         <div class="slider-item" style="background-image: url(images/bg_3.jpg);">
             <div class="overlay"></div>
@@ -11,7 +11,7 @@
 
                     <div class="aboutdiv col-md-7 col-sm-12 text-center ftco-animate">
                         <h1 class="mb-3 mt-5 bread">Menu</h1>
-                        <p class="breadcrumbs"><span class="mr-2 homeabout" style="color: #ffffff"><a
+                        <p class="breadcrumbs"><span class="mr-2 homeabout"><a
                                     href="index.html">Home</a></span> <span>Menu</span></p>
                     </div>
 
@@ -22,7 +22,7 @@
 
     <section class="menupizzaimg">
         <div class="container">
-            <div class="row justify-content-center mb-5 pb-3">
+            <div class="row justify-content-center mb-2 pb-3">
                 <div class="col-md-7 heading-section  text-center p-3">
                     <h2 class="mb-4 pt-3 pb-3" style="color: #fff">Our Menu</h2>
                     <p style="color: #858585">Far far away, behind the word mountains, far from the countries Vokalia and
@@ -43,7 +43,7 @@
                     <div class=" text-div ">
                         <div class="services-wrap ">
                             <div class="text">
-                                <h3>{{ $product->name }}</h3>
+                                <h4 class="mb-3">{{ $product->name }}</h4>
                                 <p>{{ $product->description }}</p>
                                 <p><span class="price">${{ $product->price }} </span> <a
                                         href="{{ route('cart.add', ['product' => $product]) }}"

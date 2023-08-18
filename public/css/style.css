@@ -219,10 +219,12 @@ margin-left: -97%;
 
 .navbar{
     padding-left: 100px !important;
-padding-right: 50px !important;
+    padding-right: 50px !important;
     display: flex;
     position: relative;
+    height: 70px;
 }
+
 .navbar-nav {
     margin-left: auto;
 
@@ -236,6 +238,14 @@ padding-right: 50px !important;
   .navbar-nav .nav-link {
     text-decoration: none;
   }
+
+  .navbar-nav .nav-item.active .nav-link {
+    border-bottom: 2px solid #ffc107;
+}
+
+.navbar-nav .nav-item:hover .nav-link {
+    border-bottom: 2px solid #ffc107;
+}
 
   .toplogo{
     display: flex;
@@ -311,8 +321,19 @@ padding-right: 50px !important;
 
 
 .slider-item {
-    height: calc(100vh - 60px);
-    opacity: 0.5;
+    height: calc(100vh);
+    position: relative;
+}
+
+.slider-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the color and opacity */
+    z-index: 1; /* Make sure the overlay is above the background image */
 }
 
 .aboutdiv {
@@ -356,12 +377,12 @@ padding-right: 50px !important;
 
 
 .text h5{
-    color: #ffffff;
+    color: rgb(255, 255, 255,1.0);
     margin-top: 30px;
 }
 
 .text p{
-    color: #808080;
+    color: rgb(128, 128, 128,1.0);
 }
 
 .aboutsocial ul li{
@@ -489,8 +510,8 @@ input:focus, textarea:focus, select:focus{
     background-repeat: no-repeat;
     position: relative;
     height:auto;
-    padding-top: 8%;
-    padding-bottom: 8%;
+    padding-top: 130px;
+    padding-bottom: 130px;
       padding-left: 20px;
     padding-right: 20px;
 
@@ -683,14 +704,24 @@ width: 100vw;
 .menupizza{
     width: 200px;
     height: 200px;
+ transition: transform .2s;
+ border-radius: 10px;
 
 
 }
 
+.menupizza:hover {
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
 
 .text-div{
-    background-color: #0000001c;
-    padding: 20px;
+    background-color: rgb(33, 37, 41,0.3);
+    padding: 5px;
+    height: auto;
+
 
 }
 
@@ -777,7 +808,10 @@ flex:0.5;
     width: 60px;
     height: 60px;
     border-radius: 50%;
+
 }
+
+
 
 .menucontent{
     flex:4;

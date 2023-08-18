@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <section class=" home-slider owl-carousel img" style="background-color: black;">
+    <section class=" home-slider owl-carousel img" ">
 
         <div class="slider-item" style="background-image: url(images/bg_3.jpg);">
             <div class="overlay"></div>

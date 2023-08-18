@@ -2,25 +2,25 @@
 
 @section('content')
 
-    <section class="home-slider owl-carousel img" style="background-image: url(images/bg_1.jpg);">
+<section class=" home-slider owl-carousel img" >
 
-        <div class="slider-item" style="background-image: url(images/bg_3.jpg);">
-            <div class="overlay"></div>
-            <div class="container">
-                <div class="row slider-text justify-content-center align-items-center">
+    <div class="slider-item" style="background-image: url(images/bg_3.jpg);">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row slider-text justify-content-center align-items-center">
 
-                    <div class="col-md-7 col-sm-12 text-center ftco-animate">
-                        <h1 class="mb-3 mt-5 bread">Contact Us</h1>
-                        <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Contact</span>
-                        </p>
-                    </div>
-
+                <div class="aboutdiv col-md-7 col-sm-12 text-center ftco-animate">
+                    <h1 class="mb-3 mt-5 bread">Contact</h1>
+                    <p class="breadcrumbs"><span class="mr-2 homeabout" ><a
+                                href="index.html">Home</a></span> <span>Contact</span></p>
                 </div>
+
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="contactinfo pt-5 pb-5">
+    <section class="contactinfo " style="height: 90vh">
         <div class="container newcontainer ">
             <div class="row block-9">
                 <div class="col-md-6 col-xs-12 contact-info ">

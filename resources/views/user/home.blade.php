@@ -71,6 +71,56 @@
     </div>
 
 </div>
+<div class="row info ">
+    <div class="col-md-4 col-xs-12 contactnum ">
+        <div class="icon"><span class="icon-phone"></span></div>
+        <div class="text">
+            <h5>000 (123) 456 7890</h5>
+            <p>A small river named Duden flows</p>
+        </div>
+    </div>
+    <div class="col-md-2 col-xs-12">
+        <div class="icon"><span class="icon-my_location"></span></div>
+        <div class="text">
+            <h5>198 West 21th Street</h5>
+            <p>Suite 721 New York NY 10016</p>
+        </div>
+    </div>
+    <div class="col-md-2 col-xs-12 ">
+        <div class="icon"><span class="icon-clock-o"></span></div>
+        <div class="text">
+            <h5>Open Monday-Friday</h5>
+            <p>8:00am - 9:00pm</p>
+        </div>
+    </div>
+    <div class="col-md-4 col-xs-12 aboutsocial pt-3 " style="background-color: #FAC564 ">
+        <ul class="social-icon">
+            <li class=""><a href="#"><span class="fa fa-twitter" style="color: #ffffff"></span></a></li>
+            <li class=""><a href="#"><span class="fa fa-facebook" style="color: #ffffff"></span></a></li>
+            <li class=""><a href="#"><span class="fa fa-instagram" style="color: #ffffff"></span></a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6 col-xs-12"> <img src="images/about.jpg" class="welcome-img" alt="" style="width:100% "></div>
+    <div class="col-md-6 col-xs-12 welcomeright" style="background-color:#212529">
+        <div class="welcome-text " style="color: #ffffff">
+            <h2 class="mb-4 mt-4">Welcome to <span class="" style="color: #FAC564">Pizza</span> A Restaurant
+            </h2>
+        </div>
+
+
+        <div >
+            <p style="color: #808080">On her way she met a copy. The copy warned the Little Blind Text, that where
+                it came from it would have been rewritten a thousand times and everything that was left from its
+                origin would be the word "and" and the Little Blind Text should turn around and return to its own,
+                safe country. But nothing the copy said could convince her and so it didn’t take long until a few
+                insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their
+                agency, where they abused her for their.</p>
+        </div>
+    </div>
+</div>
 
 @endsection
 
