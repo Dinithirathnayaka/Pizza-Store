@@ -252,6 +252,29 @@ margin-left: -97%;
      color: #FAC564 !important;
   }
 
+  .cartimg{
+    width: 30px !important;
+
+
+  }
+
+  .loginbtn, .registerbtn{
+    text-decoration: none;
+    border: 1px solid #ffc107;
+    color: #fff;
+    padding: 5px 10px;
+    margin: 5px;
+    width: auto;
+  }
+
+  .topbtn{
+    background-color: #808080;
+    width: 50px !important;
+    border-radius: 50%;
+color: #fff !important;
+
+  }
+
 
 
 /* -----------------
@@ -1093,3 +1116,31 @@ border: 1px solid #808080;
   .sub{
 color: #808080;
   }
+
+
+  /* PLACE ORDER */
+
+  .ordersum{
+    width: 70%;
+ margin-right: 120px;
+ margin-top: 50px;
+  }
+
+  .completebtn{
+    border: none;
+    outline: none;
+    background-color: #fac564;
+    width: 40%;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 8px !important;
+  }
+
+  .completebtn:hover{
+    background-color: #ffc107;
+  }
+
+
+
+

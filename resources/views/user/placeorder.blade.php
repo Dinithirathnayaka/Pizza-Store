@@ -8,39 +8,47 @@
         $total += $item['product']->price;
         $discount += $item['product']->price * ($item['product']->discount / 100);
     }
-    
+
 @endphp
 
 
 
 
 @section('content')
-    <section class="contactinfo pt-5 pb-5">
-        <div class="container newcontainer ">
+    <section class="contactinfo " style="height: 100vh,padding-top:200px">
+        <div class="container newcontainer mt-5">
             <div class="row block-9">
-                <div class="col-md-6 col-xs-12 contact-info ">
-                    <div class="row">
-                        <div class="col-md-12 mb-4">
-                            <h2 class="h4" style="color: #ffffff">Order Details</h2>
-                        </div>
-                        <div class="col-md-12 mb-4">
+                <div class="col-md-6 col-xs-12 placeorder-info mx-auto d-block " style="margin-right: 50px">
+                            <h3 class="" style="color: #fac564">Summary of the Order </h3>
+
+                        {{-- <div class="col-md-12 mb-4">
                             <h2 class="h4" style="color: #ffffff">{{ round($total - $discount, 2) }}</h2>
+                        </div> --}}
+
+                        <div class="ordersum p-3" style="background-color: #212529">
+                            <div class="row mb-3 ">
+                                <div class="col-4" style="color: #ffffff">No of Items :</div>
+                                <div class="col-6 text-end" style="color: #fac564">10</div>
+                            </div>
+                            <hr style="color: #ffffff">
+                            <div class="row mb-3">
+                                <div class="col-4" style="color: #ffffff">Sub Total :</div>
+                                <div class="col-6" style="color: #fac564">10</div>
+                            </div>
+                            <hr style="color: #ffffff">
+                            <div class="row mb-3">
+                                <div class="col-4" style="color: #ffffff">Disccount :</div>
+                                <div class="col-6" style="color: green">10%</div>
+                            </div>
+                            <hr style="color: #ffffff">
+                            <div class="row mb-3">
+                                <div class="col-4" style="color: #ffffff">Total :</div>
+                                <div class="col-6" style="color: #fac564">10</div>
+                            </div>
                         </div>
-                        <div class="col-md-12 mb-3">
-                            <p style="color: #808080"><span style="color: #ffffff">Address:</span> 198 West 21th Street,
-                                Suite 721 New York NY 10016</p>
-                        </div>
-                        <div class="col-md-12 mb-3">
-                            <p><span style="color: #ffffff">Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
-                        </div>
-                        <div class="col-md-12 mb-3">
-                            <p><span style="color: #ffffff">Email:</span> <a
-                                    href="mailto:info@yoursite.com">info@yoursite.com</a></p>
-                        </div>
-                        <div class="col-md-12 mb-3">
-                            <p><span style="color: #ffffff">Website:</span> <a href="#">yoursite.com</a></p>
-                        </div>
-                    </div>
+
+
+
                 </div>
 
                 <div class="col-md-6 col-xs-12 ">
@@ -67,8 +75,7 @@
                             <textarea name="note" id="" cols="30" rows="7" class="form-controlnew" placeholder="Note"></textarea>
                         </div>
                         <div class="form-group">
-                            <input type="submit" value="Place Order" class="btn btn-primary py-3 px-5 "
-                                style="color:#000000 ">
+                            <input type="submit" value="Complete Order" class="completebtn  mx-auto d-block text-center">
                         </div>
                     </form>
                 </div>
