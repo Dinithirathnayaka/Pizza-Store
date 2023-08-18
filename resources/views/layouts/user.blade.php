@@ -64,10 +64,11 @@
                     <li class="nav-item active"><a href="{{ route('home') }}" class="nav-link">Home</a></li>
                     <li class="nav-item"><a href="{{ route('menu') }}" class="nav-link">Menu</a></li>
                     <li class="nav-item"><a href="{{ route('services') }}" class="nav-link">Services</a></li>
-                    <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-                    <li class="nav-item"><a href="{{ route('cart.index') }}" class="nav-link">Cart</a></li>
                     <li class="nav-item"><a href="{{ route('about') }}" class="nav-link">About</a></li>
                     <li class="nav-item"><a href="{{ route('contact') }}" class="nav-link">Contact</a></li>
+                    <a href="{{ route('login') }}" class="loginbtn">Sign In</a>
+                    <a href="{{ route('register') }}" class="registerbtn">Sign Up</a>
+                    <li class="nav-item"><a href="{{ route('cart.index') }}" class="nav-link"> <img src="images/shopping-cart.png" alt="cart" class="cartimg"><span class="topbtn">1</span></a></li>
                 </ul>
             </div>
         </div>
