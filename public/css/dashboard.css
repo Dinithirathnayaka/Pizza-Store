@@ -38,7 +38,7 @@
     color: #fff;
 }
 
-.nav-item:hover .nav-link {
+.sub-menu.nav-item.active .nav-item {
     background-color: #fac5641c;
     color: #fff;
 }
@@ -84,4 +84,14 @@
 .navbar-nav li {
     animation: fadeInBottom 1s both;
     display: inline-block;
+}
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    padding: 0;
+    border: 1px solid #ccc;
 }

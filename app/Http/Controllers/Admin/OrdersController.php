@@ -38,7 +38,7 @@ class OrdersController extends Controller
     {
         $riders = Rider::all();
         $order = Order::find($id);
-        return view('admin.orders.show',compact('riders'));
+        return view('admin.orders.show', compact('riders'));
     }
 
     public function store(Request $request, CartService $cart)
@@ -93,5 +93,15 @@ class OrdersController extends Controller
             return $th;
             return redirect()->back()->withErrors(['error' => 'An error occurred while processing your request.'])->withInput();
         }
+    }
+
+    public function pendingorder()
+    {
+        return view('admin.orders.pendingorder');
+    }
+
+    public function orderhistory()
+    {
+        return view('admin.orders.orderhistory');
     }
 }

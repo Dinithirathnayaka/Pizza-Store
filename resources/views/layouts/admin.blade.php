@@ -64,7 +64,8 @@
                     <li class="nav-item {{ request()->is('admin/dashboard') ? 'active' : '' }}"><a
                             href="{{ route('admin.dashboard') }}" class="nav-link"><span><img
                                     src="{{ asset('images/house.png') }}" alt=""
-                                    class="navicon"></span>Dashboard</a></li>
+                                    class="navicon"></span>Dashboard</a>
+                    </li>
                     <li class="nav-item {{ request()->is('admin/users') ? 'active' : '' }}"><a
                             href="{{ route('admin.users') }}" class="nav-link"><span><img
                                     src="{{ asset('images/user.png') }}" alt="" class="navicon"></span>Users</a>
@@ -72,11 +73,22 @@
                     <li class="nav-item {{ request()->is('admin/product') ? 'active' : '' }}"><a
                             href="{{ route('admin.product') }}" class="nav-link"><span><img
                                     src="{{ asset('images/order.png') }}" alt=""
-                                    class="navicon"></span>Products</a></li>
-                    <li class="nav-item {{ request()->is('admin/orders') ? 'active' : '' }}"><a
-                            href="{{ route('admin.orders') }}" class="nav-link"><span><img
-                                    src="{{ asset('images/checkout.png') }}" alt=""
-                                    class="navicon"></span>Orders</a></li>
+                                    class="navicon"></span>Products</a>
+
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="{{ route('admin.orders') }}" class="nav-link nav-link-toggle" onclick="toggleSubMenu('sub-menu-1')">
+                            <span><img src="{{ asset('images/checkout.png') }}" alt="" class="navicon"></span>
+                            Orders
+                        </a>
+                        <ul class="sub-menu" id="sub-menu-1">
+                            <li class="nav-item mb-2"><a href="{{ route('admin.orders.orderhistory') }}" >Order History</a></li><br>
+                            <li class="nav-item"><a href="{{ route('admin.orders.pendingorder') }}">Pending Orders</a></li>
+                        </ul>
+                    </li>
+
+
                     <li class="nav-item {{ request()->is('admin/category') ? 'active' : '' }}"><a
                             href="{{ route('admin.category') }}" class="nav-link"><span><img
                                     src="{{ asset('images/category.png') }}" alt=""
@@ -126,6 +138,16 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
     </script>
+
+<script>
+        $(document).ready(function () {
+            $(".nav-link-toggle").click(function (e) {
+                e.preventDefault(); // Prevent default link behavior
+                const subMenu = $(this).siblings(".sub-menu");
+                subMenu.toggle(); // Toggle the sub-menu
+            });
+        });
+</script>
 </body>
 
 </html>
