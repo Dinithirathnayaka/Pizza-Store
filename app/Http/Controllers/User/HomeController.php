@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\User;
 use App\Http\Controllers\Controller;
+use App\Mail\OrderEmail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class HomeController extends Controller
 {
@@ -24,7 +26,14 @@ class HomeController extends Controller
 
      public function index()
     {
-        return view('user.home');
+
+    $userEmail = 'supunnikz@gmail.com';
+    Mail::to($userEmail)->send(new OrderEmail("fddf","dsd"));
+
+    return "Email sent successfully!";
+
+
+        //return view('user.home');
     }
 
     public function about()
