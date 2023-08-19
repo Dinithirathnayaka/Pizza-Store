@@ -39,14 +39,23 @@ class OrdersController extends Controller
 
     public function show($id)
     {
+
+        $order = Order::find($id);
+        $orderitems=$order->orderItems;
+
+
+       return view('admin.orders.show', compact('order','orderitems'));
+    }
+
+    public function showcomplete($id)
+    {
         $riders = Rider::all();
         $order = Order::find($id);
         $orderitems=$order->orderItems;
 
 
-       return view('admin.orders.show', compact('riders','order','orderitems'));
+       return view('admin.orders.complete', compact('riders','order','orderitems'));
     }
-
 
 
 
@@ -106,25 +115,44 @@ class OrdersController extends Controller
 
 
 
-    public function update(Request $request, $id)
-{
-    try {
-        $validatedData = $request->validate([
-            'status' => 'required|integer',
-            'rider_id' => 'nullable|integer',
-        ]);
-        $order = Order::findOrFail($id);
-        $order->orderstatus = $validatedData['status'];
-         $order->rider_id = $validatedData['rider_id'];
-        $order->save();
-        return redirect()->route('order.index')->with('success', 'Order updated successfully.');
-    } catch (ValidationException $e) {
-        return redirect()->back()->withErrors($e->errors())->withInput();
-    } catch (\Throwable $th) {
-        return redirect()->back()->withErrors(['error' => 'An error occurred while processing your request.'])->withInput();
+        public function update(Request $request, $id)
+    {
+        try {
+            $validatedData = $request->validate([
+                'status' => 'required|integer',
+                'rider_id' => 'nullable|exists:riders,id',
+            ]);
+            // return $validatedData;
+            $order = Order::findOrFail($id);
+            $order->orderstatus = $validatedData['status'];
+            $order->rider_id = $validatedData['rider_id'];
+            $order->save();
+            return redirect()->route('admin.orders')->with('success', 'Order updated successfully.');
+        } catch (ValidationException $e) {
+            return redirect()->back()->withErrors($e->errors())->withInput();
+        } catch (\Throwable $th) {
+            return redirect()->back()->withErrors(['error' => 'An error occurred while processing your request.'])->withInput();
+        }
     }
-}
+    public function complete(Request $request, $id)
+        {
+            try {
+            $validatedData = $request->validate([
+                'status' => 'required|integer',
+                'rider_id' => 'exists:riders,id',
+            ]);
 
+            $order = Order::findOrFail($id);
+            $order->orderstatus = $validatedData['status'];
+            $order->rider_id = $validatedData['rider_id'];
+            $order->save();
+            return redirect()->route('admin.orders')->with('success', 'Order updated successfully.');
+    } catch (ValidationException $e) {
+            return redirect()->back()->withErrors($e->errors())->withInput();
+     } catch (\Throwable $e) {
+            return redirect()->back()->withErrors(['error' => 'An error occurred while processing your request.'])->withInput();
+     }
+    }
 
     public function orderhistory()
     {

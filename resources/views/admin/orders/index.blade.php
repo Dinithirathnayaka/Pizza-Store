@@ -84,7 +84,7 @@
                                         Order</button>
                                 </form>
                             @else
-                                <a href="{{ route('admin.orders.show', $order->id) }}" class="completebtn">Complete
+                                <a href="{{ route('admin.orders.showcomplete', $order->id) }}" class="completebtn">Complete
                                     Order</a>
                             @endif
 
