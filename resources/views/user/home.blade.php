@@ -8,7 +8,7 @@
             <p class="text-center">Welcome</p>
             <h1 class="text-center"> WE COOKED YOUR DESIRED<br>PIZZA RECIPE</h1>
             <p class="text-center mb-md-5">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-            <p><a href="#" class="orderbtn mx-auto d-block text-center">Order Now</a> </p>
+            <p><a href="{{ route('menu') }}" class="orderbtn mx-auto d-block text-center">Order Now</a> </p>
         </div>
 
     </div>
@@ -18,7 +18,7 @@
             <span class="subheading">Crunchy</span>
             <h1 class="mb-4">Italian Pizza</h1>
             <p class="mb-4 mb-md-5">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-            <p><a href="#" class="orderbtn mx-auto d-block text-center">Order Now</a> </p>
+            <p><a href="{{ route('menu') }}" class="orderbtn mx-auto d-block text-center">Order Now</a> </p>
         </div>
         <img src="{{ url('/images/bg_1.png') }}"  class="sliderimg" style="width: 100%; height: 100%;">
     </div>
@@ -28,7 +28,7 @@
             <span class="subheading">Crunchy</span>
             <h1 class="mb-4">Italian Burger</h1>
             <p class="mb-4 mb-md-5">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-            <p><a href="#" class="orderbtn mx-auto d-block text-center">Order Now</a> </p>
+            <p><a href="{{ route('menu') }}" class="orderbtn mx-auto d-block text-center">Order Now</a> </p>
         </div>
         <img src="{{ url('/images/burger-1.jpg') }}"  class="sliderimg" style="width: 100%; height: 100%; border-radius:50% ;">
     </div>
@@ -38,7 +38,7 @@
             <span class="subheading">Delicious</span>
             <h1 class="mb-4">Italian Pasta</h1>
             <p class="mb-4 mb-md-5">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-            <p><a href="#" class="orderbtn mx-auto d-block text-center">Order Now</a> </p>
+            <p><a href="{{ route('menu') }}" class="orderbtn mx-auto d-block text-center">Order Now</a> </p>
         </div>
         <img src="{{ url('/images/pasta-1.jpg') }}"  class="sliderimg" style="width: 100%; height: 100%; border-radius:50% ;">
     </div>
@@ -48,7 +48,7 @@
             <span class="subheading">Delicious</span>
             <h1 class="mb-4">Lime Juice</h1>
             <p class="mb-4 mb-md-5">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-            <p><a href="#" class="orderbtn mx-auto d-block text-center">Order Now</a> </p>
+            <p><a href="{{ route('menu') }}" class="orderbtn mx-auto d-block text-center">Order Now</a> </p>
         </div>
         <img src="{{ url('/images/drink-1.jpg') }}"  class="sliderimg" style="width: 100%; height: 100%; border-radius:50% ;">
     </div>

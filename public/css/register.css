@@ -1,4 +1,4 @@
-.loginContainer {
+.registerContainer {
     background-image: url(/images/loginbackground.jpg);
     height: 100vh !important;
     background-repeat: no-repeat;
@@ -8,7 +8,7 @@
     position: relative;
 }
 
-.loginForm {
+.registerForm {
     width: 35vw;
     background-image: url(/images/bg_4.jpg);
     padding: 40px;
@@ -21,7 +21,7 @@
     z-index: 200000;
 }
 
-.logintext {
+.registertext {
     color: #ffc107;
     font-size: 30px;
     font-weight: 600;
@@ -31,7 +31,7 @@
     color: blue;
 }
 
-.loginbtn {
+.registerbtn {
     background-color: #ffc107;
     border-radius: 12px;
     padding: 3px;

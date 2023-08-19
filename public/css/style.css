@@ -218,11 +218,13 @@ margin-left: -97%;
 --------------------*/
 
 .navbar{
-    padding-left: 100px !important;
-    padding-right: 50px !important;
+
     display: flex;
     position: relative;
     height: 70px;
+    width: 100vw;
+    padding-left: 100px !important;
+    padding-right: 50px !important;
 }
 
 .navbar-nav {
@@ -576,7 +578,6 @@ p a{
     background-image: url(/images/food.png);
     height:auto ;
     width: 100vw;
-
     padding-top: 200px;
     padding-bottom: 100px;
 
@@ -696,7 +697,9 @@ text-transform: capitalize;
 .menupizzaimg{
 
 background-image: url(/images/bg_4.jpg);
-width: 100vw;
+height: auto !important;
+background-repeat: no-repeat;
+background-size: cover;
 }
 
 
