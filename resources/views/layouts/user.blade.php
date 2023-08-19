@@ -64,31 +64,39 @@
         </button>
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active"><a href="{{ route('home') }}" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="{{ route('menu') }}" class="nav-link">Menu</a></li>
-                <li class="nav-item"><a href="{{ route('services') }}" class="nav-link">Services</a></li>
-                <li class="nav-item"><a href="{{ route('about') }}" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="{{ route('contact') }}" class="nav-link">Contact</a></li>
+                <li class="nav-item {{ request()->routeIs('home') ? 'active' : '' }}">
+                    <a href="{{ route('home') }}" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item {{ request()->routeIs('menu') ? 'active' : '' }}">
+                    <a href="{{ route('menu') }}" class="nav-link">Menu</a>
+                </li>
+                <li class="nav-item {{ request()->routeIs('services') ? 'active' : '' }}">
+                    <a href="{{ route('services') }}" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item {{ request()->routeIs('about') ? 'active' : '' }}">
+                    <a href="{{ route('about') }}" class="nav-link">About</a>
+                </li>
+                <li class="nav-item {{ request()->routeIs('contact') ? 'active' : '' }}">
+                    <a href="{{ route('contact') }}" class="nav-link">Contact</a>
+                </li>
                 @if (auth()->check())
-                    <a href="{{ route('cart.index') }}" class="nav-link"> <img src="images/shopping-cart.png"
-                            alt="cart" class="cartimg">
-                        @if ($cartService->count())
-                            <span class="topbtn">
-                                {{-- {{ $cartService->count() }} --}}
-                            </span>
-                        @endif
-
-
                     </a>
                     <a href="{{ route('logout') }}" class="registerbtn">Log Out</a>
+                    <a href="{{ route('accountsetting') }}" class="user-profile"> <img src="images/user-profile.png"
+                            alt="cart" class="cartimg"></a>
                 @else
                     <a href="{{ route('login') }}" class="loginbtn">Sign In</a>
                     <a href="{{ route('register') }}" class="registerbtn">Sign Up</a>
                 @endif
+                <a href="{{ route('cart.index') }}" class="nav-link"> <img src="images/shopping-cart.png"
+                        alt="cart" class="cartimg">
+                    @if ($cartService->count())
+                        <span class="topbtn">
+                            {{-- {{ $cartService->count() }} --}}
+                        </span>
+                    @endif
 
 
-                <a href="{{ route('accountsetting') }}" class="user-profile"> <img src="images/user-profile.png"
-                        alt="cart" class="cartimg"></a>
             </ul>
         </div>
 
