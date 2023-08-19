@@ -33,9 +33,9 @@ Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
-
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::get('/services', [HomeController::class, 'services'])->name('services');
+Route::get('/accountsetting', [HomeController::class, 'accountsetting'])->name('accountsetting');
 
 Route::get('/placeorder', [OrdersController::class, 'create'])->name('orders.create');
 Route::post('/placeorder', [OrdersController::class, 'store'])->name('orders.store');
@@ -48,6 +48,8 @@ Route::get('/cart/add/{product}', [CartController::class, 'add'])->name('cart.ad
 Route::patch('/cart/update/{product}', [CartController::class, 'update'])->name('cart.update');
 Route::delete('/cart/remove/{product}', [CartController::class, 'remove'])->name('cart.remove');
 Route::delete('/cart/clear', [CartController::class, 'clear'])->name('cart.clear');
+
+
 
 
 

@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\User;
+
 use App\Http\Controllers\Controller;
 use App\Mail\OrderEmail;
 use Illuminate\Http\Request;
@@ -24,7 +25,7 @@ class HomeController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
 
-     public function index()
+    public function index()
     {
 
     // $userEmail = 'supunnikz@gmail.com';
@@ -50,4 +51,8 @@ class HomeController extends Controller
         return view('user.contact');
     }
 
+    public function accountsetting()
+    {
+        return view('user.accountsetting');
+    }
 }

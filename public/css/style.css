@@ -697,7 +697,13 @@ text-transform: capitalize;
     background: transparent;
     color:#ffffff !important;
     border: 1px solid #ffffff;
-    padding: 5px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.btn-service:hover{
+    background-color: #ffc107;
+    color: #fff;
 }
 
 /* -----------------
