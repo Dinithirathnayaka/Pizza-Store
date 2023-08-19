@@ -27,13 +27,13 @@ class HomeController extends Controller
      public function index()
     {
 
-    $userEmail = 'supunnikz@gmail.com';
-    Mail::to($userEmail)->send(new OrderEmail("fddf","dsd"));
+    // $userEmail = 'supunnikz@gmail.com';
+    // Mail::to($userEmail)->send(new OrderEmail("fddf","dsd"));
 
-    return "Email sent successfully!";
+    // return "Email sent successfully!";
 
 
-        //return view('user.home');
+        return view('user.home');
     }
 
     public function about()
