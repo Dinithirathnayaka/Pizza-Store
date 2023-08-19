@@ -458,7 +458,7 @@ margin-bottom: 30px;
 
 .contactright{
     background-color: #000000;
-    padding: 30px;
+    padding: 100px 30px;
 }
 
 .aboutcontact{
@@ -788,7 +788,13 @@ background-size: cover;
 .btn-order{
     color: #ffffff !important;
     border: 1px solid #ffffff;
-    padding: 5px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.btn-order:hover{
+    background-color: #ffc107;
+    color: #fff;
 }
 
 .menurow{
@@ -889,6 +895,10 @@ flex:0.5;
     background-color: #ffc107;
     color: #000000;
 }
+
+
+
+
 
 
 

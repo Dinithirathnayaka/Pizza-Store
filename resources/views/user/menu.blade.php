@@ -45,9 +45,8 @@
                             <div class="text">
                                 <h4 class="mb-3">{{ $product->name }}</h4>
                                 <p>{{ $product->description }}</p>
-                                <p><span class="price">${{ $product->price }} </span> <a
-                                        href="{{ route('cart.add', ['product' => $product]) }}"
-                                        class="ml-2 btn-order btn-white btn-outline-white ">Add to cart</a></p>
+                                <p><span class="price">${{ $product->price }} </span> </p>
+                                    <p><a href="{{ route('cart.add', ['product' => $product]) }}" class=" ml-2 btn-order btn-white btn-outline-white ">Add to cart</a></p>
                             </div>
                         </div>
                     </div>
@@ -108,7 +107,7 @@
         </div>
         <div class="menus pt-3 ">
             <div class="row vw-100">
-                <div class="col-lg-4 col-sm-12"><img src="images/about.jpg" class="menusleftimg ps-3" /></div>
+                <div class="col-lg-4 col-sm-12"><img src="images/pizza-9.jpg" class="menusleftimg" /></div>
                 {{-- <div class="col-lg-8 col-sm-12">
                     <div class="btnlist mb-3 mt-3">
 
