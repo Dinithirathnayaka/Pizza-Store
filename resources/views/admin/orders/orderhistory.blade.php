@@ -55,7 +55,7 @@
                     </th>
                     <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Price</th>
                     <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Status</th>
-
+                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"></th>
                 </tr>
             </thead>
             <tbody>
@@ -69,7 +69,10 @@
 
                         <th style="color: {{ getStatusColor($order->orderstatus) }}">{{ getStatus($order->orderstatus) }}
                         </th>
-
+                        <th>
+                            <a href="{{ route('admin.orders.show', $order->id) }}" class="completebtn">View
+                                Order</a>
+                        </th>
 
                     </tr>
                 @endforeach

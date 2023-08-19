@@ -46,19 +46,23 @@
         </div>
         <div class="rightsummary">
             <span class="ms-1 font-weight-bold light">Rider Details</span>
-            <div class="row">
-                <div class="col-4">Sub Total :</div>
-                <div class="col-5">{{ $order->rider->emp_id }}</div>
-            </div>
+            <form action="{{ route('orders.complete', $order->id) }}" method="POST">
+                @csrf
+                @method('PATCH')
+                <input type="hidden" name="status" value="{{ 2 }}">
+                <label for="riders">Choose a Rider:</label>
+                <select name="rider_id" id="cars">
+                    <option value="" disabled selected>Select a rider</option>
+                    @foreach ($riders as $rider)
+                        <option value="{{ $rider->id }}">{{ $rider->name }}</option>
+                    @endforeach
+                </select>
+                <br><br>
+                <input type="submit" value="Accept Order">
+            </form>
+            {{-- <form action="">
 
-            <div class="row">
-                <div class="col-4">Total :</div>
-                <div class="col-5">{{ $order->rider->name }}</div>
-            </div>
-            <div class="row">
-                <div class="col-4">Total :</div>
-                <div class="col-5">{{ $order->rider->mobile }}</div>
-            </div>
+            </form> --}}
         </div>
     </div>
 
@@ -92,7 +96,7 @@
                         <td>{{ $item->product->price }}</td>
                         <td>{{ round($item->product->price - $item->product->price * ($item->product->discount / 100), 2) }}
                         </td>
-                        <td>10</td>
+                        <td> {{ $item->qty }}</td>
                     </tr>
                 @endforeach
             </tbody>

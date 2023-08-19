@@ -90,6 +90,8 @@ Route::group(['prefix' => 'admin'], function () {
     // orders
     Route::get('/orders', [OrdersController::class, 'index'])->name('admin.orders');
     Route::get('/orders/{id}/show', [OrdersController::class, 'show'])->name('admin.orders.show');
+    Route::get('/orders/{id}/showcomplete', [OrdersController::class, 'showcomplete'])->name('admin.orders.showcomplete');
     Route::patch('/orders/{id}/update', [OrdersController::class, 'update'])->name('orders.update');
+    Route::patch('/orders/{id}/complete', [OrdersController::class, 'complete'])->name('orders.complete');
     Route::get('/orders/orderhistory', [OrdersController::class, 'orderhistory'])->name('admin.orders.orderhistory');
 });
