@@ -1,52 +1,59 @@
-.leftbar {
-    display: none !important;
-}
-.rightbar {
-    width: 100vw;
-    padding-top: 10%;
-    background-color: #808080;
-    /* background-image: url("{{ asset('images/bg_1.jpg') }}") !important; */
-}
-
-.adminlogin {
-    background-color: #808080;
-    margin-left: auto;
-    margin-right: auto;
+.loginContainer {
+    background-image: url(/images/loginbackground.jpg);
+    height: 100vh !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
-.card {
-    width: 500px;
-    padding: 20px;
-    background-color: #212529;
-    margin-left: auto;
-    margin-right: auto;
+.loginForm {
+    width: 35vw;
+    background-image: url(/images/bg_4.jpg);
+    padding: 40px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    z-index: 200000;
 }
 
 .logintext {
-    font-size: 25px;
-    font-weight: 500;
-    margin-bottom: 20px;
-    color: #fff;
+    color: #ffc107;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.form-check-label {
+    color: blue;
 }
 
 .loginbtn {
-    background-color: #fac564;
-    width: 150px;
-    border: none;
-    outline: none;
-    padding: 5px;
-    color: #212529;
+    background-color: #ffc107;
+    border-radius: 12px;
+    padding: 3px;
+    width: 30vw;
+    font-size: 20px;
     font-weight: 500;
-    font-size: 18px;
-    border-radius: 10px;
+    outline: none;
 }
 
 .forgotlink {
+    text-align: center !important;
+    justify-content: center !important;
     text-decoration: none;
-    font-size: small;
-    color: red;
+    margin-left: 120px !important;
+    margin-bottom: 40px;
+    color: #808080 !important;
 }
 
-.adminlogin label {
+.signup {
+    text-decoration: none;
+}
+
+.form-check-labelsign {
     color: #fff;
 }

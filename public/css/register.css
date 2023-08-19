@@ -1,0 +1,59 @@
+.registerContainer {
+    background-image: url(/images/loginbackground.jpg);
+    height: 100vh !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.registerForm {
+    width: 35vw;
+    background-image: url(/images/bg_4.jpg);
+    padding: 40px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    z-index: 200000;
+}
+
+.registertext {
+    color: #ffc107;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.form-check-label {
+    color: blue;
+}
+
+.registerbtn {
+    background-color: #ffc107;
+    border-radius: 12px;
+    padding: 3px;
+    width: 30vw;
+    font-size: 20px;
+    font-weight: 500;
+    outline: none;
+}
+
+.forgotlink {
+    text-align: center !important;
+    justify-content: center !important;
+    text-decoration: none;
+    margin-left: 120px !important;
+    margin-bottom: 40px;
+    color: #808080 !important;
+}
+
+.signup {
+    text-decoration: none;
+}
+
+.form-check-labelsign {
+    color: #fff;
+}

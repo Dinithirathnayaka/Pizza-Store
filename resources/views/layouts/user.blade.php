@@ -48,7 +48,7 @@
 </head>
 
 <body class="">
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar" style="width: 100vw">
 
             <div class="toplogo"><img src="images/pizza-slicelogo.png" alt="" class="logoimg">
                 <div class="toplogocontent">Pizza</div>
@@ -68,7 +68,7 @@
                     <li class="nav-item"><a href="{{ route('contact') }}" class="nav-link">Contact</a></li>
                     <a href="{{ route('login') }}" class="loginbtn">Sign In</a>
                     <a href="{{ route('register') }}" class="registerbtn">Sign Up</a>
-                    <li class="nav-item"><a href="{{ route('cart.index') }}" class="nav-link"> <img src="images/shopping-cart.png" alt="cart" class="cartimg"><span class="topbtn">1</span></a></li>
+                    <a href="{{ route('cart.index') }}" class="nav-link"> <img src="images/shopping-cart.png" alt="cart" class="cartimg"><span class="topbtn">1</span></a>
                 </ul>
             </div>
 
