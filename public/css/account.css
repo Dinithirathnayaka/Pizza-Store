@@ -1,6 +1,6 @@
 .account {
     height: 100vh;
-    max-width: 100%;
+    width: 100vw !important;
     background-size: cover;
     position: relative;
     background-repeat: no-repeat;
@@ -8,16 +8,62 @@
 
 .midcontainer {
     position: absolute;
-    background: rgba(57, 57, 57, 0.6);
+    background: rgba(57, 57, 57, 0.8);
     width: 100vw;
     height: 100vh;
 }
 
-.accountdetails {
-    height: 100vh;
-    width: 100%;
-    background-color: #212529 !important;
+.accountDetails {
+    background-color: rgba(0, 0, 0, 0.6);
     color: #fff;
-    padding-left: 20px;
-    padding-right: 20px;
+    width: 100%;
+    height: auto;
+    padding: 30px;
+    margin-top: 100px;
+    margin-left: 30px;
+}
+
+.accountRight {
+    padding: 30px;
+    margin-top: 100px;
+}
+
+.accountRight h5 {
+    color: #fff;
+    margin-left: 10px;
+}
+
+.card {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+th {
+    font-size: small;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+tr {
+    margin-bottom: 20px !important;
+    padding: 20px;
+}
+
+.viewbtn {
+    background-color: #ffc107;
+    text-decoration: none;
+    color: #000;
+    padding: 5px 10px;
+    float: right !important;
+    border-radius: 10px;
+    border-radius: 15px;
+}
+
+.viewordertable {
+    margin-bottom: 50px;
 }
