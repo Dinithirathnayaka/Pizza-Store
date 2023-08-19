@@ -2,21 +2,21 @@
 
 @section('content')
 
-    <section class=" home-slider owl-carousel img">
+    <section class=" home-slider " style="background-image: url(images/menu.jpg);">
 
-        <div class="slider-item" style="background-image: url(images/bg_3.jpg);">
-            <div class="overlay"></div>
-            <div class="container">
+        <div class="slider-item" >
+
+
                 <div class="row slider-text justify-content-center align-items-center">
 
-                    <div class="aboutdiv col-md-7 col-sm-12 text-center ftco-animate">
+                    <div class="aboutdiv text-center ">
                         <h1 class="mb-3 mt-5 bread">Menu</h1>
                         <p class="breadcrumbs"><span class="mr-2 homeabout"><a
                                     href="index.html">Home</a></span> <span>Menu</span></p>
                     </div>
 
                 </div>
-            </div>
+
         </div>
     </section>
 
