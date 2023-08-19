@@ -30,7 +30,7 @@ class CartService
         if ($this->has($productId)) {
             $prevQuantity = $this->items->get($productId)['quantity'];
 
-            if ($quantity + $prevQuantity >= 0) {
+            if ($quantity + $prevQuantity > 0) {
                 $newQuantity = $quantity + $prevQuantity;
                 $this->items = $this->items->map(function ($item, $key) use ($productId, $newQuantity) {
                     if ($key === $productId) {

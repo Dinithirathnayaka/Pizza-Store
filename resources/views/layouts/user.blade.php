@@ -48,31 +48,48 @@
 </head>
 
 <body class="">
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar" style="width: 100vw">
+    @inject('cartService', 'App\Services\CartService')
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar"
+        style="width: 100vw">
 
-            <div class="toplogo"><img src="images/pizza-slicelogo.png" alt="" class="logoimg">
-                <div class="toplogocontent">Pizza</div>
-            </div>
+        <div class="toplogo"><img src="images/pizza-slicelogo.png" alt="" class="logoimg">
+            <div class="toplogocontent">Pizza</div>
+        </div>
 
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
-                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="oi oi-menu"></span> Menu
-            </button>
-            <div class="collapse navbar-collapse" id="ftco-nav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active"><a href="{{ route('home') }}" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="{{ route('menu') }}" class="nav-link">Menu</a></li>
-                    <li class="nav-item"><a href="{{ route('services') }}" class="nav-link">Services</a></li>
-                    <li class="nav-item"><a href="{{ route('about') }}" class="nav-link">About</a></li>
-                    <li class="nav-item"><a href="{{ route('contact') }}" class="nav-link">Contact</a></li>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+            aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="oi oi-menu"></span> Menu
+        </button>
+        <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active"><a href="{{ route('home') }}" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="{{ route('menu') }}" class="nav-link">Menu</a></li>
+                <li class="nav-item"><a href="{{ route('services') }}" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="{{ route('about') }}" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="{{ route('contact') }}" class="nav-link">Contact</a></li>
+                @if (auth()->check())
+                    <a href="{{ route('cart.index') }}" class="nav-link"> <img src="images/shopping-cart.png"
+                            alt="cart" class="cartimg">
+                        @if ($cartService->count())
+                            <span class="topbtn">
+                                {{-- {{ $cartService->count() }} --}}
+                            </span>
+                        @endif
+
+
+                    </a>
+                    <a href="{{ route('logout') }}" class="registerbtn">Log Out</a>
+                @else
                     <a href="{{ route('login') }}" class="loginbtn">Sign In</a>
                     <a href="{{ route('register') }}" class="registerbtn">Sign Up</a>
-                    <a href="{{ route('cart.index') }}" class="nav-link"> <img src="images/shopping-cart.png" alt="cart" class="cartimg"><span class="topbtn">1</span></a>
-                    <a href="#" class="registerbtn">Log Out</a>
-                    <a href="{{ route('accountsetting') }}" class="user-profile"> <img src="images/user-profile.png" alt="cart" class="cartimg"></a>
-                </ul>
-            </div>
+                @endif
+
+
+                <a href="{{ route('accountsetting') }}" class="user-profile"> <img src="images/user-profile.png"
+                        alt="cart" class="cartimg"></a>
+            </ul>
+        </div>
 
     </nav>
     <!-- END nav -->
@@ -208,7 +225,7 @@
         });
 
 
-            const myslide = document.querySelectorAll('.myslide'),
+        const myslide = document.querySelectorAll('.myslide'),
             dot = document.querySelectorAll('.dot');
         let counter = 1;
         slidefun(counter);
@@ -218,11 +235,13 @@
             counter += 1;
             slidefun(counter);
         }
+
         function plusSlides(n) {
             counter += n;
             slidefun(counter);
 
         }
+
         function currentSlide(n) {
             counter = n;
             slidefun(counter);
@@ -236,22 +255,22 @@
         function slidefun(n) {
 
             let i;
-            for(i = 0;i<myslide.length;i++){
+            for (i = 0; i < myslide.length; i++) {
                 myslide[i].style.display = "none";
             }
-            for(i = 0;i<dot.length;i++) {
+            for (i = 0; i < dot.length; i++) {
                 dot[i].className = dot[i].className.replace(' active', '');
             }
-            if(n > myslide.length){
+            if (n > myslide.length) {
                 counter = 1;
-                }
-            if(n < 1){
+            }
+            if (n < 1) {
                 counter = myslide.length;
-                }
+            }
             myslide[counter - 1].style.display = "block";
             dot[counter - 1].className += " active";
         }
- </script>
+    </script>
 
 
 
