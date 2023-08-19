@@ -17,7 +17,7 @@
         <div class="txt">
             <span class="subheading">Crunchy</span>
             <h1 class="mb-4">Italian Pizza</h1>
-            <p class="mb-4 mb-md-5">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+            <p class="">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
             <p><a href="{{ route('menu') }}" class="orderbtn mx-auto d-block text-center">Order Now</a> </p>
         </div>
 
@@ -27,7 +27,7 @@
         <div class="txt">
             <span class="subheading">Crunchy</span>
             <h1 class="mb-4">Italian Burger</h1>
-            <p class="mb-4 mb-md-5">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+            <p class="">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
             <p><a href="{{ route('menu') }}" class="orderbtn mx-auto d-block text-center">Order Now</a> </p>
         </div>
 
@@ -37,7 +37,7 @@
         <div class="txt">
             <span class="subheading">Delicious</span>
             <h1 class="mb-4">Italian Pasta</h1>
-            <p class="mb-4 mb-md-5">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+            <p class="">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
             <p><a href="{{ route('menu') }}" class="orderbtn mx-auto d-block text-center">Order Now</a> </p>
         </div>
 
@@ -47,8 +47,8 @@
         <div class="txt">
             <span class="subheading">Delicious</span>
             <h1 class="mb-4">Lime Juice</h1>
-            <p class="mb-4 mb-md-5">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-            <p><a href="{{ route('menu') }}" class="orderbtn mx-auto d-block text-center">Order Now</a> </p>
+            <p class=" ">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+            <p><a href="{{ route('menu') }}" class="orderbtn mx-auto d-block text-center" style="padding: 5Ppx 10px">Order Now</a> </p>
         </div>
 
     </div>
@@ -67,36 +67,7 @@
     </div>
 
 </div>
-<div class="row info ">
-    <div class="col-md-4 col-xs-12 contactnum ">
-        <div class="icon"><span class="icon-phone"></span></div>
-        <div class="text">
-            <h5>000 (123) 456 7890</h5>
-            <p>A small river named Duden flows</p>
-        </div>
-    </div>
-    <div class="col-md-2 col-xs-12">
-        <div class="icon"><span class="icon-my_location"></span></div>
-        <div class="text">
-            <h5>198 West 21th Street</h5>
-            <p>Suite 721 New York NY 10016</p>
-        </div>
-    </div>
-    <div class="col-md-2 col-xs-12 ">
-        <div class="icon"><span class="icon-clock-o"></span></div>
-        <div class="text">
-            <h5>Open Monday-Friday</h5>
-            <p>8:00am - 9:00pm</p>
-        </div>
-    </div>
-    <div class="col-md-4 col-xs-12 aboutsocial pt-3 " style="background-color: #FAC564 ">
-        <ul class="social-icon">
-            <li class=""><a href="#"><span class="fa fa-twitter" style="color: #ffffff"></span></a></li>
-            <li class=""><a href="#"><span class="fa fa-facebook" style="color: #ffffff"></span></a></li>
-            <li class=""><a href="#"><span class="fa fa-instagram" style="color: #ffffff"></span></a></li>
-        </ul>
-    </div>
-</div>
+
 
 <div class="row">
     <div class="col-md-6 col-xs-12"> <img src="images/about.jpg" class="welcome-img"></div>

@@ -21,7 +21,7 @@
     </section>
 
 
-    <div class="row info ">
+    {{-- <div class="row info ">
         <div class="col-md-4 col-xs-12 contactnum ">
             <div class="icon"><span class="icon-phone"></span></div>
             <div class="text">
@@ -50,7 +50,7 @@
                 <li class=""><a href="#"><span class="fa fa-instagram" style="color: #ffffff"></span></a></li>
             </ul>
         </div>
-    </div>
+    </div> --}}
 
 
     <section class="aboutsection">

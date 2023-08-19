@@ -19,65 +19,73 @@
                     $discount = 0.0;
                 @endphp
 
-<table class="carttable"  style="width: 100%">
+                <button class="clearallbtn"> Clear All</button>
+
+            <table class="carttable"  style="width: 100%">
 
 
-    <thead class="mb-5" style="margin-bottom: 50px">
-        <tr>
-            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 text-center mb-3"></th>
-            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2 text-center mb-3">Product Details</th>
-            <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 text-center mb-3">Quantity</th>
-            <th class="text-secondary opacity-7 text-center mb-3">Price</th>
-            <th class="text-secondary opacity-7 text-center mb-3">Total</th>
+                <thead class="mb-3" style="margin-bottom: 50px">
+                    <tr>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 text-center mb-3"></th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2 text-center mb-3">Product Details</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 text-center mb-3">Quantity</th>
+                        <th class="text-secondary opacity-7 text-center mb-3">Price</th>
+                        <th class="text-secondary opacity-7 text-center mb-3">Total</th>
 
-        </tr>
+                    </tr>
 
-    </thead>
-
-
-    @foreach ($items as $productId => $item)
-        <tbody  class="mt-3">
-
-            <tr class="contenttr">
-                <td class="text-center "><img src="{{ asset('images/pasta-1.jpg') }}" class="cartimgs" alt="cartimg" ></td>
-                <td class="text-center"><p>{{ $item['product']->name }}</p><br><p class="discount">{{ $item['product']->discount }}%</p></td>
-                <td class="text-center">
-                    <div class="text-center quantiyselector">
-                    <form action="{{ route('cart.update', $item['product']) }}" method="POST">
-                        @csrf
-                        @method('PATCH')
-                        <input type="hidden" name="quantity" value="{{ -1 }}">
-                        <button class="minmax" type="submit">-</button>
-                    </form>
-
-                    {{ $item['quantity'] }}
+                </thead>
 
 
-                    <form action="{{ route('cart.update', $item['product']) }}" method="POST">
-                        @csrf
-                        @method('PATCH')
-                        <input type="hidden" name="quantity" value="{{ 1 }}">
-                        <button class="minmax" type="submit">+</button>
-                    </form>
-                </div>
-            </td>
-                <td class="text-center">
-                    <p  class="cartpreprice">Rs.{{ round($item['product']->price - ($item['product']->price * $item['product']->discount) / 100, 2) }}
+                @foreach ($items as $productId => $item)
+                    <tbody  class="mt-3">
 
-                </td>
-                <td class="text-center"><p>Rs.{{ $item['product']->price }}</td>
-            </tr>
-        </tbody>
+                        <tr class="contenttr">
+                            <td class="text-center "><img src={{$item['product']->imgurl}} class="cartimgs" alt="cartimg" ></td>
+                            <td class="text-center"><p>{{ $item['product']->name }}</p><br><p class="discount">{{ $item['product']->discount }}%</p></td>
+                            <td class="text-center">
+                                <div class="text-center quantiyselector">
+                                <form action="{{ route('cart.update', $item['product']) }}" method="POST">
+                                    @csrf
+                                    @method('PATCH')
+                                    <input type="hidden" name="quantity" value="{{ -1 }}">
+                                    <button class="minmax" type="submit">-</button>
+                                </form>
 
-        @php
-        $total += $item['product']->price;
-        $discount += $item['product']->price * ($item['product']->discount / 100);
-    @endphp
-    @endforeach
+                                {{ $item['quantity'] }}
 
 
+                                <form action="{{ route('cart.update', $item['product']) }}" method="POST">
+                                    @csrf
+                                    @method('PATCH')
+                                    <input type="hidden" name="quantity" value="{{ 1 }}">
+                                    <button class="minmax" type="submit">+</button>
+                                </form>
+                            </div>
+                        </td>
+                            <td class="text-center">
+                                <p  class="cartpreprice">Rs.{{ round($item['product']->price - ($item['product']->price * $item['product']->discount) / 100, 2) }}
 
-</table>
+                            </td>
+                            <td class="text-center"><p>Rs.{{ $item['product']->price }}</td>
+                        </tr>
+
+                    </tbody>
+
+                    @php
+                    $total += $item['product']->price;
+                    $discount += $item['product']->price * ($item['product']->discount / 100);
+
+
+                @endphp
+                @endforeach
+
+
+                <img src="images/bin.png" class="bin" >
+
+            </table>
+
+
 
             </div>
             <div class="cartconRight">

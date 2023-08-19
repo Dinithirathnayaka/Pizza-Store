@@ -162,7 +162,7 @@
 	.txt{
 		letter-spacing: 2px;
 		line-height: 25px;
-		top: 50%;
+		top: 60%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 		-webkit-animation-name: posi2;
@@ -205,10 +205,17 @@
 }
 
 .orderbtn{
-    font-size: 15px;
+    font-size: 20px;
     border:1px solid #ffc107;
-    width: 150px;
-    height: auto;
+    width: 250px;
+    padding: 5px 10px ;
+    font-weight: 500;
+    margin-top: 60px;
+}
+
+.orderbtn:hover{
+    background-color: #ffc107;
+    color: #000 !important;
 }
 
 
@@ -332,7 +339,7 @@
 
 .slider-item {
     position: absolute;
-    background: rgba(57, 57, 57, 0.6);
+    background: rgba(57, 57, 57, 0.4);
     width: 100vw;
     height: 100vh;
     margin-left: auto;
@@ -903,6 +910,11 @@ flex:0.5;
     color: #000000;
 }
 
+.btn-service :hover{
+background-color: #ffc107;
+color: #000 !important;
+}
+
 
 
 
@@ -1081,13 +1093,15 @@ flex:0.5;
   }
 
   .cart_container{
-border: 1px solid #808080;
+border: 1px solid #808080 !;
     display: flex;
     border-bottom: none !important;
-    height: 100vh;
+    height: 90vh;
+    overflow: auto;
+}
 
 
-  }
+
 
   .cartconLeft{
     padding: 30px;
@@ -1143,7 +1157,7 @@ border: 1px solid #808080;
   }
 
   .cartimgs{
-    width: 120px;
+    width: 180px;
     border-radius: 10px;
   }
 
@@ -1242,21 +1256,36 @@ td {
     padding: 8px;
 }
 
+.clearallbtn{
+    float:right;
+    background-color: #ffc107;
+    color:fff;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    outline: none;
+}
+
 
   /* PLACE ORDER */
 
   .ordersum{
-    width: 70%;
+    width: 90%;
  margin-right: 120px;
- margin-top: 50px;
+ margin-top: 30px;
+ background-color: rgba(0, 0, 0, 0.6);
+ padding: 20px 10px;
+ height: 40vh;
+ padding-top: 40px !important;
   }
+
 
   .completebtn{
     border: none;
     outline: none;
     background-color: #fac564;
     width: 40%;
-    color: #fff;
+    color: #000 !important;
     border-radius: 10px;
     font-size: 20px;
     padding: 8px !important;
@@ -1264,6 +1293,7 @@ td {
 
   .completebtn:hover{
     background-color: #ffc107;
+    color: #000;
   }
 
 

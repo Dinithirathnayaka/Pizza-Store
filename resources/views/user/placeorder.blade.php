@@ -19,13 +19,14 @@
         <div class="container newcontainer mt-5">
             <div class="row block-9">
                 <div class="col-md-6 col-xs-12 placeorder-info mx-auto d-block " style="margin-right: 50px">
-                            <h3 class="" style="color: #fac564">Summary of the Order </h3>
+                    <h5 class="" style="color: #fac564">Summary of the Order </h5>
 
                         {{-- <div class="col-md-12 mb-4">
                             <h2 class="h4" style="color: #ffffff">{{ round($total - $discount, 2) }}</h2>
                         </div> --}}
 
-                        <div class="ordersum p-3" style="background-color: #212529">
+                        <div class="ordersum " >
+
                             <div class="row mb-3 ">
                                 <div class="col-4" style="color: #ffffff">No of Items :</div>
                                 <div class="col-6 text-end" style="color: #fac564">10</div>
@@ -33,17 +34,17 @@
                             <hr style="color: #ffffff">
                             <div class="row mb-3">
                                 <div class="col-4" style="color: #ffffff">Sub Total :</div>
-                                <div class="col-6" style="color: #fac564">10</div>
+                                <div class="col-6" style="color: #fac564"><span>Rs.</span>10</div>
                             </div>
                             <hr style="color: #ffffff">
                             <div class="row mb-3">
                                 <div class="col-4" style="color: #ffffff">Disccount :</div>
-                                <div class="col-6" style="color: green">10%</div>
+                                <div class="col-6" style="color: green"><span>Rs.</span>10</div>
                             </div>
                             <hr style="color: #ffffff">
                             <div class="row mb-3">
                                 <div class="col-4" style="color: #ffffff">Total :</div>
-                                <div class="col-6" style="color: #fac564">10</div>
+                                <div class="col-6" style="color: #fac564"><span>Rs.</span>10</div>
                             </div>
                         </div>
 
