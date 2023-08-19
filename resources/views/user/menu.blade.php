@@ -96,46 +96,21 @@
 
         </div>
 
-        <div class=" d-flex justify-content-center">
-            <div class="btnlist mb-1 mt-3">
 
-                @foreach ($categories as $category)
-                    <button onclick="fetchProductsByCategory({{ $category->id }})">{{ $category->name }}</button>
-                @endforeach
-
-            </div>
-        </div>
         <div class="menus pt-3 ">
             <div class="row vw-100">
                 <div class="col-lg-4 col-sm-12"><img src="images/pizza-9.jpg" class="menusleftimg" /></div>
-                {{-- <div class="col-lg-8 col-sm-12">
-                    <div class="btnlist mb-3 mt-3">
 
-                        @foreach ($categories as $category)
-                            <button onclick="fetchProductsByCategory({{ $category->id }})">{{ $category->name }}</button>
-                        @endforeach
+                <div class="col-lg-8 col-sm-12 pb-3">
+                    <div class=" d-flex ">
+                        <div class="btnlist mb-1 mt-3">
 
-                    </div>
+                            @foreach ($categories as $category)
+                                <button onclick="fetchProductsByCategory({{ $category->id }})">{{ $category->name }}</button>
+                            @endforeach
 
-                    <div id="carousel-container" style="display: none;">
-                        <div id="carouselExample" class="carousel slide" data-ride="carousel">
-                            <div class="carousel-inner">
-
-                            </div>
-                            <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
                         </div>
                     </div>
-
-                </div> --}}
-
-                <div class="col-lg-8 col-sm-12">
 
                     <div class="slider" id="slider-id">
 
@@ -248,21 +223,7 @@
     </section>
 @endsection
 
-{{-- @section('styles')
-    <link href="{{ asset('css/menucarosul.css') }}" rel="stylesheet">
-@endsection --}}
 
-{{-- <div class="col-md-4 text-center">
-    <div class="menu-wrap">
-        <img src="${product.imgurl}" class="menu-img" />
-        <div class="text">
-            <h5>${product.name}</h5>
-            <p style="color: #808080">${product.description}</p>
-            <p class="price"><span style="color: #ffc107">$${product.price}</span></p>
-            <p><a href="#" class="btn-service mb-3">Add to cart</a></p>
-        </div>
-    </div>
-</div> --}}
 <script>
     function fetchProductsByCategory(categoryId) {
         console.log("IN-----------IN");
