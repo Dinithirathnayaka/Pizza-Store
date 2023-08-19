@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\User;
+
 use App\Http\Controllers\Controller;
 use App\Mail\OrderEmail;
 use Illuminate\Http\Request;
@@ -24,13 +25,13 @@ class HomeController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
 
-     public function index()
+    public function index()
     {
 
-    $userEmail = 'supunnikz@gmail.com';
-    Mail::to($userEmail)->send(new OrderEmail("fddf","dsd"));
+        $userEmail = 'supunnikz@gmail.com';
+        Mail::to($userEmail)->send(new OrderEmail("fddf", "dsd"));
 
-    return "Email sent successfully!";
+        return "Email sent successfully!";
 
 
         //return view('user.home');
@@ -50,4 +51,8 @@ class HomeController extends Controller
         return view('user.contact');
     }
 
+    public function accountsetting()
+    {
+        return view('user.accountsetting');
+    }
 }

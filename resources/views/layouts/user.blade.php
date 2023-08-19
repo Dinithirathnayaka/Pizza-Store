@@ -69,6 +69,8 @@
                     <a href="{{ route('login') }}" class="loginbtn">Sign In</a>
                     <a href="{{ route('register') }}" class="registerbtn">Sign Up</a>
                     <a href="{{ route('cart.index') }}" class="nav-link"> <img src="images/shopping-cart.png" alt="cart" class="cartimg"><span class="topbtn">1</span></a>
+                    <a href="#" class="registerbtn">Log Out</a>
+                    <a href="{{ route('accountsetting') }}" class="user-profile"> <img src="images/user-profile.png" alt="cart" class="cartimg"></a>
                 </ul>
             </div>
 
