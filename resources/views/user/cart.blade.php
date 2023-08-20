@@ -1,5 +1,3 @@
-<!-- resources/views/cart/index.blade.php -->
-
 @extends('layouts.user')
 
 @section('content')
@@ -106,11 +104,17 @@
                     <div class="col-6"><p class="sub" >Total</p></div>
                     <div class="col-6"><p>Rs. {{ round($total - $discount, 2) }}</p></div>
                 </div>
-                <button>Placeorder</button>
+                <form action="{{ route('orders.create') }}" method="GET" class="text-center">
+                    @csrf <!-- Add this line for CSRF protection -->
+
+                    <button type="submit" class="placeorderbtn">Place Order</button>
+                </form>
 
 
             </div>
         </div>
+
+
 
 @endsection
 
