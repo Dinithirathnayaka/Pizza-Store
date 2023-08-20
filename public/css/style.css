@@ -310,6 +310,12 @@
 
   }
 
+  .cartimg-btn{
+    background-color: #212529;
+    outline: none !important;
+    border: none;
+  }
+
 
 
 /* -----------------

@@ -93,13 +93,11 @@
                     <a href="{{ route('login') }}" class="loginbtn">Sign In</a>
                     <a href="{{ route('register') }}" class="registerbtn">Sign Up</a>
                 @endif
-                <a href="{{ route('cart.index') }}" class="nav-link"> <img src="images/shopping-cart.png"
-                        alt="cart" class="cartimg">
-                    @if ($cartService->count())
-                        <span class="topbtn">
-                            {{-- {{ $cartService->count() }} --}}
-                        </span>
-                    @endif
+                <form action="{{ route('cart.index') }}" method="GET" class="">
+                    <button type="submit" class="cartimg-btn">
+                        <img src="images/shopping-cart.png" alt="cart" class="cartimg">
+                    </button>
+                </form>
 
 
             </ul>
