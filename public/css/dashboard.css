@@ -95,3 +95,49 @@
     padding: 0;
     border: 1px solid #ccc;
 }
+
+/*------------------ DSAHBOARD -------------------------*/
+
+.topLeftcon {
+    padding: 20px 15px;
+}
+.topLeftcon .card {
+    background-color: rgb(250, 197, 100, 0.8);
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    height: 150px;
+}
+
+.topLeftcon .card-body {
+    color: rgb(255, 255, 255);
+    margin-top: 20px;
+}
+
+.bottomcon h5 {
+    color: #fff;
+    margin-top: 30px;
+}
+
+.bottomcon.card {
+    background-color: red;
+}
+
+.bottomcon .table {
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    padding: 20px;
+    border-radius: 10px !important;
+}
+
+th {
+    font-size: small;
+}
+
+th,
+td {
+    padding: 8px;
+}
