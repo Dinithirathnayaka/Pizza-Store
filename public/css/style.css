@@ -310,6 +310,12 @@
 
   }
 
+  .cartimg-btn{
+    background-color: #212529;
+    outline: none !important;
+    border: none;
+  }
+
 
 
 /* -----------------
@@ -915,15 +921,6 @@ flex:0.5;
 background-color: #ffc107;
 color: #000 !important;
 }
-
-
-
-
-
-
-
-
-
 
 /* -----------------
 ------Footer----
