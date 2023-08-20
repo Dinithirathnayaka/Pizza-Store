@@ -86,6 +86,11 @@
                 <form action="{{ route('cart.index') }}" method="GET" class="">
                     <button type="submit" class="cartimg-btn">
                         <img src="images/shopping-cart.png" alt="cart" class="cartimg">
+                        @if ($cartService->count())
+                            <span class="topbtn">
+                                {{-- {{ $cartService->count() }} --}}
+                            </span>
+                        @endif
                     </button>
                 </form>
 
