@@ -53,7 +53,8 @@
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar"
         style="width: 100vw">
 
-        <div class="toplogo"><img src="images/pizza-slicelogo.png" alt="" class="logoimg">
+        <div class="toplogo">
+            <img src="images/pizza-slicelogo.png" alt="" class="logoimg">
             <div class="toplogocontent"><span class="color:#ffc107">SpiceCraft</span> Pizza</div>
         </div>
 
@@ -79,11 +80,17 @@
                 <li class="nav-item {{ request()->routeIs('contact') ? 'active' : '' }}">
                     <a href="{{ route('contact') }}" class="nav-link">Contact</a>
                 </li>
+                <form action="{{ route('cart.index') }}" method="GET" class="">
+                    <button type="submit" class="cartimg-btn">
+                        <img src="images/shopping-cart.png" alt="cart" class="cartimg">
+                    </button>
+                </form>
+
                 @if (auth()->check())
                     </a>
                     <form action="{{ route('logout') }}" method="POST">
                         @csrf
-                        <button type="submit" class="registerbtn">Logout</button>
+                        <button type="submit" class="logoutbtn">Logout</button>
 
                     </form>
 
@@ -93,11 +100,7 @@
                     <a href="{{ route('login') }}" class="loginbtn">Sign In</a>
                     <a href="{{ route('register') }}" class="registerbtn">Sign Up</a>
                 @endif
-                <form action="{{ route('cart.index') }}" method="GET" class="">
-                    <button type="submit" class="cartimg-btn">
-                        <img src="images/shopping-cart.png" alt="cart" class="cartimg">
-                    </button>
-                </form>
+
 
 
             </ul>
