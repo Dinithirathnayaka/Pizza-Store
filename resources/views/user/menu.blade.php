@@ -1,21 +1,20 @@
 @extends('layouts.user')
 
 @section('content')
-
     <section class=" home-slider " style="background-image: url(images/menu.jpg);">
 
-        <div class="slider-item" >
+        <div class="slider-item">
 
 
-                <div class="row slider-text justify-content-center align-items-center">
+            <div class="row slider-text justify-content-center align-items-center">
 
-                    <div class="aboutdiv text-center ">
-                        <h1 class="mb-3 mt-5 bread">Menu</h1>
-                        <p class="breadcrumbs"><span class="mr-2 homeabout"><a
-                                    href="index.html">Home</a></span> <span>Menu</span></p>
-                    </div>
-
+                <div class="aboutdiv text-center ">
+                    <h1 class="mb-3 mt-5 bread">Menu</h1>
+                    <p class="breadcrumbs"><span class="mr-2 homeabout"><a href="index.html">Home</a></span> <span>Menu</span>
+                    </p>
                 </div>
+
+            </div>
 
         </div>
     </section>
@@ -46,7 +45,8 @@
                                 <h4 class="mb-3">{{ $product->name }}</h4>
                                 <p>{{ $product->description }}</p>
                                 <p><span class="price">${{ $product->price }} </span> </p>
-                                    <p><a href="{{ route('cart.add', ['product' => $product]) }}" class=" ml-2 btn-order btn-white btn-outline-white ">Add to cart</a></p>
+                                <p><a href="{{ route('cart.add', ['product' => $product]) }}"
+                                        class=" ml-2 btn-order btn-white btn-outline-white ">Add to cart</a></p>
                             </div>
                         </div>
                     </div>
@@ -106,110 +106,14 @@
                         <div class="btnlist mb-1 mt-3">
 
                             @foreach ($categories as $category)
-                                <button onclick="fetchProductsByCategory({{ $category->id }})">{{ $category->name }}</button>
+                                <button
+                                    onclick="fetchProductsByCategory({{ $category->id }})">{{ $category->name }}</button>
                             @endforeach
 
                         </div>
                     </div>
 
-                    <div class="slider" id="slider-id">
 
-                        <input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav" />
-                        <input type="radio" name="slider" title="slide2" class="slider__nav" />
-                        <input type="radio" name="slider" title="slide3" class="slider__nav" />
-                        <input type="radio" name="slider" title="slide4" class="slider__nav" />
-
-                        <div class="slider__inner">
-                            <div class="slider__contents">
-                                <div class="row">
-                                    <div class="col-md-4 text-center">
-
-                                        <div class="menu-wrap">
-                                            <img src="${product.imgurl}" class="menu-img" />
-                                            <div class="text">
-                                                <h5>"dfdf"</h5>
-                                                <p style="color: #808080">sddsd</p>
-                                                <p class="price"><span style="color: #ffc107">rsdsd</span></p>
-                                                <p><a href="#" class="btn-service mb-3">Add to cart</a></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 text-center">
-                                        <div class="menu-wrap">
-                                            <img src="${product.imgurl}" class="menu-img" />
-                                            <div class="text">
-                                                <h5>"dfdf"</h5>
-                                                <p style="color: #808080">sddsd</p>
-                                                <p class="price"><span style="color: #ffc107">rsdsd</span></p>
-                                                <p><a href="#" class="btn-service mb-3">Add to cart</a></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 text-center">
-                                        <div class="menu-wrap">
-                                            <img src="${product.imgurl}" class="menu-img" />
-                                            <div class="text">
-                                                <h5>"dfdf"</h5>
-                                                <p style="color: #808080">sddsd</p>
-                                                <p class="price"><span style="color: #ffc107">rsdsd</span></p>
-                                                <p><a href="#" class="btn-service mb-3">Add to cart</a></p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="slider__contents">
-                                <div class="row">
-                                    <div class="col-md-4 text-center">
-
-                                        <div class="menu-wrap">
-                                            <img src="${product.imgurl}" class="menu-img" />
-                                            <div class="text">
-                                                <h5>"dfdf"</h5>
-                                                <p style="color: #808080">sddsd</p>
-                                                <p class="price"><span style="color: #ffc107">rsdsd</span></p>
-                                                <p><a href="#" class="btn-service mb-3">Add to cart</a></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 text-center">
-                                        <div class="menu-wrap">
-                                            <img src="${product.imgurl}" class="menu-img" />
-                                            <div class="text">
-                                                <h5>"dfdf"</h5>
-                                                <p style="color: #808080">sddsd</p>
-                                                <p class="price"><span style="color: #ffc107">rsdsd</span></p>
-                                                <p><a href="#" class="btn-service mb-3">Add to cart</a></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 text-center">
-                                        <div class="menu-wrap">
-                                            <img src="${product.imgurl}" class="menu-img" />
-                                            <div class="text">
-                                                <h5>"dfdf"</h5>
-                                                <p style="color: #808080">sddsd</p>
-                                                <p class="price"><span style="color: #ffc107">rsdsd</span></p>
-                                                <p><a href="#" class="btn-service mb-3">Add to cart</a></p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="slider__contents"><i class="slider__image fa fa-television"></i>
-                                <h2 class="slider__caption">television</h2>
-                                <p class="slider__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At
-                                    cupiditate omnis possimus illo quos, corporis minima!</p>
-                            </div>
-                            <div class="slider__contents"><i class="slider__image fa fa-diamond"></i>
-                                <h2 class="slider__caption">diamond</h2>
-                                <p class="slider__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At
-                                    cupiditate omnis possimus illo quos, corporis minima!</p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
 
@@ -221,6 +125,10 @@
 
 
     </section>
+@endsection
+
+@section('styles')
+    <link href="{{ asset('css/cart.css') }}" rel="stylesheet">
 @endsection
 
 
