@@ -871,6 +871,7 @@ flex:0.5;
     width: 100vw;
     height: auto;
     display: flex;
+    padding-bottom: 30px;
 
 }
 
@@ -1100,6 +1101,19 @@ border: 1px solid #808080 !;
     overflow: auto;
 }
 
+.cartcard{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 30px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    margin-bottom: 100px !important;
+    border: 0.5px solid #808080;
+    margin-top: 90px;
+    height: auto;
+
+}
+
 
 
 
@@ -1164,6 +1178,8 @@ border: 1px solid #808080 !;
   .bin{
     width: 20px;
     margin-bottom: 30px;
+    margin-top: 150px;
+
   }
 
   .minmax{
@@ -1261,7 +1277,7 @@ td {
     background-color: #ffc107;
     color:fff;
     padding: 5px 10px;
-    margin-bottom: 20px;
+    margin-bottom: 20px !important;
     border-radius: 10px;
     outline: none;
 }
@@ -1295,6 +1311,9 @@ td {
     background-color: #ffc107;
     color: #000;
   }
+
+
+
 
 
 

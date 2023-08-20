@@ -54,7 +54,7 @@
         style="width: 100vw">
 
         <div class="toplogo"><img src="images/pizza-slicelogo.png" alt="" class="logoimg">
-            <div class="toplogocontent">SpiceCraft Pizza</div>
+            <div class="toplogocontent"><span class="color:#ffc107">SpiceCraft</span> Pizza</div>
         </div>
 
 
