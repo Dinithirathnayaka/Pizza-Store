@@ -96,32 +96,47 @@
 
                     </table>
                 </div>
-                <div class="row text-center">
-                    <div class="col-6">
-                        <p class="sub">Discount</p>
-                    </div>
-                    <div class="col-6">
-                        <p>-Rs.{{ round($discount, 2) }}</p>
-                    </div>
-                </div>
-                <div class="row text-center">
-                    <div class="col-6">
-                        <p class="sub">Total</p>
-                    </div>
-                    <div class="col-6">
-                        <p>Rs. {{ round($total - $discount, 2) }}</p>
-                    </div>
-                </div>
-                <form action="{{ route('orders.create') }}" method="GET" class="text-center">
-                    @csrf <!-- Add this line for CSRF protection -->
-
-                    <button type="submit" class="placeorderbtn">Place Order</button>
-                </form>
-
-
             </div>
-        @endsection
 
-        @section('styles')
-            <link href="{{ asset('css/category_cur.css') }}" rel="stylesheet">
-        @endsection
+        </div>
+        <div class="cartRight_container">
+
+            <h5 style="margin-top: 80px">Order Summary</h5>
+            <div class="row text-center">
+                <div class="col-6">
+                    <p class="sub">Sub Total</p>
+                </div>
+                <div class="col-6">
+                    <p>Rs.{{ round($total, 2) }}</p>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-6">
+                    <p class="sub">Discount</p>
+                </div>
+                <div class="col-6">
+                    <p>-Rs.{{ round($discount, 2) }}</p>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-6">
+                    <p class="sub">Total</p>
+                </div>
+                <div class="col-6">
+                    <p>Rs. {{ round($total - $discount, 2) }}</p>
+                </div>
+            </div>
+            <form action="{{ route('orders.create') }}" method="GET" class="text-center">
+                @csrf <!-- Add this line for CSRF protection -->
+
+                <button type="submit" class="placeorderbtn">Place Order</button>
+            </form>
+
+
+        </div>
+    </div>
+@endsection
+
+@section('styles')
+    <link href="{{ asset('css/cart.css') }}" rel="stylesheet">
+@endsection
