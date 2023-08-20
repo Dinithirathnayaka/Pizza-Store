@@ -13,13 +13,13 @@ class OrderEmail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $greeting;
-    public $message;
+    public $order;
+    public $subject;
 
-    public function __construct($greeting, $message)
+    public function __construct($order, $subject)
     {
-        $this->greeting = $greeting;
-        $this->message = $message;
+        $this->order = $order;
+        $this->subject = $subject;
     }
 
 
@@ -30,7 +30,7 @@ class OrderEmail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Order Email',
+            subject: $this->subject,
         );
     }
 
@@ -42,12 +42,18 @@ class OrderEmail extends Mailable
     {
         return new Content(
             view: 'emails.orderemail',
-            with : ['customData' => 'This is custom data for the view',],
+            with : [
+                'discount' => round($this->order->discount,2),
+                'subtotal' => round(($this->order->total-$this->order->discount),2),
+                'total' =>round( $this->order->total,2),
+                'id' => $this->order->id,
+
+            ],
         );
     }
 
     /**
-     * Get the attachments for the message.
+     * Get the attachments for the subject.
      *
      * @return array<int, \Illuminate\Mail\Mailables\Attachment>
      */

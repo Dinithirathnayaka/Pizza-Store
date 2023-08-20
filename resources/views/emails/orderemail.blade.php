@@ -562,7 +562,8 @@
                                           color: #ffffff;
                                         "><span
                                                                                 style="line-height: 19.6px"><strong>Order
-                                                                                    Id : Pz-345</strong></span></span>
+                                                                                    Id :
+                                                                                    {{ $id }}</strong></span></span>
                                                                     </li>
                                                                     <li style="line-height: 19.6px">
                                                                         <span
@@ -572,7 +573,7 @@
                                         "><span
                                                                                 style="line-height: 19.6px"><strong>Sub
                                                                                     Total : Rs
-                                                                                    1500.00</strong></span></span>
+                                                                                    {{ $subtotal }}</strong></span></span>
                                                                     </li>
                                                                     <li style="line-height: 19.6px">
                                                                         <span
@@ -581,7 +582,8 @@
                                           color: #ffffff;
                                         "><span
                                                                                 style="line-height: 19.6px"><strong>Discount
-                                                                                    :Rs  150.00</strong></span></span>
+                                                                                    :Rs
+                                                                                    {{ $discount }}</strong></span></span>
                                                                     </li>
                                                                     <li style="line-height: 19.6px">
                                                                         <span
@@ -590,7 +592,8 @@
                                           color: #ffffff;
                                         "><span
                                                                                 style="line-height: 19.6px"><strong>Total
-                                                                                    : Rs 1450.00</strong></span></span>.
+                                                                                    : Rs
+                                                                                    {{ $total }}</strong></span></span>.
                                                                     </li>
                                                                 </ul>
                                                             </div>

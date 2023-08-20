@@ -81,7 +81,12 @@
                 </li>
                 @if (auth()->check())
                     </a>
-                    <a href="{{ route('logout') }}" class="registerbtn">Log Out</a>
+                    <form action="{{ route('logout') }}" method="POST">
+                        @csrf
+                        <button type="submit" class="registerbtn">Logout</button>
+
+                    </form>
+
                     <a href="{{ route('accountsetting') }}" class="user-profile"> <img src="images/user-profile.png"
                             alt="cart" class="cartimg"></a>
                 @else

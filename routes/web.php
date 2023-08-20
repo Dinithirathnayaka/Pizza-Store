@@ -35,10 +35,7 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::get('/services', [HomeController::class, 'services'])->name('services');
-Route::get('/accountsetting', [HomeController::class, 'accountsetting'])->name('accountsetting');
 
-Route::get('/placeorder', [OrdersController::class, 'create'])->name('orders.create');
-Route::post('/placeorder', [OrdersController::class, 'store'])->name('orders.store');
 Route::get('/menu', [MenuController::class, 'index'])->name('menu');
 Route::get('/fetch-products', [MenuController::class, 'fetchProductsByCategory']);
 
@@ -50,6 +47,14 @@ Route::delete('/cart/remove/{product}', [CartController::class, 'remove'])->name
 Route::delete('/cart/clear', [CartController::class, 'clear'])->name('cart.clear');
 
 
+Route::middleware(['auth'])->group(function () {
+    Route::get('/accountsetting', [HomeController::class, 'accountsetting'])->name('accountsetting');
+    Route::get('/placeorder', [OrdersController::class, 'create'])->name('orders.create');
+    Route::post('/completeorder', [OrdersController::class, 'store'])->name('orders.store');
+});
+// Route::get('/accountsetting', [HomeController::class, 'accountsetting'])->name('accountsetting');
+// Route::get('/placeorder', [OrdersController::class, 'create'])->name('orders.create');
+// Route::post('/placeorder', [OrdersController::class, 'store'])->name('orders.store');
 
 
 
@@ -58,7 +63,7 @@ Route::delete('/cart/clear', [CartController::class, 'clear'])->name('cart.clear
 
 
 
-Route::group(['prefix' => 'admin'], function () {
+Route::group(['prefix' => 'admin','middleware' => 'admin'], function () {
 
     // dashboard
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');

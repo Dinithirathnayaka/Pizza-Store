@@ -6,6 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Auth;
+use Illuminate\Support\Facades\Auth as FacadesAuth;
 
 class AdminMiddleware
 {
@@ -16,10 +17,16 @@ class AdminMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        $user=Auth::user();
-        // if ($user->role) {
-        //     # code...
-        // }
-        return $next($request);
+
+        if (auth()->check()) {
+            $user=FacadesAuth::user();
+            if ($user->role==1) {
+                return $next($request);
+            }
+            return redirect()->route('home');
+        }
+
+        return redirect()->route('home');
+
     }
 }

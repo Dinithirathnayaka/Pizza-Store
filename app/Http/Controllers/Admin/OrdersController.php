@@ -3,11 +3,13 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Mail\OrderEmail;
 use App\Models\Order;
 use App\Models\Order_item;
 use App\Models\Rider;
 use App\Services\CartService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Validation\ValidationException;
 
 class OrdersController extends Controller
@@ -15,7 +17,7 @@ class OrdersController extends Controller
 
     public function __construct()
     {
-        $this->middleware('auth');
+
     }
 
 
@@ -146,6 +148,10 @@ class OrdersController extends Controller
             $order->orderstatus = $validatedData['status'];
             $order->rider_id = $validatedData['rider_id'];
             $order->save();
+
+            Mail::to( $order->user->email)->send(new OrderEmail($order,"Order Status"));
+
+
             return redirect()->route('admin.orders')->with('success', 'Order updated successfully.');
     } catch (ValidationException $e) {
             return redirect()->back()->withErrors($e->errors())->withInput();
