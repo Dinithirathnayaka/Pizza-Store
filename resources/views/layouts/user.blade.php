@@ -15,6 +15,7 @@
 
     <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('css/menucarosul.css') }}">
+
     <link rel="stylesheet" href="{{ URL::asset('css/style.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
@@ -135,7 +136,8 @@
                             <img src="images/image_1.jpg" alt="" class="footerimg">
 
                             <div class="text" style="text-align: left">
-                                <h3 class="heading" style="color: #FFFFFFE3; font-size:16px"><a href="#">Even the
+                                <h3 class="heading" style="color: #FFFFFFE3; font-size:16px"><a href="#">Even
+                                        the
                                         all-powerful Pointing has no control about</a></h3>
                                 <div class="meta" style="text-align: left">
                                     <div><a href="#" style="color: #808080 ; margin: 5px;"><span
