@@ -9,12 +9,14 @@
 .midcontainer {
     position: absolute;
     background: rgba(57, 57, 57, 0.8);
+    width: 100vw !important;
+    height: 100vh !important;
 }
 
 .accountDetails {
     background-color: rgba(0, 0, 0, 0.6);
     color: #fff;
-    width: 100%;
+    width: 100% !important;
     height: auto;
     padding: 30px;
     margin-top: 100px;
