@@ -8,9 +8,9 @@
     </div>
     <hr style="color: #fff" />
 
-    <div class="product-form">
-        <h4>Register New Rider</h4>
-        <form action="{{ route('admin.riders.store') }}" method="post" enctype="multipart/form-data">
+    <div >
+
+        <form action="{{ route('admin.riders.store') }}" method="post" enctype="multipart/form-data" class="createrider-form" style="background-color: ">
             @csrf
 
 
@@ -26,7 +26,7 @@
             <div id="imagePreview"></div>
 
             <br>
-            <button type="submit" class="mt-3 mx-auto d-block text-center">Add Product</button>
+            <button type="submit" class="createriderbtn mt-3 mx-auto d-block text-center">Add Rider</button>
         </form>
 
     </div>
