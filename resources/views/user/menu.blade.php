@@ -98,28 +98,26 @@
 
 
         <div class="menus pt-3 ">
-            <div class="row vw-100">
-                <div class="col-lg-4 col-sm-12"><img src="images/pizza-9.jpg" class="menusleftimg" /></div>
+            <div class="row vw-100 text-center ">
 
-                <div class="col-lg-8 col-sm-12 pb-3">
-                    <div class=" d-flex ">
-                        <div class="btnlist mb-1 mt-3">
 
-                            @foreach ($categories as $category)
-                                <button
-                                    onclick="fetchProductsByCategory({{ $category->id }})">{{ $category->name }}</button>
-                            @endforeach
 
-                        </div>
-                    </div>
+                <div id="mbtnlist" class="btnlist mb-1 mt-3">
 
+                    @foreach ($categories as $category)
+                        <button onclick="fetchProductsByCategory({{ $category->id }})">{{ $category->name }}</button>
+                    @endforeach
 
                 </div>
-
-
             </div>
         </div>
+        <div id="product-list" class="main">
 
+
+            <!-- Product items will be displayed here -->
+
+        </div>
+        </div>
         </div>
         </div>
 
@@ -130,11 +128,19 @@
 @section('styles')
     <link href="{{ asset('css/cart.css') }}" rel="stylesheet">
 @endsection
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <script>
+    $(document).ready(function() {
+        $('#mbtnlist button:first-child').addClass('checked');
+
+
+        // Fetch and display products for the first category on page load
+        fetchProductsByCategory({{ $categories->first()->id }});
+
+    });
+
     function fetchProductsByCategory(categoryId) {
-        console.log("IN-----------IN");
         $.ajax({
             url: '/fetch-products',
             type: 'GET',
@@ -142,127 +148,36 @@
                 id: categoryId
             },
             success: function(data) {
-                console.log(data);
-                var carouselContainer = $('#slider-id');
+                var productList = $('#product-list');
+                productList.empty(); // Clear existing product list
 
-                // Clear existing content
-                carouselContainer.empty();
-
-                let catcount = Math.floor(data.length / 3);
-                var slideHtml = '';
-                for (var i = 0; i < data.length; i += 3) {
-                    if (i == 0) {
-                        slideHtml +=
-                            '<input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav" /> ';
-                    } else {
-                        slideHtml +=
-                            '<input type="radio" name="slider" title="slide4" class="slider__nav" /> ';
-                    }
-                }
-                slideHtml += '<div class="slider__inner">';
-
-                // Group products into sets of 3
-                console.log(carouselContainer);
-
-                for (var i = 0; i < data.length; i += 3) {
-                    var productsSet = data.slice(i, i + 3);
-                    // Generate carousel slide HTML
-                    slideHtml += `
-                    <div class="slider__contents">
-                          <div class="row">
-                                ${productsSet.map(function(product) {
-                                    return `
-                                    <div class="col-md-4 text-center">
-                                        <div class="menu-wrap">
-                                            <img src="${product.imgurl}" class="menu-img" />
-                                            <div class="text">
-                                                <h5>${product.name}</h5>
-                                                <p style="color: #808080">${product.description}</p>
-                                                <p class="price"><span style="color: #ffc107">$${product.price}</span></p>
-                                                <p><a href="#" class="btn-service mb-3">Add to cart</a></p>
-                                            </div>
-                                        </div>
+                // Iterate through products and append to the product list
+                data.forEach(function(product) {
+                    var productHtml = `
+                        <div class="left">
+                            <div class="text-center p-3">
+                                <div class="services-wrap">
+                                    <img src="${product.imgurl}" class="menupizza" />
+                                </div>
+                            </div>
+                            <div class="text-div">
+                                <div class="services-wrap">
+                                    <div class="text">
+                                        <h4 class="mb-3">${product.name}</h4>
+                                        <p>${product.description}</p>
+                                        <p><span class="price">$${product.price}</span></p>
+                                        <p><a href=" " class="ml-2 btn-order btn-white btn-outline-white">Add to cart</a></p>
                                     </div>
-                                    `;
-                                }).join('')}
-
-                         </div>
-                    </div>
+                                </div>
+                            </div>
+                        </div>
                     `;
-
-                    // carouselContainer.show();
-                }
-                slideHtml += '</div>';
-                console.log(slideHtml);
-                carouselContainer.append(slideHtml);
-
-                // Show the carousel container
-                carouselContainer.show();
+                    productList.append(productHtml);
+                });
             },
             error: function(error) {
-                console.log("ERROR");
-                console.log(error);
+                console.log("Error fetching products:", error);
             }
         });
     }
-
-
-    // function fetchProductsByCategory(categoryId) {
-    //     console.log("IN-----------IN");
-    //     $.ajax({
-    //         url: '/fetch-products',
-    //         type: 'GET',
-    //         data: {
-    //             id: categoryId
-    //         },
-    //         success: function(data) {
-    //             console.log(data);
-
-    //             // Select the carousel container
-    //             var carouselContainer = $('#carousel-container');
-    //             console.log(carouselContainer);
-    //             // Clear existing content
-    //             carouselContainer.empty();
-
-    //             // Group products into sets of 3
-    //             for (var i = 0; i < data.length; i += 3) {
-    //                 var productsSet = data.slice(i, i + 3);
-
-    //                 // Generate carousel slide HTML
-    //                 var slideHtml = `
-    //                     <div class="carousel-item">
-    //                         <div class="row">
-    //                             ${productsSet.map(function(product) {
-    //                                 return `
-    //                                     <div class="col-md-4 text-center">
-    //                                         <div class="menu-wrap">
-    //                                             <img src="${product.imgurl}" class="menu-img" />
-    //                                             <div class="text">
-    //                                                 <h5>${product.name}</h5>
-    //                                                 <p style="color: #808080">${product.description}</p>
-    //                                                 <p class="price"><span style="color: #ffc107">$${product.price}</span></p>
-    //                                                 <p><a href="#" class="btn-service mb-3">Add to cart</a></p>
-    //                                             </div>
-    //                                         </div>
-    //                                     </div>
-    //                                 `;
-    //                             }).join('')}
-    //                         </div>
-    //                     </div>
-    //                 `;
-    //                 // console.log(slideHtml);
-    //                 carouselContainer.append(slideHtml);
-    //                 carouselContainer.show();
-
-    //             }
-
-    //             // Show the carousel container
-    //             carouselContainer.show();
-    //         },
-    //         error: function(error) {
-    //             console.log("ERROR  ");
-    //             console.log(error);
-    //         }
-    //     });
-    // }
 </script>
