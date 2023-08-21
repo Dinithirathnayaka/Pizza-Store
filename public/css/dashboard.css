@@ -32,14 +32,17 @@
     width: 90%;
     color: #fff;
 }
+.nav-item:hover {
+    background-color: #fac5641c;
+}
 
 .nav-item.active .nav-link {
-    background-color: #fac5641c;
+    background-color: #fac5641c !important;
     color: #fff;
 }
 
 .sub-menu.nav-item.active .nav-item {
-    background-color: #fac5641c;
+    background-color: #fac5641c !important;
     color: #fff;
 }
 
@@ -102,12 +105,12 @@
     padding: 20px 15px;
 }
 .topLeftcon .card {
-    background-color: rgb(250, 197, 100, 0.8);
     margin-left: 10px;
     margin-right: 10px;
     font-size: 20px;
     font-weight: 500;
     height: 150px;
+    background-color: rgb(33, 37, 41, 0.5);
 }
 
 .topLeftcon .card-body {

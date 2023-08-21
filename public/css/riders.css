@@ -73,15 +73,29 @@ h5 {
 }
 
 /*--- product form -------- */
-form {
+.editrider-form {
+    margin-top: 100px;
     width: 500px;
-    margin-top: 50px;
     padding: 20px;
     border: 1px solid #ccc;
-    background-color: #f9f9f9;
     border-radius: 5px;
     margin-left: auto;
     margin-right: auto;
+    background-color: #fac5641c;
+    color: #fff;
+    height: auto;
+}
+.createrider-form {
+    margin-top: 100px;
+    width: 500px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fac5641c;
+    color: #fff;
+    height: auto;
 }
 
 label {
@@ -96,19 +110,29 @@ textarea {
     padding: 8px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.editriderbtn {
+    background-color: #fac564;
+    color: #000;
+    border: 0.5px solid #000;
+    text-decoration: none;
+    padding: 5px 10px !important;
+    width: auto !important;
+    margin-right: 30px;
+    text-align: center;
     border-radius: 3px;
 }
 
-button[type="submit"] {
+.createriderbtn {
     background-color: #fac564;
-    color: white;
-    padding: 10px 20px;
-    border: none;
+    color: #000;
+    border: 0.5px solid #000;
+    text-decoration: none;
+    padding: 5px 10px !important;
+    width: auto !important;
+    margin-right: 30px;
+    text-align: center;
     border-radius: 3px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button[type="submit"]:hover {
-    background-color: #fac564;
 }

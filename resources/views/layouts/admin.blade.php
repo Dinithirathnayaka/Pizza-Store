@@ -80,7 +80,7 @@
                     <li class="nav-item">
                         <a class="nav-link nav-link-toggle" onclick="toggleSubMenu('sub-menu-1')">
                             <span><img src="{{ asset('images/checkout.png') }}" alt="" class="navicon"></span>
-                            Orders
+                            Orders<span></span>
                         </a>
                         <ul class="sub-menu" id="sub-menu-1">
                             <li class="nav-item mb-2"><a href="{{ route('admin.orders.orderhistory') }}">Order
@@ -94,7 +94,8 @@
                     <li class="nav-item {{ request()->is('admin/category') ? 'active' : '' }}"><a
                             href="{{ route('admin.category') }}" class="nav-link"><span><img
                                     src="{{ asset('images/category.png') }}" alt=""
-                                    class="navicon"></span>Category</a></li>
+                                    class="navicon"></span>Category</a>
+                    </li>
                     <li class="nav-item {{ request()->is('admin/category') ? 'active' : '' }}"><a
                             href="{{ route('admin.riders') }}" class="nav-link"><span><img
                                     src="{{ asset('images/motorbike.png') }}" alt=""

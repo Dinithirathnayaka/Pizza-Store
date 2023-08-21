@@ -7,9 +7,9 @@
     </div>
     <hr style="color: #fff" />
 
-    <div class="product-form">
-        <h4>Edit Product</h4>
-        <form action="{{ route('admin.products.update', $product->id) }}" method="post" enctype="multipart/form-data">
+    <div class="">
+
+        <form action="{{ route('admin.products.update', $product->id) }}" method="post" enctype="multipart/form-data" class="product-form">
             @csrf
             @method('PATCH')
 
@@ -45,7 +45,7 @@
             <input type="number" id="price" name="price" value="{{ old('price', $product->price) }}" step="0.01"
                 required>
 
-            <button type="submit" class="mt-3 mx-auto d-block text-center">Update Product</button>
+            <button type="submit" class="updateproductbtn mt-3 mx-auto d-block text-center">Update Product</button>
         </form>
     </div>
 @endsection

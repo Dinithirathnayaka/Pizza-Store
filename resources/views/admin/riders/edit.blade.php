@@ -7,9 +7,9 @@
     </div>
     <hr style="color: #fff" />
 
-    <div class="product-form">
-        <h4>Edit Rider</h4>
-        <form action="{{ route('admin.riders.update', ['rider' => $rider->id]) }}" method="post"
+    <div >
+
+        <form action="{{ route('admin.riders.update', ['rider' => $rider->id]) }}" method="post" class="editrider-form"
             enctype="multipart/form-data">
             @csrf
             @method('PATCH')
@@ -30,7 +30,7 @@
             </div>
 
             <br>
-            <button type="submit" class="mt-3 mx-auto d-block text-center">Update Rider</button>
+            <button type="submit" class="editriderbtn mt-3 mx-auto d-block text-center">Update Rider</button>
         </form>
     </div>
 @endsection

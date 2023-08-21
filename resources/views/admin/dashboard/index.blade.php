@@ -12,15 +12,15 @@
             <div class="col-6 topLeftcon">
                 <div class="row">
                     <div class="col-6">
-                        <div class="card mb-3">
+                        <div class="card border-danger mb-3" >
                         <div class="card-body text-center">
                             Today Total Orders<br><span><h1>10</h1></span>
                         </div>
                         </div>
                     </div>
                     <div class="col-6">
-                        <div class="card mb-3">
-                            <div class="card-body text-center">
+                        <div class="card border-success mb-3">
+                            <div class="card-body text-center" >
                                 Customer Count<br><span><h1>10</h1></span>
                             </div>
                             </div>
@@ -29,14 +29,14 @@
 
                 <div class="row">
                     <div class="col-6">
-                        <div class="card mb-3">
+                        <div class="card border-warning mb-3" >
                         <div class="card-body text-center">
                             No of Products<br><span><h1>10</h1></span>
                         </div>
                         </div>
                     </div>
                     <div class="col-6">
-                        <div class="card mb-3">
+                        <div class="card border-primary mb-3" >
                         <div class="card-body text-center">
                             No of Categories<br><span><h1>10</h1></span>
                         </div>

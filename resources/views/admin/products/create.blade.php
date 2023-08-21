@@ -8,9 +8,9 @@
     </div>
     <hr style="color: #fff" />
 
-    <div class="product-form">
-        <h4>Add New Product</h4>
-        <form action="{{ route('admin.products.store') }}" method="post" enctype="multipart/form-data">
+    <div >
+
+        <form action="{{ route('admin.products.store') }}" method="post" enctype="multipart/form-data" class="productcreate-form">
             @csrf
             <label for="category">Product Category:</label>
             <select id="category" name="category_id" required>
@@ -36,7 +36,7 @@
             <label for="price">Price (Rs):</label>
             <input type="number" id="price" name="price" step="0.01" required>
             <br>
-            <button type="submit" class="mt-3 mx-auto d-block text-center">Add Product</button>
+            <button type="submit" class="addnewproductbtn mt-3 mx-auto d-block text-center " >Add Product</button>
         </form>
 
     </div>
