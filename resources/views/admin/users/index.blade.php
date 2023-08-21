@@ -12,10 +12,10 @@
 
 
 
-        <table class="table  text-center" border="2" style="width: 100%">
+        <table class="table  text-center" border="1" style="width: 100%">
 
 
-            <thead>
+            <thead class="table-secondary">
                 <tr>
                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Usere_ID</th>
                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Profile Picture
@@ -26,7 +26,7 @@
                     </th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="table-dark">
                 @foreach ($genusers as $user)
                     <tr>
                         <td>{{ $user->id }}</td>

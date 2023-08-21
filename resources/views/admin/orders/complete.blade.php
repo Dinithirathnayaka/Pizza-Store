@@ -70,7 +70,7 @@
         <table class="table  text-center" border="2" style="width: 100%">
 
 
-            <thead>
+            <thead class="table-secondary">
                 <tr>
                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Product Image</th>
                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Product Id</th>
@@ -84,7 +84,7 @@
             </thead>
 
 
-            <tbody>
+            <tbody class="table-dark">
                 @foreach ($orderitems as $item)
                     <tr>
                         <td>

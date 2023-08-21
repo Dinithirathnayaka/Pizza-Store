@@ -1,5 +1,10 @@
 @extends('layouts.admin')
 
+@section('styles')
+    <link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
+
+@endsection
+
 @section('content')
 
     <div class="dashboard_container">
@@ -45,12 +50,12 @@
         </div>
         <div class="row bottomcon">
             <h5 class="card-title mb-3">Recent Orders</h5>
-            <div class="card" style="background-color: red">
+            <div class="card" style="background-color:rgb(33, 37, 41, 0.5)">
                 <div class="card-body">
-                    <table class="table  text-center" border="2" style="width: 100%">
+                    <table class="table  text-center" border="1" style="width: 100%">
 
 
-                        <thead>
+                        <thead class="table-secondary">
                             <tr>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Order_ID</th>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Date</th>
@@ -64,7 +69,7 @@
 
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="table-dark">
 
 
                                 <tr>

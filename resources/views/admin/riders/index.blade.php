@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="rightnav-header">
-        <span class="ms-1 font-weight-bold light">rider Details</span>
+        <span class="ms-1 font-weight-bold light">Rider Details</span>
     </div>
     <hr style="color: #fff" />
     <div class="rider">
@@ -12,7 +12,7 @@
         <table class="table  text-center mt-5" border="2" style="width: 100%">
 
 
-            <thead>
+            <thead class="table-secondary">
                 <tr>
                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">ID</th>
                     <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Empoyee ID
@@ -23,7 +23,7 @@
                     <th class="text-secondary opacity-7"></th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="table-dark">
                 @foreach ($riders as $rider)
                     <tr>
                         <td>

@@ -42,10 +42,10 @@
 
 
 
-        <table class="table  text-center" border="2" style="width: 100%">
+        <table class="table  text-center" border="1" style="width: 100%">
 
 
-            <thead>
+            <thead class="table-secondary">
                 <tr>
                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Order_ID</th>
                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Date</th>
@@ -58,7 +58,7 @@
                     <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"></th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="table-dark">
                 @foreach ($orders as $order)
                     <tr>
                         <td>{{ $order->id }}</td>

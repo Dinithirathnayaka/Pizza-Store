@@ -6,7 +6,6 @@
     border-collapse: collapse;
     margin-left: auto;
     margin-right: auto;
-    border: none;
     padding: 20px;
     border-radius: 10px !important;
 }
@@ -33,19 +32,21 @@ h5 {
 
 .edit {
     margin-right: 5px;
-    background-color: green;
-    padding: 5px;
+    background-color: rgb(0, 128, 0, 0.5);
+    border: 0.5px solid #808080;
+    padding: 5px 10px !important;
     color: #ffffff;
-    border: none;
-    width: 60px;
+    width: 80px !important;
+    text-align: center;
 }
 
 .delete {
-    background-color: red;
-    padding: 5px;
+    border: 0.5px solid #808080;
+    padding: 5px 10px !important;
     color: #ffffff;
-    border: none;
-    width: 60px;
+    width: 80px !important;
+    text-align: center;
+    background-color: rgb(255, 0, 0, 0.5);
 }
 
 .signinicon {
@@ -59,14 +60,16 @@ h5 {
 }
 
 .addbtn {
-    margin-left: 90%;
-    background-color: blue;
+    background-color: rgba(0, 0, 255, 0.5);
     color: #ffffff;
-    border: none;
-    padding: 5px !important;
-    width: 150px !important;
+    border: 0.5px solid #808080;
     margin-bottom: 30px;
     text-decoration: none;
+    padding: 5px 10px !important;
+    float: right;
+    width: 100px !important;
+    margin-right: 30px;
+    text-align: center;
 }
 
 /*--- product form -------- */
@@ -108,12 +111,4 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
     background-color: #fac564;
-}
-
-.table-row-even {
-    background-color: red; /* Light gray color for even rows */
-}
-
-.table-row-odd {
-    background-color: #ffffff; /* White color for odd rows */
 }

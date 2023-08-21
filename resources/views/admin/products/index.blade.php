@@ -10,11 +10,11 @@
     <div class="product">
 
 
-        <a href="{{ route('admin.products.create') }}" class="addbtn mb-3" style="width: 100px">Add</a>
-        <table class="table text-center mt-5" border="2" style="width: 100%">
+        <a href="{{ route('admin.products.create') }}" class="addbtn mb-3" style="width:200px">Add</a>
+        <table class="table text-center mt-5" border="1" style="width: 100%">
 
 
-            <thead>
+            <thead class="table-secondary">
                 <tr>
                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Product_ID</th>
                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Image</th>
@@ -26,7 +26,7 @@
                     <th class="text-secondary opacity-7"></th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="table-dark">
                 @foreach ($products as $product)
                     <tr>
                         <td>

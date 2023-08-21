@@ -12,10 +12,10 @@
     <div class="category">
 
         <a href="{{ route('admin.category.create') }}" class="categorybtn">Create Category</a>
-        <table class="table text-center mt-5" border="2" style="width: 100%">
+        <table class="table text-center mt-5" border="1" style="width: 100%">
 
 
-            <thead>
+            <thead class="table-secondary">
                 <tr>
                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Category_ID</th>
                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Category Name</th>
@@ -26,7 +26,7 @@
             </thead>
 
             @foreach ($categories as $category)
-                <tbody>
+                <tbody class="table-dark">
                     <tr>
                         <td>{{ $category->id }}</td>
                         <td>{{ $category->name }}</td>
