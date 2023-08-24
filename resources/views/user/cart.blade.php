@@ -82,7 +82,16 @@
                                     <td class="text-center">
                                         <p>Rs.{{ $item['product']->price }}
                                     </td>
-                                    <td><a href="#" class="viewbtn "><img src="images/bin.png" class="bin"></a>
+                                    <td>
+                                        {{-- <form action="{{ route('cart.remove', $item['product']) }}" style="display: none;"
+                                            method="POST" id="deleteForm">
+                                            @csrf
+                                            @method('DELETE')
+
+                                        </form> --}}
+
+
+                                        <a href="#" class="viewbtn "><img src="images/bin.png" class="bin"></a>
                                     </td>
                                 </tr>
 
@@ -139,4 +148,16 @@
 
 @section('styles')
     <link href="{{ asset('css/cart.css') }}" rel="stylesheet">
+@endsection
+
+
+@section('scripts')
+    <script>
+        function deleteprod() {
+            console.log("pressed");
+
+            $("#deleteForm").submit();
+
+        }
+    </script>
 @endsection

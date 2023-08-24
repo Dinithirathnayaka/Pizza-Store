@@ -7,7 +7,7 @@ use App\Mail\OrderEmail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
-
+use Illuminate\Support\Facades\Auth as FacadesAuth;
 class HomeController extends Controller
 {
     /**
@@ -30,7 +30,13 @@ class HomeController extends Controller
     {
 
 
-
+        if (auth()->check()) {
+            $user=FacadesAuth::user();
+            if ($user->role==1) {
+                return redirect()->route('admin.dashboard');
+            }
+            return redirect()->route('home');
+        }
 
         return view('user.home');
     }
