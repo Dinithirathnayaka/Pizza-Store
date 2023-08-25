@@ -5,22 +5,19 @@
         <div class="row midcontainer">
             <div class="col-md-4 col-xs-12 accountLeft ">
                 <div class="accountDetails">
-                    <h5 class="mb-5">Account Details</h5>
+                    <h5 class="mb-5">Your Profile</h5>
                     <div class="row mb-3">
-                        <div class="col-5">First Name :</div>
-                        <div class="col-7" style="color: #ffc107">Dinithi</div>
+                        <div class="col-5"> Name : </div>
+                        <div class="col-7" style="color: #ffc107">{{ $user->name }}</div>
                     </div>
-                    <div class="row mb-3">
-                        <div class="col-5">Last Name :</div>
-                        <div class="col-7" style="color: #ffc107">Rathnayake</div>
-                    </div>
+
                     <div class="row mb-3">
                         <div class="col-5">Email Address :</div>
-                        <div class="col-7" style="color: #ffc107">dini@gmail.com</div>
+                        <div class="col-7" style="color: #ffc107">{{ $user->email }}</div>
                     </div>
                     <div class="row mb-3">
                         <div class="col-5">Mobile Number :</div>
-                        <div class="col-7" style="color: #ffc107">0570000000</div>
+                        <div class="col-7" style="color: #ffc107">{{ $user->name }}</div>
                     </div>
                 </div>
             </div>
