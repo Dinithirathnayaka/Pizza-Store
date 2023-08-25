@@ -79,6 +79,10 @@
 
 
             </tbody>
+            <div class="container">
+                {!! $orders->withQueryString()->links('pagination::bootstrap-5') !!}
+
+            </div>
 
 
         </table>

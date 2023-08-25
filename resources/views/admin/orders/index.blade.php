@@ -97,6 +97,10 @@
 
 
         </table>
+        <div class="container">
+            {!! $orders->withQueryString()->links('pagination::bootstrap-5') !!}
+
+        </div>
         <div>
             {{ $orders->links('pagination::bootstrap-5') }}
         </div>
