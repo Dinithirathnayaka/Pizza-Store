@@ -6,19 +6,26 @@
 
             <h5 class="cart-title">Your Cart</h5>
             <hr />
+            <form action="{{ route('cart.clear') }}" method="POST">
+                @csrf
+                @method('PATCH')
+                <button class="clearallbtn"> Clear All</button>
+            </form>
 
-            <button class="clearallbtn"> Clear All</button>
 
             @php
                 $total = 0.0;
                 $discount = 0.0;
             @endphp
 
-
-
             <div class="cartcard">
                 <div class="card-body">
 
+                    {{-- @if (is_null($items))
+                        <lottie-player src="<URL HERE>" background="transparent" speed="1"
+                            style="width: 300px; height: 300px;" loop controls autoplay></lottie-player>
+                    @else
+                    @endif --}}
 
                     <table class="carttable" style="width: 100%">
 
@@ -83,15 +90,16 @@
                                         <p>Rs.{{ $item['product']->price }}
                                     </td>
                                     <td>
-                                        {{-- <form action="{{ route('cart.remove', $item['product']) }}" style="display: none;"
+                                        <form action="{{ route('cart.remove', $item['product']) }}" style="display: none;"
                                             method="POST" id="deleteForm">
                                             @csrf
                                             @method('DELETE')
 
-                                        </form> --}}
+                                        </form>
 
 
-                                        <a href="#" class="viewbtn "><img src="images/bin.png" class="bin"></a>
+                                        <a style="" onclick="deleteprod()" id="deleteButton" class="viewbtn "><img
+                                                src="images/bin.png" class="bin"></a>
                                     </td>
                                 </tr>
 
@@ -104,6 +112,8 @@
                         @endforeach
 
                     </table>
+
+
                 </div>
             </div>
 
@@ -151,13 +161,12 @@
 @endsection
 
 
-@section('scripts')
-    <script>
-        function deleteprod() {
-            console.log("pressed");
 
-            $("#deleteForm").submit();
+<script>
+    function deleteprod() {
+        console.log("pressed");
 
-        }
-    </script>
-@endsection
+        $("#deleteForm").submit();
+
+    }
+</script>
