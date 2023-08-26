@@ -232,7 +232,7 @@
     height: 70px;
     width: 100vw;
     padding-left: 100px !important;
-    padding-right: 50px !important;
+    padding-right: 30px !important;
 }
 
 .navbar-nav {
@@ -241,7 +241,7 @@
   }
 
   .navbar-nav .nav-item {
-    margin-left: 20px !important;
+    margin-left: 30px !important;
   }
 
 
@@ -283,7 +283,7 @@
 
   .cartimg{
     width: 30px !important;
-    margin-left: 20px;
+    margin-left: 70px !important;
 
 
   }
@@ -303,16 +303,16 @@
 
   }
 
-  .loginbtn, .registerbtn{
+  .loginbtn{
     text-decoration: none;
     border: 0.5px solid #ffc107;
     color: #fff;
     padding: 5px 10px;
-    margin: 5px;
+margin-left: 30px !important;
     width: auto;
   }
 
-  .loginbtn, .registerbtn :hover{
+  .loginbtn :hover{
     background-color: #ffc107;
     color: #000;
   }
