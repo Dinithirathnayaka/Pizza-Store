@@ -55,7 +55,7 @@
             <div class="sidenav-header">
 
                 <img src="{{ asset('images/control-panel.png') }}" class="logoicon" alt="main_logo">
-                <span class="ms-1 font-weight-bold light">Admin panel</span>
+                <span class="ms-1 font-weight-bold light"><span style="color: #fac564">SpiceCraft</span> Admin panel</span>
                 </a>
             </div>
             <hr style="color: #fff" />

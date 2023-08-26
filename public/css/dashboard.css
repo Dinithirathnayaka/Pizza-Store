@@ -48,8 +48,8 @@
 
 /* Hover effect */
 .nav-link:hover {
-    background-color: #f0f0f0;
-    color: #333;
+    background-color: #fac5641c !important;
+    color: #fff;
 }
 .navicon {
     width: 30px;
