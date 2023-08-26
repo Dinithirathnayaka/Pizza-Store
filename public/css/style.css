@@ -449,6 +449,11 @@
     height: 50vh;
 }
 
+.welcomehome-img{
+    width: 100% !important;
+    height: 50vh !important;
+}
+
 .welcomeright{
     padding: 60px !important;
 
@@ -457,6 +462,11 @@
 .welcome-text{
     text-transform: uppercase;
 }
+.welcomehome-text{
+    text-transform: uppercase;
+
+}
+
 
 
 .cheft{
