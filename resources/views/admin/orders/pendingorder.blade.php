@@ -16,17 +16,17 @@
         <table class="table  text-center" border="1" style="width: 100%">
 
 
-            <thead class="table-secondary">
+            <thead class="table-dark">
                 <tr>
-                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Order_ID</th>
-                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Date</th>
-                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Customer
+                    <th class="text-uppercase text-warning text-xxs  opacity-7">Order_ID</th>
+                    <th class="text-uppercase text-warning text-xxs  opacity-7 ps-2">Date</th>
+                    <th class="text-center text-uppercase text-warning text-xxs  opacity-7">Customer
                         Name</th>
-                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Discount
+                    <th class="text-center text-uppercase text-warning text-xxs  opacity-7">Discount
                     </th>
-                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Price</th>
-                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Status</th>
-                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"></th>
+                    <th class="text-center text-uppercase text-warning text-xxs  opacity-7">Price</th>
+                    <th class="text-center text-uppercase text-warning text-xxs  opacity-7">Status</th>
+                    <th class="text-center text-uppercase text-warning text-xxs  opacity-7"></th>
                 </tr>
             </thead>
             <tbody class="table-dark">

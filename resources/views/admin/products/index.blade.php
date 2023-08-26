@@ -14,17 +14,17 @@
         <table class="table text-center mt-5" border="1" style="width: 100%">
 
 
-            <thead class="table-secondary">
+            <thead class="table-dark">
                 <tr>
-                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Product_ID</th>
-                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Image</th>
-                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Name</th>
-                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Discount
+                    <th class="text-uppercase text-warning text-xxs  opacity-7">Product_ID</th>
+                    <th class="text-uppercase text-warning text-xxs  opacity-7 ps-2">Image</th>
+                    <th class="text-center text-uppercase text-warning text-xxs  opacity-7">Name</th>
+                    <th class="text-center text-uppercase text-warning text-xxs  opacity-7">Discount
                     </th>
-                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Price</th>
-                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Bill Price
+                    <th class="text-center text-uppercase text-warning text-xxs  opacity-7">Price</th>
+                    <th class="text-center text-uppercase text-warning text-xxs  opacity-7">Bill Price
                     </th>
-                    <th class="text-secondary opacity-7"></th>
+                    <th class="text-warning opacity-7"></th>
                 </tr>
             </thead>
             <tbody class="table-dark">

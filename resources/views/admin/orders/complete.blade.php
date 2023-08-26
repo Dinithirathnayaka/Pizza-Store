@@ -70,16 +70,16 @@
         <table class="table  text-center" border="2" style="width: 100%">
 
 
-            <thead class="table-secondary">
+            <thead class="table-dark">
                 <tr>
-                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Product Image</th>
-                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Product Id</th>
-                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Product Name
+                    <th class="text-uppercase text-warning text-xxs  opacity-7">Product Image</th>
+                    <th class="text-uppercase text-warning text-xxs  opacity-7 ps-2">Product Id</th>
+                    <th class="text-center text-uppercase text-warning text-xxs  opacity-7">Product Name
                     </th>
-                    <th class="text-secondary opacity-7">Discount</th>
-                    <th class="text-secondary opacity-7">Price</th>
-                    <th class="text-secondary opacity-7">Bill price</th>
-                    <th class="text-secondary opacity-7">Quantity</th>
+                    <th class="text-warning opacity-7">Discount</th>
+                    <th class="text-warning opacity-7">Price</th>
+                    <th class="text-warning opacity-7">Bill price</th>
+                    <th class="text-warning opacity-7">Quantity</th>
                 </tr>
             </thead>
 

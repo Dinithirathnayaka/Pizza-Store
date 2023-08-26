@@ -12,15 +12,15 @@
         <table class="table  text-center mt-5" border="2" style="width: 100%">
 
 
-            <thead class="table-secondary">
+            <thead class="table-dark">
                 <tr>
-                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">ID</th>
-                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Empoyee ID
+                    <th class="text-uppercase text-warning text-xxs  opacity-7">ID</th>
+                    <th class="text-center text-uppercase text-warning text-xxs  opacity-7">Empoyee ID
                     </th>
-                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Name</th>
-                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Mobile</th>
-                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Image</th>
-                    <th class="text-secondary opacity-7"></th>
+                    <th class="text-center text-uppercase text-warning text-xxs  opacity-7">Name</th>
+                    <th class="text-center text-uppercase text-warning text-xxs  opacity-7">Mobile</th>
+                    <th class="text-uppercase text-warning text-xxs  opacity-7 ps-2">Image</th>
+                    <th class="text-warning opacity-7"></th>
                 </tr>
             </thead>
             <tbody class="table-dark">
