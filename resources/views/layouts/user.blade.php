@@ -108,7 +108,7 @@
                             alt="cart" class="cartimg"></a>
                 @else
                     <a href="{{ route('login') }}" class="loginbtn">Sign In</a>
-                    <a href="{{ route('register') }}" class="registerbtn">Sign Up</a>
+                    {{-- <a href="{{ route('register') }}" class="registerbtn">Sign Up</a> --}}
                 @endif
 
 

@@ -60,8 +60,8 @@ h5 {
 }
 
 .addbtn {
-    background-color: rgba(0, 0, 255, 0.5);
-    color: #ffffff;
+    background-color: rgb(250, 197, 100);
+    color: #000;
     border: 0.5px solid #808080;
     margin-bottom: 30px;
     text-decoration: none;

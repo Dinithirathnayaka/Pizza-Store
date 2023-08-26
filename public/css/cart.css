@@ -109,6 +109,10 @@
     color: red;
 }
 
+.productname{
+    color: #fff;
+}
+
 .clear-btn {
     width: 100px;
     background-color: #ffc107;
@@ -176,12 +180,14 @@ td {
 
 .clearallbtn {
     float: right;
-    background-color: #ffc107;
+border: 0.5px solid #ffc107;
     color: fff;
     padding: 5px 10px;
     margin-bottom: 20px !important;
     border-radius: 10px;
     outline: none;
+    color: #fff;
+    background: transparent;
 }
 
 

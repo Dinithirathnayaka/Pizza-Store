@@ -91,7 +91,7 @@
                     <img src="images/person_2.jpg" class="cheftimg mx-auto d-block" alt="">
                     <div class=" text-center">
                         <h6 style="color: #ffffff">Tom Smith</h6>
-                        <span class="position">Hair Specialist</span>
+                        <span class="position">Cooking Specialist</span>
                         <div class="text">
                             <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
                                 there live the blind texts.</p>
@@ -103,7 +103,7 @@
                     <img src="images/person_3.jpg" class="cheftimg mx-auto d-block" alt="">
                     <div class="text-center">
                         <h6 style="color: #ffffff">Tom Smith</h6>
-                        <span class="position">Hair Specialist</span>
+                        <span class="position">Cooking Specialist</span>
                         <div class="text">
                             <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
                                 there live the blind texts.</p>
@@ -114,7 +114,7 @@
                     <img src="images/person_4.jpg" class="cheftimg mx-auto d-block" alt="">
                     <div class="text-center">
                         <h6 style="color: #ffffff">Tom Smith</h6>
-                        <span class="position">Hair Specialist</span>
+                        <span class="position">Cooking Specialist</span>
                         <div class="text">
                             <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
                                 there live the blind texts.</p>
@@ -126,7 +126,7 @@
                     <img src="images/person_1.jpg" class="cheftimg mx-auto d-block" alt="">
                     <div class="text-center">
                         <h6 style="color: #ffffff">Tom Smith</h6>
-                        <span class="position">Hair Specialist</span>
+                        <span class="position">Cooking Specialist</span>
                         <div class="text">
                             <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
                                 there live the blind texts.</p>

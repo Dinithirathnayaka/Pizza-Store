@@ -57,7 +57,7 @@
                                         <div class="col-md-5 imgcon"><img src={{ $item['product']->imgurl }}
                                                 class="cartimgs" alt="cartimg"></div>
                                         <div class="col-md-5" style="justify-content: left">
-                                            <p>{{ $item['product']->name }}</p><br>
+                                            <p class="productname">{{ $item['product']->name }}</p><br>
                                             <p class="discount">{{ $item['product']->discount }}%</p>
                                         </div>
                                     </td>
@@ -69,9 +69,7 @@
                                                 <input type="hidden" name="quantity" value="{{ -1 }}">
                                                 <button class="minmax" type="submit">-</button>
                                             </form>
-
-                                            {{ $item['quantity'] }}
-
+                                            <p style="color: #fff;margin:10px">{{ $item['quantity'] }}</p>
 
                                             <form action="{{ route('cart.update', $item['product']) }}" method="POST">
                                                 @csrf
@@ -87,7 +85,7 @@
 
                                     </td>
                                     <td class="text-center">
-                                        <p>Rs.{{ $item['product']->price }}
+                                        <p class="cartpreprice">Rs.{{ $item['product']->price }}
                                     </td>
                                     <td>
                                         <form action="{{ route('cart.remove', $item['product']) }}" style="display: none;"

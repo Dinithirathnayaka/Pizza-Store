@@ -26,8 +26,8 @@ h5 {
 
 .addbtn {
     margin-left: 90%;
-    background-color: blue;
-    color: #ffffff;
+    background-color: rgb(250, 197, 100);
+    color: #000;
     border: none;
     padding: 5px;
     width: 100px;
@@ -71,8 +71,8 @@ label {
 }
 
 .categorybtn {
-    background-color: rgba(0, 0, 255, 0.5);
-    color: #ffffff;
+    background-color: rgb(250, 197, 100);
+    color: #000;
     border: 0.5px solid #808080;
     margin-bottom: 30px;
     text-decoration: none;

@@ -69,9 +69,9 @@
 </div>
 
 
-<div class="row">
+<div class="row" style="background-image: url(images/bg_4.jpg)">
     <div class="col-md-6 col-xs-12"> <img src="images/about.jpg" class="welcome-img"></div>
-    <div class="col-md-6 col-xs-12 welcomeright" style="background-color:#212529">
+    <div class="col-md-6 col-xs-12 welcomeright" >
         <div class="welcome-text " style="color: #ffffff">
             <h2 class="mb-4 mt-4">Welcome to <span class="" style="color: #FAC564">Pizza</span> A Restaurant
             </h2>
