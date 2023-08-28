@@ -74,6 +74,18 @@ h5 {
 
 /*--- product form -------- */
 
+form {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    color: #fac564;
+    border-radius: 5px;
+    height: auto;
+}
+
 label {
     display: block;
     font-weight: bold;
@@ -87,6 +99,7 @@ textarea {
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 10px;
+    margin-bottom: 20px;
 }
 
 .product-form,
@@ -99,7 +112,7 @@ textarea {
     margin-left: auto;
     margin-right: auto;
     background-color: #fac5641c;
-    color: #fff;
+    color: #fac564;
     height: auto;
 }
 
@@ -108,7 +121,7 @@ textarea {
     color: #000;
     border: 0.5px solid #000;
     text-decoration: none;
-    padding: 5px 10px !important;
+    padding: 8px 10px !important;
     width: auto !important;
     margin-right: 30px;
     text-align: center;

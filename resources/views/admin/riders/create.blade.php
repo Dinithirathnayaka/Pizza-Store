@@ -10,7 +10,7 @@
 
     <div >
 
-        <form action="{{ route('admin.riders.store') }}" method="post" enctype="multipart/form-data" class="createrider-form" style="background-color: ">
+        <form action="{{ route('admin.riders.store') }}" method="post" enctype="multipart/form-data" class="createrider-form bg-dark" style="background-color: ">
             @csrf
 
 

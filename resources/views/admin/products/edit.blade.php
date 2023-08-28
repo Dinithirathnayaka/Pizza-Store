@@ -9,12 +9,12 @@
 
     <div class="">
 
-        <form action="{{ route('admin.products.update', $product->id) }}" method="post" enctype="multipart/form-data" class="product-form">
+        <form class="dark" action="{{ route('admin.products.update', $product->id) }}" method="post" enctype="multipart/form-data" class="product-form">
             @csrf
             @method('PATCH')
 
             <label for="category">Product Category:</label>
-            <select id="category" name="category_id" required>
+            <select id="category" name="category_id" required class="mb-2">
                 @foreach ($categories as $category)
                     <option value="{{ $category->id }}" {{ $product->category_id == $category->id ? 'selected' : '' }}>
                         {{ $category->name }}
@@ -31,7 +31,7 @@
 
             <label for="image">Product Image:</label>
             <input type="file" id="image" name="imgurl" accept="image/*" onchange="updateImagePreview(this)">
-            <div id="imagePreview">
+            <div id="imagePreview" >
                 @if ($product->imgurl)
                     <img src="{{ asset('products/' . $product->imgurl) }}" style="max-width: 100px" alt="Product Image">
                 @endif
