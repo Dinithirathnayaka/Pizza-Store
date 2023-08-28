@@ -283,7 +283,8 @@
 
   .cartimg{
     width: 30px !important;
-    margin-left: 70px !important;
+    margin-left: 50px;
+
 
 
   }
@@ -339,6 +340,8 @@
     border: none;
     margin-right: 10px;
   }
+
+
 
 
 
