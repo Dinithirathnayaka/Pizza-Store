@@ -23,6 +23,10 @@
 
 }
 
+.myslide h1{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
+}
+
 
 .prev,
 .next {
@@ -283,7 +287,8 @@
 
   .cartimg{
     width: 30px !important;
-    margin-left: 70px !important;
+    margin-left: 50px;
+
 
 
   }
@@ -293,7 +298,7 @@
     border: 0.5px solid #ffc107;
     padding: 5px 10px;
     color: #fff;
-    margin-left: 50px;
+    margin-left: 10px;
 
   }
 
@@ -308,7 +313,6 @@
     border: 0.5px solid #ffc107;
     color: #fff;
     padding: 5px 10px;
-margin-left: 30px !important;
     width: auto;
   }
 
@@ -338,7 +342,10 @@ margin-left: 30px !important;
     background-color: #212529;
     outline: none !important;
     border: none;
+    margin-right: 10px;
   }
+
+
 
 
 

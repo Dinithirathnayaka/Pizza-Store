@@ -81,8 +81,7 @@ h5 {
     border-radius: 5px;
     margin-left: auto;
     margin-right: auto;
-    background-color: #fac5641c;
-    color: #fff;
+    color: #fac564;
     height: auto;
 }
 .createrider-form {
@@ -94,7 +93,7 @@ h5 {
     margin-left: auto;
     margin-right: auto;
     background-color: #fac5641c;
-    color: #fff;
+    color: #fac564;
     height: auto;
 }
 
@@ -111,6 +110,7 @@ textarea {
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    margin-bottom: 20px;
 }
 
 .editriderbtn {

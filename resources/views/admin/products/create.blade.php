@@ -10,7 +10,7 @@
 
     <div >
 
-        <form action="{{ route('admin.products.store') }}" method="post" enctype="multipart/form-data" class="productcreate-form">
+        <form action="{{ route('admin.products.store') }}" method="post" enctype="multipart/form-data" class="productcreate-form bg-dark">
             @csrf
             <label for="category">Product Category:</label>
             <select id="category" name="category_id" required>

@@ -7,8 +7,7 @@
             <div class="txt">
                 <p class="text-center">Welcome</p>
                 <h1 class="text-center"> WE COOKED YOUR DESIRED<br>PIZZA RECIPE</h1>
-                <p class="text-center mb-md-5">A small river named Duden flows by their place and supplies it with the
-                    necessary regelialia.</p>
+                <p class="text-center mb-md-5">A Burst of Savory Perfection in Every Bite.</p>
                 <p><a href="{{ route('menu') }}" class="orderbtn mx-auto d-block text-center">Order Now</a> </p>
             </div>
 
@@ -18,8 +17,7 @@
             <div class="txt">
                 <span class="subheading">Crunchy</span>
                 <h1 class="mb-4">Italian Pizza</h1>
-                <p class="">A small river named Duden flows by their place and supplies it with the necessary
-                    regelialia.</p>
+                <p class="">Taste the Essence of Italy with Mouthwatering Margherita</p>
                 <p><a href="{{ route('menu') }}" class="orderbtn mx-auto d-block text-center">Order Now</a> </p>
             </div>
 
@@ -29,8 +27,7 @@
             <div class="txt">
                 <span class="subheading">Crunchy</span>
                 <h1 class="mb-4">Cheesy Margherita</h1>
-                <p class="">A classic Margherita pizza with a generous layer of melted mozzarella cheese that oozes
-                    with every bite.</p>
+                <p class="">Indulge in Meat Lover's Paradise - A Carnivore's Dream.</p>
                 <p><a href="{{ route('menu') }}" class="orderbtn mx-auto d-block text-center">Order Now</a> </p>
             </div>
 
@@ -40,8 +37,7 @@
             <div class="txt">
                 <span class="subheading">Delicious</span>
                 <h1 class="mb-4">Spinach & Feta Bliss</h1>
-                <p class="">Embrace a healthier option without compromising on flavor. Our Spinach & Feta Bliss pizza
-                    combines fresh spinach leaves and crumbled feta cheese on a bed of mozzarellaz.</p>
+                <p class="">Experience BBQ Bliss with Every Bite of Our Savory Creation.</p>
                 <p><a href="{{ route('menu') }}" class="orderbtn mx-auto d-block text-center">Order Now</a> </p>
             </div>
 
