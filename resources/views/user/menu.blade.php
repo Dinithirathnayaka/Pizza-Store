@@ -141,8 +141,9 @@
 
 
         // Fetch and display products for the first category on page load
-        fetchProductsByCategory({{ $categories->first()->id }});
-
+        @if ($categories !== null && $categories->isNotEmpty())
+            fetchProductsByCategory({{ $categories->first()->id }});
+        @endif
     });
 
     function fetchProductsByCategory(categoryId) {
