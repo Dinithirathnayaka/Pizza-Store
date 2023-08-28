@@ -36,7 +36,7 @@
                 <div class="left">
                     <div class=" text-center p-3">
                         <div class="services-wrap ">
-                            <img src={{ $product->imgurl }} class="menupizza" />
+                            <img src={{ asset('products/' . $product->imgurl) }} class="menupizza" />
                         </div>
                     </div>
                     <div class=" text-div ">
@@ -77,7 +77,8 @@
                 @foreach ($no_pgproducts as $product)
                     @if ($counter < 8)
                         <div class="menudiv">
-                            <div class="imgdiv"><img src={{ $product->imgurl }} class="menuimg" /></div>
+                            <div class="imgdiv"><img src={{ asset('products/' . $product->imgurl) }} class="menuimg" />
+                            </div>
                             <div class="menucontent">
                                 <div class="toprule">
                                     <div class="namepizza">{{ $product->name }}</div>
@@ -163,7 +164,7 @@
                         <div class="left">
                             <div class="text-center p-3">
                                 <div class="services-wrap">
-                                    <img src="${product.imgurl}" class="menupizza" />
+                                    <img src="products/${ product.imgurl}" class="menupizza" />
                                 </div>
                             </div>
                             <div class="text-div">
@@ -171,8 +172,8 @@
                                     <div class="text">
                                         <h4 class="mb-3">${product.name}</h4>
                                         <p>${product.description}</p>
-                                        <p> <span class="pricebill">$${product.price}</span>
-                                            <span class="price">$${(product.price-(product.price*(product.discount/100))).toFixed(2)}</span></p>
+                                        <p> <span class="pricebill">Rs ${product.price}</span>
+                                            <span class="price">Rs ${(product.price-(product.price*(product.discount/100))).toFixed(2)}</span></p>
 
 
                                         <p><a href="#" data-product='${JSON.stringify(product)}' class="ml-2 btn-order1 btn-white btn-outline-white">Add to cart</a></p>

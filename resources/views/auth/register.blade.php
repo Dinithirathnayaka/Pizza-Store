@@ -75,7 +75,7 @@
                     </div>
                 </div>
                 <div class="mb-2">
-                    <label for="mobile_number" class="mb-2 " style="color:#808080">{{ __('Name') }}</label>
+                    <label for="mobile_number" class="mb-2 " style="color:#808080">{{ __('Mobile Number') }}</label>
 
                     <div class="">
                         <input id="mobile_number" type="text"
@@ -90,7 +90,7 @@
                     </div>
                 </div>
                 <div class="mb-2">
-                    <label for="address" class="mb-2 " style="color:#808080">{{ __('address') }}</label>
+                    <label for="address" class="mb-2 " style="color:#808080">{{ __('Address') }}</label>
 
                     <div class="">
                         <input id="address" type="text" class="form-control @error('address') is-invalid @enderror"

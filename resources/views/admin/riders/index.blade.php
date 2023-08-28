@@ -39,7 +39,8 @@
                             {{ $rider->mobile }}
                         </td>
                         <td>
-                            <img src="{{ asset($rider->imgurl) }}" alt="rider Image" class="riderimg">
+                            <img src="{{ asset('rider_images/' . $rider->imgurl) }}" alt="rider Image"
+                                class="rider rounded-circle" style="width: 120px; height: 120px;">
                         </td>
 
 

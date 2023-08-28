@@ -34,16 +34,17 @@
                             {{ $product->id }}
                         </td>
                         <td>
-                            <img src="{{ asset($product->imgurl) }}" alt="Product Image" class="productimg">
+                            <img src="{{ asset('products/' . $product->imgurl) }}" alt="Product Image" class="productimg">
+
                         </td>
                         <td>
                             {{ $product->name }}
                         </td>
                         <td>
-                            {{ $product->discount }}%
+                            {{ round($product->discount, 2) }}%
                         </td>
                         <td>
-                            Rs {{ $product->price }}
+                            Rs {{ round($product->price, 2) }}
                         </td>
                         <td>
                             Rs {{ round($product->price - ($product->price * ((float) $product->discount)) / 100, 2) }}

@@ -53,6 +53,8 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'mobile_number' => ['required', 'string', 'min:10', 'max:15'], // Add your mobile number validation rules here
+            'address' => ['required', 'string', 'max:255'], // Add your address validation rules here
         ]);
     }
 
@@ -67,6 +69,8 @@ class RegisterController extends Controller
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
+            'mobile_number' => $data['mobile_number'], // Add the mobile_number field
+            'address' => $data['address'], // Add the address field
             'password' => Hash::make($data['password']),
         ]);
     }
