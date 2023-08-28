@@ -1,24 +1,24 @@
 @extends('layouts.user')
 
 @section('content')
+    <section class=" home-slider owl-carousel img" style="background-image: url(images/contact.jpg);">
 
-<section class=" home-slider owl-carousel img" style="background-image: url(images/contact.jpg);">
-
-    <div class="slider-item" >
+        <div class="slider-item">
 
 
             <div class="row slider-text justify-content-center align-items-center">
 
                 <div class="aboutdiv text-center ">
                     <h1 class="mb-3 mt-5 bread">Contact</h1>
-                    <p class="breadcrumbs"><span class="mr-2 homeabout" ><a
-                                href="index.html">Home</a></span> <span>Contact</span></p>
+                    <p class="breadcrumbs"><span class="mr-2 homeabout"><a href="index.html">Home</a></span>
+                        <span>Contact</span>
+                    </p>
                 </div>
 
             </div>
 
-    </div>
-</section>
+        </div>
+    </section>
 
     <section class="contactinfo " style="height: 90vh">
         <div class="container newcontainer ">
@@ -29,18 +29,19 @@
                             <h2 class="h4" style="color: #ffffff">Contact Information</h2>
                         </div>
                         <div class="col-md-12 mb-3">
-                            <p style="color: #808080"><span style="color: #ffffff">Address:</span> 198 West 21th Street,
-                                Suite 721 New York NY 10016</p>
+                            <p style="color: #808080"><span style="color: #ffffff">Address:</span> Parakumba Street,
+                                Wallawaththa, Colombo 06</p>
                         </div>
                         <div class="col-md-12 mb-3">
-                            <p><span style="color: #ffffff">Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
+                            <p><span style="color: #ffffff">Phone:</span> <a href="tel://1234567920">011 2245625</a></p>
                         </div>
                         <div class="col-md-12 mb-3">
                             <p><span style="color: #ffffff">Email:</span> <a
-                                    href="mailto:info@yoursite.com">info@yoursite.com</a></p>
+                                    href="mailto:pizzaspicecraft@gmail.com">pizzaspicecraft@gmail.com</a></p>
                         </div>
                         <div class="col-md-12 mb-3">
-                            <p><span style="color: #ffffff">Website:</span> <a href="#">yoursite.com</a></p>
+                            <p><span style="color: #ffffff">Website:</span> <a href="#">spicecraftpizza.com
+                                </a></p>
                         </div>
                     </div>
                 </div>

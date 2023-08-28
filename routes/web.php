@@ -31,7 +31,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Auth::routes();
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('index');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::get('/services', [HomeController::class, 'services'])->name('services');
@@ -42,6 +42,7 @@ Route::get('/fetch-products', [MenuController::class, 'fetchProductsByCategory']
 
 Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
 Route::get('/cart/add/{product}', [CartController::class, 'add'])->name('cart.add');
+Route::get('/cart/addAjx/', [CartController::class, 'addAjx'])->name('cart.addAjx');
 Route::patch('/cart/update/{product}', [CartController::class, 'update'])->name('cart.update');
 Route::delete('/cart/remove/{product}', [CartController::class, 'remove'])->name('cart.remove');
 Route::patch('/cart/clear', [CartController::class, 'clear'])->name('cart.clear');

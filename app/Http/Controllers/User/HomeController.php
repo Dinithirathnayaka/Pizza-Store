@@ -35,7 +35,7 @@ class HomeController extends Controller
             if ($user->role==1) {
                 return redirect()->route('admin.dashboard');
             }
-            return redirect()->route('home');
+            return view('user.home');
         }
 
         return view('user.home');

@@ -44,7 +44,10 @@
                             <div class="text">
                                 <h4 class="mb-3">{{ $product->name }}</h4>
                                 <p>{{ $product->description }}</p>
-                                <p><span class="price">${{ $product->price }} </span> </p>
+                                <p><span class="pricebill">Rs {{ $product->price }} </span> <span class="price">Rs
+                                        {{ round($product->price - ($product->price * $product->discount) / 100, 2) }}
+                                    </span>
+                                </p>
                                 <p><a href="{{ route('cart.add', ['product' => $product]) }}"
                                         class=" ml-2 btn-order btn-white btn-outline-white ">Add to cart</a></p>
                             </div>
@@ -78,7 +81,9 @@
                             <div class="menucontent">
                                 <div class="toprule">
                                     <div class="namepizza">{{ $product->name }}</div>
-                                    <div class="pizzaprice"><span>------------------------</span>${{ $product->price }}
+                                    <div class="pizzaprice"><span>------------------------</span> <span class="price">Rs
+                                            {{ round($product->price - ($product->price * $product->discount) / 100, 2) }}
+                                        </span>
                                     </div>
                                 </div>
                                 <div class="bottomrule">
@@ -136,8 +141,9 @@
 
 
         // Fetch and display products for the first category on page load
-        fetchProductsByCategory({{ $categories->first()->id }});
-
+        @if ($categories !== null && $categories->isNotEmpty())
+            fetchProductsByCategory({{ $categories->first()->id }});
+        @endif
     });
 
     function fetchProductsByCategory(categoryId) {
@@ -165,8 +171,11 @@
                                     <div class="text">
                                         <h4 class="mb-3">${product.name}</h4>
                                         <p>${product.description}</p>
-                                        <p><span class="price">$${product.price}</span></p>
-                                        <p><a href=" " class="ml-2 btn-order btn-white btn-outline-white">Add to cart</a></p>
+                                        <p> <span class="pricebill">$${product.price}</span>
+                                            <span class="price">$${(product.price-(product.price*(product.discount/100))).toFixed(2)}</span></p>
+
+
+                                        <p><a href="#" data-product='${JSON.stringify(product)}' class="ml-2 btn-order1 btn-white btn-outline-white">Add to cart</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -177,6 +186,32 @@
             },
             error: function(error) {
                 console.log("Error fetching products:", error);
+            }
+        });
+    }
+
+
+    $(document).on('click', '.btn-order1', function(event) {
+        event.preventDefault();
+
+        var productData = $(this).data('product');
+        addToCart(productData);
+    });
+
+    function addToCart(product) {
+        $.ajax({
+            url: '/cart/addAjx',
+            type: 'GET',
+            data: {
+                _token: '{{ csrf_token() }}',
+                product: JSON.stringify(product)
+            },
+            success: function(response) {
+                console.log("Product added to cart:", response);
+                window.location.href = '{{ route('cart.index') }}';
+            },
+            error: function(error) {
+                console.log("Error adding product to cart:", error);
             }
         });
     }
