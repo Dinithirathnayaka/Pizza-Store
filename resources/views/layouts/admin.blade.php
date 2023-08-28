@@ -112,6 +112,10 @@
                             href="{{ route('admin.riders') }}" class="nav-link"><span><img
                                     src="{{ asset('images/motorbike.png') }}" alt=""
                                     class="navicon"></span>Riders</a></li>
+
+                     <li class="nav-item"><a
+                            href="{{ route('admin.riders') }}" class="nav-link"><span><img src="{{ asset('images/exit.png') }}" alt=""
+                                                class="navicon"></span>Logout</a></li>
                 </ul>
             </div>
         </div>

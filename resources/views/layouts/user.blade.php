@@ -98,14 +98,16 @@
 
                 @if (auth()->check())
                     </a>
+
+                    <a href="{{ route('accountsetting') }}" class=""> <img src="images/user-profile.png"
+                        alt="cart" class="cartimg"></a>
                     <form action="{{ route('logout') }}" method="POST">
                         @csrf
                         <button type="submit" class="logoutbtn">Logout</button>
 
                     </form>
 
-                    <a href="{{ route('accountsetting') }}" class="user-profile"> <img src="images/user-profile.png"
-                            alt="cart" class="cartimg"></a>
+
                 @else
                     <a href="{{ route('login') }}" class="loginbtn">Sign In</a>
                     {{-- <a href="{{ route('register') }}" class="registerbtn">Sign Up</a> --}}
