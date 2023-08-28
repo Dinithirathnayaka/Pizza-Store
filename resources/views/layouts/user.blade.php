@@ -60,7 +60,7 @@
 
         <div class="toplogo">
             <img src="images/pizza-slicelogo.png" alt="" class="logoimg">
-            <div class="toplogocontent"><span class="color:#ffc107">SpiceCraft</span> Pizza</div>
+            <div class="toplogocontent"><span class="color:#ffc107"><span style="color: #ffc107;font-size:25px">S</span>pice<span style="color: #ffc107;font-size:25px">C</span>raft</span> Pizza</div>
         </div>
 
 
