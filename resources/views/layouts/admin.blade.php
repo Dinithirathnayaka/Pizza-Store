@@ -78,8 +78,19 @@
 
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link nav-link-toggle" onclick="toggleSubMenu('sub-menu-1')">
+                    <li class="nav-item ">
+
+                        <button class="dropdown-btn "><a class="nav-link nav-link-toggle" >
+                            <span><img src="{{ asset('images/checkout.png') }}" alt="" class="navicon"></span>
+                            Orders<span><img src="{{ asset('images/down-arrow.png') }}" alt="" class="droparrow"></span></span></span>
+                        </a>
+                          </button>
+
+                          <div class="dropdown-container">
+                            <div class="subnav-item mb-3 mt-2"> <span><img src="{{ asset('images/file.png') }}" alt="" class="navicon"></span><a href="{{ route('admin.orders.orderhistory') }}" class="sub_link">Order History</a><br></div>
+                            <div class="subnav-item "><span><img src="{{ asset('images/box.png') }}" alt="" class="navicon"></span><a href="{{ route('admin.orders') }}"  class="sub_link">Pending Orders</a></div>
+                          </div>
+                        {{-- <a class="nav-link nav-link-toggle" onclick="toggleSubMenu('sub-menu-1')">
                             <span><img src="{{ asset('images/checkout.png') }}" alt="" class="navicon"></span>
                             Orders<span></span>
                         </a>
@@ -88,7 +99,7 @@
                                     History</a></li><br>
                             <li class="nav-item"><a href="{{ route('admin.orders') }}">Pending Orders</a>
                             </li>
-                        </ul>
+                        </ul> --}}
                     </li>
 
 
@@ -151,6 +162,24 @@
                 subMenu.toggle(); // Toggle the sub-menu
             });
         });
+    </script>
+
+<script>
+
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+
+    for (i = 0; i < dropdown.length; i++) {
+      dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+          dropdownContent.style.display = "none";
+        } else {
+          dropdownContent.style.display = "block";
+        }
+      });
+    }
     </script>
 </body>
 
