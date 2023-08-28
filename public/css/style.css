@@ -797,7 +797,11 @@ background-size: cover;
     margin-right: 20px !important;
 }
 
-
+.text-div .pricebill{
+    text-decoration: line-through;
+    color: #f1f1f1;
+    margin-right: 20px !important;
+}
 .text-div a{
     color:#ffffff
 }
@@ -851,6 +855,19 @@ background-size: cover;
     color: #fff;
 }
 
+
+.btn-order1{
+    color: #ffffff !important;
+    border: 1px solid #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.btn-order1:hover{
+    background-color: #ffc107;
+    color: #fff;
+}
+
 .menurow{
 
     display: grid;
@@ -900,6 +917,12 @@ flex:0.5;
 
 .pizzaprice{
     color: #ffc107;
+}
+
+.pizzapricebill{
+    text-decoration: line-through;
+    color: #999999;
+    margin-right: 10px;
 }
 
 .bottomrule p{

@@ -1,21 +1,20 @@
 @extends('layouts.user')
 
 @section('content')
-
     <section class=" home-slider owl-carousel img" style="background-image: url(images/aboutpizza.jpg);">
 
-        <div class="slider-item" >
+        <div class="slider-item">
 
 
-                <div class="row slider-text justify-content-center align-items-center">
+            <div class="row slider-text justify-content-center align-items-center">
 
-                    <div class="aboutdiv  text-center">
-                        <h1 class="mb-3 mt-5 bread">About</h1>
-                        <p class="breadcrumbs"><span class="mr-2 homeabout" style="color: #ffffff"><a
-                                    href="index.html">Home</a></span> <span>About</span></p>
-                    </div>
-
+                <div class="aboutdiv  text-center">
+                    <h1 class="mb-3 mt-5 bread">About</h1>
+                    <p class="breadcrumbs"><span class="mr-2 homeabout" style="color: #ffffff"><a
+                                href="index.html">Home</a></span> <span>About</span></p>
                 </div>
+
+            </div>
 
         </div>
     </section>
@@ -58,18 +57,16 @@
             <div class="col-md-6 col-xs-12"> <img src="images/about.jpg" class="welcome-img" alt=""></div>
             <div class="col-md-6 col-xs-12 welcomeright">
                 <div class="welcome-text " style="color: #ffffff">
-                    <h2 class="mb-4 mt-4">Welcome to <span class="" style="color: #FAC564">Pizza</span> A Restaurant
+                    <h2 class="mb-4 mt-4">Welcome to <span class="" style="color: #FAC564">Spicecraft Pizza</span> A
+                        Restaurant
                     </h2>
                 </div>
 
 
                 <div>
-                    <p style="color: #808080">On her way she met a copy. The copy warned the Little Blind Text, that where
-                        it came from it would have been rewritten a thousand times and everything that was left from its
-                        origin would be the word "and" and the Little Blind Text should turn around and return to its own,
-                        safe country. But nothing the copy said could convince her and so it didn’t take long until a few
-                        insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their
-                        agency, where they abused her for their.</p>
+                    <p style="color: #808080">Welcome to Spicecraft Pizza, your destination for mouthwatering pizzas and
+                        delightful flavors. Whether you're craving classic favorites or exploring unique combinations, we're
+                        here to satisfy your pizza cravings. Visit us today for a slice of happiness!.</p>
                 </div>
             </div>
         </div>
@@ -87,14 +84,26 @@
 
         <div class="container">
             <div class="row cheftlist">
-                <div class="col-md-6 col-xs-12 cheft ">
-                    <img src="images/person_2.jpg" class="cheftimg mx-auto d-block" alt="">
-                    <div class=" text-center">
-                        <h6 style="color: #ffffff">Tom Smith</h6>
-                        <span class="position">Cooking Specialist</span>
+                <div class="col-md-6 col-xs-12 cheft">
+                    <img src="images/person_1.jpg" class="cheftimg mx-auto d-block" alt="">
+                    <div class="text-center">
+                        <h6 style="color: #ffffff">John Smith</h6>
+                        <span class="position">Head Chef</span>
                         <div class="text">
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                                there live the blind texts.</p>
+                            <p>Passionate about creating delectable dishes that delight the senses and bring joy to every
+                                bite.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-xs-12 cheft">
+                    <img src="images/person_2.jpg" class="cheftimg mx-auto d-block" alt="">
+                    <div class="text-center">
+                        <h6 style="color: #ffffff">Emma Johnson</h6>
+                        <span class="position">Pastry Chef</span>
+                        <div class="text">
+                            <p>A master of all things sweet and indulgent, turning simple ingredients into exquisite
+                                desserts.</p>
                         </div>
                     </div>
                 </div>
@@ -102,37 +111,27 @@
                 <div class="col-md-6 col-xs-12 cheft">
                     <img src="images/person_3.jpg" class="cheftimg mx-auto d-block" alt="">
                     <div class="text-center">
-                        <h6 style="color: #ffffff">Tom Smith</h6>
-                        <span class="position">Cooking Specialist</span>
+                        <h6 style="color: #ffffff">Alex Martin</h6>
+                        <span class="position">Grill Master</span>
                         <div class="text">
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                                there live the blind texts.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-xs-12 cheft">
-                    <img src="images/person_4.jpg" class="cheftimg mx-auto d-block" alt="">
-                    <div class="text-center">
-                        <h6 style="color: #ffffff">Tom Smith</h6>
-                        <span class="position">Cooking Specialist</span>
-                        <div class="text">
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                                there live the blind texts.</p>
+                            <p>Bringing the sizzle to the grill with a passion for perfectly cooked meats and savory
+                                flavors.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-md-6 col-xs-12 cheft">
-                    <img src="images/person_1.jpg" class="cheftimg mx-auto d-block" alt="">
+                    <img src="images/person_4.jpg" class="cheftimg mx-auto d-block" alt="">
                     <div class="text-center">
-                        <h6 style="color: #ffffff">Tom Smith</h6>
-                        <span class="position">Cooking Specialist</span>
+                        <h6 style="color: #ffffff">Sophia Williams</h6>
+                        <span class="position">Sous Chef</span>
                         <div class="text">
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                                there live the blind texts.</p>
+                            <p>Supporting the kitchen with creativity and precision, ensuring every dish meets the highest
+                                standards.</p>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
 
@@ -141,8 +140,12 @@
 
 
     <div class="row " style="height: 80vh">
-        <div class="col-md-6 col-sm-12 " >
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.1782943169774!2d79.8877348747868!3d6.869227619049599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25a449198c277%3A0x3a66d5a707da2344!2sPizza%20Hut%20-%20Nugegoda!5e0!3m2!1sen!2slk!4v1692448042528!5m2!1sen!2slk" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="col-md-6 col-sm-12 ">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.1782943169774!2d79.8877348747868!3d6.869227619049599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25a449198c277%3A0x3a66d5a707da2344!2sPizza%20Hut%20-%20Nugegoda!5e0!3m2!1sen!2slk!4v1692448042528!5m2!1sen!2slk"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
         </div>
         <div class="col-md-6 col-sm-12 contactright">
             <h4 class="mb-3 aboutcontact">Contact Us</h4>

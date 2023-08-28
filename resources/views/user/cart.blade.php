@@ -3,8 +3,14 @@
 @section('content')
     <div class="cart_container">
         <div class="cartleft_container">
+            <div class="d-flex justify-content-between align-items-center">
+                <span>
+                    <h5 class="cart-title ">Your Cart</h5>
+                </span>
+                <a class="explore-link" href="{{ route('menu') }}">EXPLORE MENU</a>
 
-            <h5 class="cart-title">Your Cart</h5>
+            </div>
+
             <hr />
             <form action="{{ route('cart.clear') }}" method="POST">
                 @csrf

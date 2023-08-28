@@ -42,6 +42,7 @@ Route::get('/fetch-products', [MenuController::class, 'fetchProductsByCategory']
 
 Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
 Route::get('/cart/add/{product}', [CartController::class, 'add'])->name('cart.add');
+Route::get('/cart/addAjx/', [CartController::class, 'addAjx'])->name('cart.addAjx');
 Route::patch('/cart/update/{product}', [CartController::class, 'update'])->name('cart.update');
 Route::delete('/cart/remove/{product}', [CartController::class, 'remove'])->name('cart.remove');
 Route::patch('/cart/clear', [CartController::class, 'clear'])->name('cart.clear');

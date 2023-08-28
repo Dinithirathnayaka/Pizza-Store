@@ -28,6 +28,22 @@ class CartController extends Controller
 
     }
 
+    public function addAjx(Request $request, CartService $cart)
+{
+    try {
+
+        $productData = $request->input('product');
+        $product = json_decode($productData, true); // Convert JSON data to associative array
+        $productModel = Product::find($product['id']);
+        $quantity = 1;
+        $cart->add($productModel, $quantity);
+        return "ok";
+    } catch (\Throwable $th) {
+        return $th;
+    }
+}
+
+
     public function update(Request $request, Product $product, CartService $cart)
     {
         $quantity = $request->input('quantity',0);

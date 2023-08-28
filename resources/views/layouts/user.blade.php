@@ -128,8 +128,10 @@
                 <div class="col-lg-3 col-md-6 mb-5 mb-md-5" style="text-align: left">
                     <div class="ftco-footer-widget mb-4">
                         <h2 class="ftco-heading-2">About Us</h2>
-                        <p style="color: #FFFFFFB3">Far far away, behind the word mountains, far from the countries
-                            Vokalia and Consonantia, there live the blind texts.</p>
+                        <p style="color: #FFFFFFB3">Welcome to Spicecraft Pizza, your destination for mouthwatering
+                            pizzas and delightful flavors. Whether you're craving classic favorites or exploring unique
+                            combinations, we're here to satisfy your pizza cravings. Visit us today for a slice of
+                            happiness!</p>
                         <div class="footer_social">
                             <div class="fa fa-twitter "></div>
                             <div class="fa fa-facebook"></div>
@@ -193,15 +195,15 @@
                         <div class="block-23 mb-3" style="text-align: left">
                             <div class="deteil">
                                 <div class="fa fa-map-marker" style="color: #FFFFFFB3"></div>
-                                <div class="text">203 Fake St. Mountain View, San Francisco, California, USA</div>
+                                <div class="text">Parakumba Street, Wallawaththa, Colombo 06</div>
                             </div>
                             <div class="deteil">
                                 <div class="fa fa-phone" style="color: #FFFFFFB3"></div>
-                                <div class="text">+2 392 3929 210</div>
+                                <div class="text">011 2245625</div>
                             </div>
                             <div class="deteil">
                                 <div class="fa fa-envelope" style="color: #FFFFFFB3"></div>
-                                <div class="text">info@yourdomain.com</div>
+                                <div class="text">pizzaspicecraft@gmail.com</div>
                             </div>
                             {{-- <ul>
                         <li><span class="text" >203 Fake St. Mountain View, San Francisco, California, USA</span></li>
