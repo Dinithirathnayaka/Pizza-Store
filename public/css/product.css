@@ -79,7 +79,7 @@ h5 {
 }
 
 form {
-    width: 80%;
+    width: 70%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
@@ -116,18 +116,31 @@ textarea {
     margin-bottom: 20px;
 }
 
+.createproductcon {
+    height: 85vh;
+}
+
 .product-form,
 .productcreate-form {
-    margin-top: 50px;
-    width: 500px;
+    margin-top: 30px;
+    width: 70%;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-left: auto;
     margin-right: auto;
-    background-color: #fac5641c;
     color: #fac564;
-    height: auto;
+    height: 80vh;
+    overflow: scroll;
+}
+
+.productcreate-form::-webkit-scrollbar {
+    display: none;
+}
+
+.productcreate-form {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 .updateproductbtn {
@@ -157,4 +170,11 @@ textarea {
 #imagePreview {
     height: 150px;
     width: 100%;
+}
+
+#category,
+select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
 }

@@ -8,12 +8,12 @@
     </div>
     <hr style="color: #fff" />
 
-    <div >
+    <div class="createproductcon" >
 
         <form action="{{ route('admin.products.store') }}" method="post" enctype="multipart/form-data" class="productcreate-form bg-dark">
             @csrf
             <label for="category">Product Category:</label>
-            <select id="category" name="category_id" required>
+            <select id="category" name="category_id" required style="margin-bottom: 50px">
                 <option value="" disabled selected>Select a category</option>
                 @foreach ($categories as $category)
                     <option value="{{ $category->id }}">{{ $category->name }}</option>
@@ -28,7 +28,7 @@
             <input type="file" id="image" name="imgurl" accept="image/*" required
                 onchange="updateImagePreview(this)">
 
-            <div id="imagePreview"></div> <!-- Display selected image preview here -->
+            <div id="imagePreview"></div>
 
             <label for="discount">Discount (%):</label>
             <input type="number" id="discount" name="discount" min="0" max="100" step="1" required>
