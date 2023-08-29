@@ -58,7 +58,7 @@
                     @endforeach
                 </select>
                 <br><br>
-                <input type="submit" value="Accept Order">
+                <input type="submit" value="Accept Order" class="accepttebtn">
             </form>
             {{-- <form action="">
 
@@ -88,7 +88,7 @@
                 @foreach ($orderitems as $item)
                     <tr>
                         <td>
-                            <img src="{{ asset('products/.$item->product->imgurl') }}" class="productimg" alt="product">
+                            <img src="{{ asset('products/' . $item->product->imgurl) }}" class="productimg" alt="product">
                         </td>
                         <td>{{ $item->product->id }}</td>
                         <td>{{ $item->product->name }}</td>

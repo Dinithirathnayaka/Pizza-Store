@@ -47,16 +47,16 @@
         <div class="rightsummary">
             <span class="ms-1 font-weight-bold light">Rider Details</span>
             <div class="row">
-                <div class="col-4">Sub Total :</div>
+                <div class="col-4">Employee Id :</div>
                 <div class="col-5">{{ $order->rider->emp_id }}</div>
             </div>
 
             <div class="row">
-                <div class="col-4">Total :</div>
+                <div class="col-4">Name :</div>
                 <div class="col-5">{{ $order->rider->name }}</div>
             </div>
             <div class="row">
-                <div class="col-4">Total :</div>
+                <div class="col-4">Mobile No :</div>
                 <div class="col-5">{{ $order->rider->mobile }}</div>
             </div>
         </div>
@@ -80,21 +80,20 @@
             </thead>
 
 
-            <tbody>
+            <tbody class="table-dark">
                 @foreach ($orderitems as $item)
                     <tr>
                         <td>
-                            <img src="{{ asset('products/' . $item->$product->imgurl) }}" class="productimg"
-                                alt="product">
+                            <img src="{{ asset('products/' . $item->product->imgurl) }}" class="productimg" alt="product">
                         </td>
-                        <td>{{ $item->$product->id }}</td>
+                        <td>{{ $item->product->id }}</td>
                         <td>{{ $item->product->name }}</td>
                         <td>{{ $item->product->discount }}%</td>
                         <td>Rs {{ $item->product->price }}</td>
                         <td>Rs
                             {{ round($item->product->price - $item->product->price * ($item->product->discount / 100), 2) }}
                         </td>
-
+                        <td>{{ $item->qty }}</td>
                     </tr>
                 @endforeach
             </tbody>

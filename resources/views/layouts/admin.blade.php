@@ -55,7 +55,8 @@
             <div class="sidenav-header">
 
                 <img src="{{ asset('images/control-panel.png') }}" class="logoicon" alt="main_logo">
-                <span class="ms-1 font-weight-bold light"><span style="color: #fac564">SpiceCraft</span> Admin panel</span>
+                <span class="ms-1 font-weight-bold light"><span style="color: #fac564">SpiceCraft</span> Admin
+                    panel</span>
                 </a>
             </div>
             <hr style="color: #fff" />
@@ -80,16 +81,23 @@
 
                     <li class="nav-item ">
 
-                        <button class="dropdown-btn "><a class="nav-link nav-link-toggle" >
-                            <span><img src="{{ asset('images/checkout.png') }}" alt="" class="navicon"></span>
-                            Orders<span><img src="{{ asset('images/down-arrow.png') }}" alt="" class="droparrow"></span></span></span>
-                        </a>
-                          </button>
+                        <button class="dropdown-btn "><a class="nav-link nav-link-toggle">
+                                <span><img src="{{ asset('images/checkout.png') }}" alt=""
+                                        class="navicon"></span>
+                                Orders<span><img src="{{ asset('images/down-arrow.png') }}" alt=""
+                                        class="droparrow"></span></span></span>
+                            </a>
+                        </button>
 
-                          <div class="dropdown-container">
-                            <div class="subnav-item mb-3 mt-2"> <span><img src="{{ asset('images/file.png') }}" alt="" class="navicon"></span><a href="{{ route('admin.orders.orderhistory') }}" class="sub_link">Order History</a><br></div>
-                            <div class="subnav-item "><span><img src="{{ asset('images/box.png') }}" alt="" class="navicon"></span><a href="{{ route('admin.orders') }}"  class="sub_link">Pending Orders</a></div>
-                          </div>
+                        <div class="dropdown-container">
+                            <div class="subnav-item mb-3 mt-2"> <span><img src="{{ asset('images/file.png') }}"
+                                        alt="" class="navicon"></span><a
+                                    href="{{ route('admin.orders.orderhistory') }}" class="sub_link">Order
+                                    History</a><br></div>
+                            <div class="subnav-item "><span><img src="{{ asset('images/box.png') }}" alt=""
+                                        class="navicon"></span><a href="{{ route('admin.orders') }}"
+                                    class="sub_link">Pending Orders</a></div>
+                        </div>
                         {{-- <a class="nav-link nav-link-toggle" onclick="toggleSubMenu('sub-menu-1')">
                             <span><img src="{{ asset('images/checkout.png') }}" alt="" class="navicon"></span>
                             Orders<span></span>
@@ -113,9 +121,15 @@
                                     src="{{ asset('images/motorbike.png') }}" alt=""
                                     class="navicon"></span>Riders</a></li>
 
-                     <li class="nav-item"><a
-                            href="{{ route('admin.riders') }}" class="nav-link"><span><img src="{{ asset('images/exit.png') }}" alt=""
-                                                class="navicon"></span>Logout</a></li>
+                    <form action="{{ route('logout') }}" style="display: none;" method="POST" id="logoutfrm">
+                        @csrf cart.remove
+
+
+                    </form>
+
+                    <li class="nav-item"><a onclick="gologout();" class="nav-link"><span><img
+                                    src="{{ asset('images/exit.png') }}" alt=""
+                                    class="navicon"></span>Logout</a></li>
                 </ul>
             </div>
         </div>
@@ -124,7 +138,6 @@
             @yield('content')
         </div>
     </div>
-
 
 
 
@@ -154,6 +167,23 @@
         });
     </script>
 
+    <script>
+        function gologout() {
+            console.log("pressed");
+            var shouldDelete = confirm('Are you sure to log out?');
+
+            if (!shouldDelete) {
+                event.preventDefault(); // Prevent the form submission
+            } else {
+                $("#logoutfrm").submit();
+            }
+
+        }
+    </script>
+
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
     </script>
@@ -168,22 +198,21 @@
         });
     </script>
 
-<script>
+    <script>
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
 
-    var dropdown = document.getElementsByClassName("dropdown-btn");
-    var i;
-
-    for (i = 0; i < dropdown.length; i++) {
-      dropdown[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var dropdownContent = this.nextElementSibling;
-        if (dropdownContent.style.display === "block") {
-          dropdownContent.style.display = "none";
-        } else {
-          dropdownContent.style.display = "block";
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
         }
-      });
-    }
     </script>
 </body>
 

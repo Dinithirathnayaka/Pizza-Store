@@ -120,17 +120,12 @@
                         </thead>
                         <tbody class="table-dark">
                             @foreach ($orders as $order)
-                                <tr>
+                                <tr style="margin-bottom: 5px;">
                                     <td>{{ $order->id }}</td>
                                     <td>{{ \Carbon\Carbon::parse($order->created_at)->format('Y-m-d H:i') }}</td>
                                     <td>{{ $order->cusname }}</td>
                                     <td>{{ $order->discount }}</td>
                                     <td>{{ $order->total }}</td>
-
-                                    {{-- <th style="color: {{ getStatusColor($order->orderstatus) }}">
-                                        {{ getStatus($order->orderstatus) }}
-                                    </th> --}}
-
                                     <th>
                                         @if ($order->orderstatus == 0)
                                             <form action="{{ route('orders.update', $order->id) }}" method="POST">
@@ -138,20 +133,18 @@
                                                 @method('PATCH')
                                                 <input type="hidden" name="status" value="{{ 1 }}">
                                                 <input type="hidden" name="rider_id" value="{{ null }}">
-                                                <button class="completebtn " type="submit" style="green">Accept
+                                                <button class="completebtn" type="submit" style="green">Accept
                                                     Order</button>
                                             </form>
                                         @else
                                             <a href="{{ route('admin.orders.showcomplete', $order->id) }}"
-                                                class="completebtn">Complete
-                                                Order</a>
+                                                class="completebtn" style="text-decoration: none;">Complete Order</a>
                                         @endif
-
-
                                     </th>
                                 </tr>
                             @endforeach
                         </tbody>
+
 
 
                     </table>

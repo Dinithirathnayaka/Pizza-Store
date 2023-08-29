@@ -30,7 +30,7 @@
                 @foreach ($genusers as $user)
                     <tr>
                         <td>{{ $user->id }}</td>
-                        <td><img src="{{ asset('images/userprofile.png') }}" alt="Profile Picture" class="profileimg"></td>
+                        <td><img src="{{ asset('images/userav.png') }}" alt="Profile Picture" class="profileimg"></td>
                         <td>{{ $user->name }}</td>
                         <td>{{ $user->email }}</td>
                         <td>{{ $user->created_at }}</td>

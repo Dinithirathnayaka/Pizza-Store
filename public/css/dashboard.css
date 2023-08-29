@@ -19,6 +19,15 @@
     color: #fff;
 }
 
+.completebtn {
+    background-color: green;
+    padding: 5px !important;
+    color: #ffffff;
+    border: none;
+    width: 150px;
+    text-decoration: none;
+}
+
 .leftbar {
     background-color: #212529;
     border: 1px solid #808080 !important;
