@@ -5,8 +5,8 @@
     $total = 0.0;
     $discount = 0.0;
     foreach ($items as $productId => $item) {
-        $total += $item['product']->price;
-        $discount += $item['product']->price * ($item['product']->discount / 100);
+        $total += $item['product']->price * $item['quantity'];
+        $discount += $item['product']->price * ($item['product']->discount / 100) * $item['quantity'];
     }
     
 @endphp
@@ -61,26 +61,28 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <input type="text" name="cusname" class="form-controlnew" placeholder="Your Name"
-                                        required>
+                                        required value="{{ Auth::user()->name }}" readonly>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <input type="text" name="mobile_number" class="form-controlnew"
-                                        placeholder="Mobile No" required>
+                                        placeholder="Mobile No" required value="{{ Auth::user()->mobile_number }}" readonly>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-controlnew" name="address" placeholder="Address" required>
+                            <input type="text" class="form-controlnew" name="address" placeholder="Address" required
+                                value="{{ Auth::user()->address }}" readonly>
                         </div>
                         <div class="form-group">
                             <textarea name="note" id="" cols="30" rows="7" class="form-controlnew" placeholder="Note"></textarea>
                         </div>
                         <div class="form-group">
-                            <input type="submit" value="Complete Order" class="completebtn  mx-auto d-block text-center">
+                            <input type="submit" value="Complete Order" class="completebtn mx-auto d-block text-center">
                         </div>
                     </form>
+
                 </div>
             </div>
         </div>

@@ -9,6 +9,7 @@ use App\Models\Order_item;
 use App\Models\Rider;
 use App\Services\CartService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Validation\ValidationException;
 
@@ -36,7 +37,8 @@ class OrdersController extends Controller
     public function create(CartService $cart)
     {
         $items = $cart->getItems();
-        return view('user.placeorder', compact('items'));
+        $user = Auth::user();
+        return view('user.placeorder', compact('items','user'));
     }
 
     public function show($id)

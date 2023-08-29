@@ -111,8 +111,8 @@
                             </tbody>
 
                             @php
-                                $total += $item['product']->price;
-                                $discount += $item['product']->price * ($item['product']->discount / 100);
+                                $total += $item['product']->price * $item['quantity'];
+                                $discount += $item['product']->price * ($item['product']->discount / 100) * $item['quantity'];
                             @endphp
                         @endforeach
 
