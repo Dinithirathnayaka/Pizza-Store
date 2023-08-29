@@ -46,7 +46,11 @@
                     </div>
                     <div class="row mb-3">
                         <div class="col-5">Mobile Number :</div>
-                        <div class="col-7" style="color: #ffc107">{{ $user->name }}</div>
+                        <div class="col-7" style="color: #ffc107">{{ $user->mobile_number }}</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-5">Address :</div>
+                        <div class="col-7" style="color: #ffc107">{{ $user->address }}</div>
                     </div>
                 </div>
             </div>

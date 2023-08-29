@@ -8,7 +8,7 @@
         $total += $item['product']->price;
         $discount += $item['product']->price * ($item['product']->discount / 100);
     }
-
+    
 @endphp
 
 
@@ -21,32 +21,34 @@
                 <div class="col-md-6 col-xs-12 placeorder-info mx-auto d-block " style="margin-right: 50px">
                     <h5 class="" style="color: #fac564">Summary of the Order </h5>
 
-                        {{-- <div class="col-md-12 mb-4">
+                    {{-- <div class="col-md-12 mb-4">
                             <h2 class="h4" style="color: #ffffff">{{ round($total - $discount, 2) }}</h2>
                         </div> --}}
 
-                        <div class="ordersum " >
+                    <div class="ordersum ">
 
-                            <div class="row mb-3 ">
-                                <div class="col-4" style="color: #ffffff">No of Items :</div>
-                                <div class="col-6 text-end" style="color: #fac564">10</div>
-                            </div>
-                            <hr style="color: #ffffff">
-                            <div class="row mb-3">
-                                <div class="col-4" style="color: #ffffff">Sub Total :</div>
-                                <div class="col-6" style="color: #fac564"><span>Rs.</span>10</div>
-                            </div>
-                            <hr style="color: #ffffff">
-                            <div class="row mb-3">
-                                <div class="col-4" style="color: #ffffff">Disccount :</div>
-                                <div class="col-6" style="color: green"><span>Rs.</span>10</div>
-                            </div>
-                            <hr style="color: #ffffff">
-                            <div class="row mb-3">
-                                <div class="col-4" style="color: #ffffff">Total :</div>
-                                <div class="col-6" style="color: #fac564"><span>Rs.</span>10</div>
+                        <div class="row mb-3 ">
+                            <div class="col-4" style="color: #ffffff">No of Items :</div>
+                            <div class="col-6 " style="color: #fac564">{{ count($items) }}</div>
+                        </div>
+                        <hr style="color: #ffffff">
+                        <div class="row mb-3">
+                            <div class="col-4" style="color: #ffffff">Sub Total :</div>
+                            <div class="col-6" style="color: #fac564"><span>Rs.</span>{{ round($total, 2) }}</div>
+                        </div>
+                        <hr style="color: #ffffff">
+                        <div class="row mb-3">
+                            <div class="col-4" style="color: #ffffff">Discount :</div>
+                            <div class="col-6" style="color: green"><span>Rs.</span>{{ round($discount, 2) }}
                             </div>
                         </div>
+                        <hr style="color: #ffffff">
+                        <div class="row mb-3">
+                            <div class="col-4" style="color: #ffffff">Total :</div>
+                            <div class="col-6" style="color: #fac564"><span>Rs.</span>{{ round($total - $discount, 2) }}
+                            </div>
+                        </div>
+                    </div>
 
 
 

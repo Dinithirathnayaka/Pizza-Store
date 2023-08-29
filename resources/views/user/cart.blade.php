@@ -60,8 +60,9 @@
                                 <tr class="contenttr">
 
                                     <td class=" row">
-                                        <div class="col-md-5 imgcon"><img src={{ $item['product']->imgurl }}
-                                                class="cartimgs" alt="cartimg"></div>
+                                        <div class="col-md-5 imgcon"><img
+                                                src={{ asset('products/' . $item['product']->imgurl) }} class="cartimgs"
+                                                alt="cartimg"></div>
                                         <div class="col-md-5" style="justify-content: left">
                                             <p class="productname">{{ $item['product']->name }}</p><br>
                                             <p class="discount">{{ $item['product']->discount }}%</p>

@@ -84,15 +84,17 @@
                 @foreach ($orderitems as $item)
                     <tr>
                         <td>
-                            <img src="{{ asset('products/.$item->product->imgurl') }}" class="productimg" alt="product">
+                            <img src="{{ asset('products/' . $item->$product->imgurl) }}" class="productimg"
+                                alt="product">
                         </td>
-                        <td>{{ $item->product->id }}</td>
+                        <td>{{ $item->$product->id }}</td>
                         <td>{{ $item->product->name }}</td>
                         <td>{{ $item->product->discount }}%</td>
-                        <td>{{ $item->product->price }}</td>
-                        <td>{{ round($item->product->price - $item->product->price * ($item->product->discount / 100), 2) }}
+                        <td>Rs {{ $item->product->price }}</td>
+                        <td>Rs
+                            {{ round($item->product->price - $item->product->price * ($item->product->discount / 100), 2) }}
                         </td>
-                        <td>10</td>
+
                     </tr>
                 @endforeach
             </tbody>
