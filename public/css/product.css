@@ -74,16 +74,30 @@ h5 {
 
 /*--- product form -------- */
 
+.productcontainer {
+    height: 85vh;
+}
+
 form {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 50px;
+    margin-top: 30px;
     padding: 20px;
     border: 1px solid #ccc;
     color: #fac564;
     border-radius: 5px;
-    height: auto;
+    height: 80vh;
+    overflow: scroll;
+}
+
+form::-webkit-scrollbar {
+    display: none;
+}
+
+form {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 label {
@@ -92,7 +106,7 @@ label {
     margin-bottom: 10px !important;
 }
 
-input[type="text"],
+input,
 textarea {
     width: 100%;
     padding: 8px;
@@ -138,4 +152,9 @@ textarea {
     margin-right: 30px;
     text-align: center;
     border-radius: 3px;
+}
+
+#imagePreview {
+    height: 150px;
+    width: 100%;
 }

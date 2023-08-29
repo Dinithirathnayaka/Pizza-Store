@@ -7,22 +7,22 @@
     </div>
     <hr style="color: #fff" />
 
-    <div class="">
+    <div class="productcontainer">
 
         <form class="dark" action="{{ route('admin.products.update', $product->id) }}" method="post" enctype="multipart/form-data" class="product-form">
             @csrf
             @method('PATCH')
 
             <label for="category">Product Category:</label>
-            <select id="category" name="category_id" required class="mb-2">
+            <select id="category" name="category_id" required class="mb-2" style="margin-bottom: 100px">
                 @foreach ($categories as $category)
-                    <option value="{{ $category->id }}" {{ $product->category_id == $category->id ? 'selected' : '' }}>
+                    <option  value="{{ $category->id }}" {{ $product->category_id == $category->id ? 'selected' : '' }}  style="background-color:#ffff">
                         {{ $category->name }}
                     </option>
                 @endforeach
             </select>
 
-            <label for="name">Product Name:</label>
+            <label for="name" style="margin-top:50px ">Product Name:</label>
             <input type="text" id="name" name="name" value="{{ old('name', $product->name) }}" required>
 
             <label for="description">Description:</label>
@@ -33,7 +33,7 @@
             <input type="file" id="image" name="imgurl" accept="image/*" onchange="updateImagePreview(this)">
             <div id="imagePreview" >
                 @if ($product->imgurl)
-                    <img src="{{ asset('products/' . $product->imgurl) }}" style="max-width: 100px" alt="Product Image">
+                    <img src="{{ asset('products/' . $product->imgurl) }}" style="max-width: 150px" alt="Product Image">
                 @endif
             </div>
 
